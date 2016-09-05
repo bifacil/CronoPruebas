@@ -1,0 +1,93 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Design Tip #130 Accumulating Snapshots for Complex Workflows</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description">
+		<meta name="application-name">
+		<meta name="title">
+		<link href="../../../favicon.ico" rel="shortcut icon" />
+		<link rel="stylesheet" href="../../../resources/main.css">
+	</head>
+	
+
+	<body>
+	
+		<div class="jumbotron1" id="jumbotron1">
+			<div class="container">
+				<h1 class="article-header">Design Tip #130 Accumulating Snapshots for Complex Workflows</h1>
+				<div class="article-date">mi&#233;rcoles, 1 de diciembre de 2010</div>
+			</div>
+		</div>
+	
+		<hr id="anchor-point"/>
+		<div class="container-fluid">
+			<a href="../../../archive/bi/dwh/design-tip-130-accumulating-snapshots-for-complex-workflows.html#" class="navigationBars">
+				<div class="iconBars closed">
+					<span id="icon-bar1" class="iconBar colorChange background"></span>
+					<span id="icon-bar2" class="iconBar colorChange background"></span>
+					<span id="icon-bar3" class="iconBar colorChange background"></span>
+				</div>
+			</a>
+			<div class="navLinks">
+				<a id="link1" class="colorChange navLink link1" href="../../../index.html">Home</a>
+				<a class="iconLink" href="../../../index.html"><i title="Home" id="icon1" class="fa fa-home colorChange link1"></i></a>
+	
+				<a id="link2" class="colorChange navLink link2" href="../../../about.html">Sobre mi</a>
+				<a class="iconLink" href="../../../about.html"><i title="Sobre mi" id="icon2" class="fa fa-envelope colorChange link2"></i></a>
+
+				<a id="link2" class="colorChange navLink link3" href="../../../archive.html">Archivo</a>
+				<a class="iconLink" href="../../../about.html"><i title="Archivo" id="icon3" class="fa fa-archive colorChange link3"></i></a>
+			</div>			
+			
+			<div class="row">
+				<div class="content col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+					<div class="article">
+						<p class="article-description"></p>				
+						<div class="article-content">
+							<div class="pf-content">
+							<p>Accumulating snapshots are one of the three fundamental types of fact tables. We often state that accumulating snapshot fact tables are appropriate for predictable workflows with well-established milestones. They typically have five to ten key milestone dates representing the workflow/pipeline start, completion, and the key event dates in between.</p>
+							<p>Our students and clients sometimes ask for guidance about monitoring cycle performance for a less predictable workflow process. These more complex workflows have a definite start and end date, but the milestones in between are often numerous and less stable. Some occurrences may skip over some intermediate milestones, but thereâ€™s no reliable pattern.</p>
+							<p>Be forewarned that the design for tackling these less predictable workflows is not for the faint of heart! The first task is to identify the key dates that will link to role-playing date dimensions. These dates represent key milestones; the start and end dates for the process would certainly qualify. In addition, youâ€™d want to consider other commonly-occurring, critical milestones. These dates (and their associated dimensions) will be used for report and analyses filtering. For example, if you want to see cycle activity for all workflows where a milestone date fell in a given work week, calendar month, fiscal period, or other standard date dimension attribute, then it should be identified as a key date with a corresponding date dimension table. The same holds true if you want to create a time series trend based on the milestone date. While selecting specific milestones as the critical ones in a complex process may be challenging for IT, business users can typically identify these key milestones fairly readily. But theyâ€™re often interested in a slew of additional lags which is where things get thorny.</p>
+							<p>For example, letâ€™s assume there are six critical milestone dates, plus an additional 20 less critical event dates associated with a given process/workflow. If we labeled each of these dates alphabetically, you could imagine analysts being interested in any of the following date lags:</p>
+							<p>A-to-B, A-to-C, â€¦, A-to-Z (total of 25 possible lags from event A)<br>
+							B-to-C, â€¦, B-to-Z (total of 24 possible lags from event B)<br>
+							C-to-D, â€¦, C-to-Z (total of 23 possible lags from event C)<br>
+							â€¦<br>
+							Y-to-Z</p>
+							<p>Using this example, there would be 325 (25+24+23+â€¦+1) possible lag calculations between milestone A and milestone Z. Thatâ€™s an unrealistic number of facts for a single fact table! Instead of physically storing all 325 date lags, you could get away with just storing 25 of them, and then calculate the others. Since every cycle occurrence starts by passing through milestone A (workflow begin date), you could store all 25 lags from the anchor event A, then calculate the other 300 variations.</p>
+							<p>Letâ€™s take a simpler example with actual dates to work through the calculations:</p>
+							<p>Event A (process begin date) &#8211; Occurred on November 1<br>
+							Event B &#8211; Occurred on November 2<br>
+							Event C &#8211; Occurred on November 5<br>
+							Event D &#8211; Occurred on November 11<br>
+							Event E &#8211; Didnâ€™t happen<br>
+							Event F (process end date) &#8211; Occurred on November 16</p>
+							<p>In the corresponding accumulating snapshot fact table row for this example, youâ€™d physically store the following facts and their values:</p>
+							<p>A-to-B days lag &#8211; 1<br>
+							A-to-C days lag &#8211; 4<br>
+							A-to-D days lag &#8211; 10<br>
+							A-to-E days lag &#8211; null<br>
+							A-to-F days lag &#8211; 15</p>
+							<p>To calculate the days lag from B-to-C, youâ€™d take the A-to-C lag value (4) and subtract the A-to-B lag value (1) to arrive at 3 days. To calculate the days lag from C-to-F, youâ€™d take the A-to-F value (15) and subtract the A-to-C value (4) to arrive at 11 days. Things get a little trickier when an event doesnâ€™t occur, like E in our example. When thereâ€™s a null involved in the calculation, like the lag from B-to-E or E-to-F, the result needs to also be null because one of the events never happened.</p>
+							<p>This technique works even if the interim dates are not in sequential order. In our example, letâ€™s assume the dates for events C and D were swapped: event C occurred on November 11 and D occurred on November 5. In this case, the A-to-C days lag is 10 and the A-to-D lag is 4. To calculate the C-to-D lag, youâ€™d take the A-to-D lag (4) and subtract the A-to-C lag (10) to arrive at a -6 days.<br>
+							In our simplified example, storing all the possible lags would have resulted in 15 total facts (5 lags from event A, plus 4 lags from event B, plus 3 lags from event C, plus 2 lags from event D, plus 1 lag from event E). Thatâ€™s not an unreasonable number of facts to just physically store. This tip makes more sense when there are dozens of potential event milestones in a cycle. Of course, youâ€™d want to hide the complexity of these lag calculations under the covers from your users, like in a view declaration.</p>
+							<p>As I warned earlier, this design pattern is not simplistic; however, itâ€™s a viable approach for addressing a really tricky problem.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../../../resources/jquery.min.js"></script>
+		<script src="../../../resources/menu.js"></script>
+			
+		
+		<a id="scrollUp" href="../../../archive/bi/dwh/design-tip-130-accumulating-snapshots-for-complex-workflows.html#top" title="Volver" style="position: fixed; z-index: 2147483647; display: none;">
+			<i class="fa fa-chevron-up"></i>
+		</a>
+	</body>
+</html>

@@ -1,0 +1,132 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Design Tip #168 What&amp;#8217;s in a Name?</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description">
+		<meta name="application-name">
+		<meta name="title">
+		<link href="../../../favicon.ico" rel="shortcut icon" />
+		<link rel="stylesheet" href="../../../resources/main.css">
+	</head>
+	
+
+	<body>
+	
+		<div class="jumbotron1" id="jumbotron1">
+			<div class="container">
+				<h1 class="article-header">Design Tip #168 What&amp;#8217;s in a Name?</h1>
+				<div class="article-date">lunes, 21 de julio de 2014</div>
+			</div>
+		</div>
+	
+		<hr id="anchor-point"/>
+		<div class="container-fluid">
+			<a href="../../../archive/bi/dwh/design-tip-168-whats-name.html#" class="navigationBars">
+				<div class="iconBars closed">
+					<span id="icon-bar1" class="iconBar colorChange background"></span>
+					<span id="icon-bar2" class="iconBar colorChange background"></span>
+					<span id="icon-bar3" class="iconBar colorChange background"></span>
+				</div>
+			</a>
+			<div class="navLinks">
+				<a id="link1" class="colorChange navLink link1" href="../../../index.html">Home</a>
+				<a class="iconLink" href="../../../index.html"><i title="Home" id="icon1" class="fa fa-home colorChange link1"></i></a>
+	
+				<a id="link2" class="colorChange navLink link2" href="../../../about.html">Sobre mi</a>
+				<a class="iconLink" href="../../../about.html"><i title="Sobre mi" id="icon2" class="fa fa-envelope colorChange link2"></i></a>
+
+				<a id="link2" class="colorChange navLink link3" href="../../../archive.html">Archivo</a>
+				<a class="iconLink" href="../../../about.html"><i title="Archivo" id="icon3" class="fa fa-archive colorChange link3"></i></a>
+			</div>			
+			
+			<div class="row">
+				<div class="content col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+					<div class="article">
+						<p class="article-description"></p>				
+						<div class="article-content">
+							<div class="pf-content">
+							<p>It seems like a small thing, but names are important. Good names for tables and columns are particularly important for ad hoc users of the DW/BI system who need to find the objects theyâ€™re looking for. Object names should be oriented to the business users, not the technical staff.</p>
+							<p>As much as possible, strive to have the names in the DW/BI system be unchanged in the semantic layer and unchanged by report designers. More challenging, your users should be discouraged from changing object names once theyâ€™ve pulled the information to their desktop. We usually canâ€™t prevent them from doing that, but attractive and sensible names will reduce the temptation.</p>
+							<p>Here are myÂ top ten suggestions for naming objects in your data warehouse / business intelligence system.</p>
+							<p><strong>1. Follow naming conventions.<br>
+							</strong>If you donâ€™t have them, create (and document!) naming conventions that follow the rules in this <em>Design Tip</em>. If your organization already has naming conventions, you may be faced with a problem: most existing naming conventions were developed for technical people. But names in the DW/BI environment should be oriented to the business users. They become row and column names in ad hoc analyses and predefined reports. We will return to this issue later.</p>
+							<p><strong>2.Â Each object has one name.<br>
+							</strong>Letâ€™s not perpetuate the confusion around data definitions that already exists in our organizations. It is not OK to say that the sales team can call a column Geography and the marketing group calls the same entity Region. If itâ€™s the same column, with the same content, it has to have the same name. If you canâ€™t get agreement organization-wide on object names, enlist the help of your business sponsor.</p>
+							<p><strong>3.Â Object names are descriptive.<br>
+							</strong>Users should not need 20 years tenure at your organization to decipher what a name means. This rule forbids a lot of silliness, like RBVLSPCD (we have more than 8 characters to work with!). It also forbids column names like NAME, which is non-descriptive outside the context of the table you are examining.</p>
+							<p><strong>4.Â Abbreviations and acronyms are discouraged.<br>
+							</strong>Abbreviations and acronyms are endemic in the corporate world, and the non-corporate world is even worse. A lot of information can be encoded in an acronym, but it places a huge burden on newcomers. The most effective approach is to maintain a list of approved abbreviations, and try not to add to them without a good reason. You may even want to document that reason in the list. Examples include:</p>
+							<table style="height: 205px;" width="768">
+							<tbody>
+							<tr>
+							<td width="126"><strong>Â </strong><em>Abbreviation</em></td>
+							<td width="290"><em>Â Replaces</em></td>
+							<td width="208"><em>Â Reason</em></td>
+							</tr>
+							<tr>
+							<td width="126"><em>Â </em>Amt</td>
+							<td width="290">Â Amount</td>
+							<td width="208">Â Extremely common</td>
+							</tr>
+							<tr>
+							<td width="126">Â Desc</td>
+							<td width="290">Â Description</td>
+							<td width="208">Â Extremely common</td>
+							</tr>
+							<tr>
+							<td width="126">Â Corp</td>
+							<td width="290">Â Corporation</td>
+							<td width="208">Â Common</td>
+							</tr>
+							<tr>
+							<td width="126">Â FDIC</td>
+							<td width="290">Â Federal Deposit Insurance Corporation</td>
+							<td width="208">Â Common; familiar to all users</td>
+							</tr>
+							</tbody>
+							</table>
+							<p>For most organizations, a reasonable list has dozens of approved abbreviations, not hundreds.</p>
+							<p><strong>5.Â Object names are pretty.<br>
+							</strong>Remember that object names become headers in reports and analyses. Although beauty is in the eye of the beholder, I find all caps to be particularly annoying. The object names should contain a visual clue for where the words end.</p>
+							<ul>
+							<li>Spaces: [Column Name]</li>
+							<li>Camel case: ColumnName</li>
+							<li>Underscore: Column_Name or COLUMN_NAME</li>
+							</ul>
+							<p>I recommend using spaces. They look the best when displayed in reports. And I scoff at the argument that developers have to type square brackets when they type the column name. I am confident that any developer who actually types SQL can figure out where the brackets keys are located, and they can develop the requisite finger muscles.</p>
+							<p><strong>6.Â Object names are unique.<br>
+							</strong>This rule is a corollary to the rule that each object has one name. If two objects are different, they should have different names. This rule forbids column names such as [City]. A better name is [Customer Mailing Address City]. This rule is especially important for ad hoc use of the DW/BI system. Although the context of [City] may be obvious during the analytic process, once that analysis is saved and shared, that context is lost. Are we looking at the customerâ€™s city or the storeâ€™s city, the mailing address or the shipping address? Although we canâ€™t prevent users from changing object names once they export to Excel, we donâ€™t want to force them to do so in order to be clear.</p>
+							<p><strong>7.Â Object names are not too long.<br>
+							</strong>This rule conflicts with rules 3, 4, and 6. If we have unique, unabbreviated, descriptive object names, the odds are that some column names will be very long. Consider [Mandatory Second Payer Letter Opt Out Code] or [Vocational Provider Referral Category]. These are reasonably descriptive column names for someone in the insurance business, but what will happen when the user or report designer drags that column into the body of a report or analysis? The name will wrap unattractively, making the header row very fat. Or it will shrink down to a font so tiny that no one can read it. And then the user will rename the column, violating our key rule that each object has one name.</p>
+							<p>I try to limit column names to 30 characters, though sometimes I go to 35. In order to achieve this goal, I have to register more abbreviations or acronyms than I would like.</p>
+							<p><strong>8.Â Consider prepending column names with an abbreviated table name.<br>
+							</strong>I hate to make this recommendation, because it violates several of my previous rules about abbreviations and short names. But I am finding myself following this practice with increasing frequency in order to guarantee consistency and uniqueness.</p>
+							<p><strong>9.Â Change names in the view layer if needed.<br>
+							</strong>We have always recommended a set of views in the DW/BI system which sit atop the physical tables and to which all queries are directed. The primary purpose of the view layer is to provide a layer of insulation between the BI applications and the physical database, providing a bit of flexibility to smoothly migrate change to a system already in production. Additionally, the view layer can also provide a place to put the business-oriented names into the database.</p>
+							<p>Our first recommendation is always to name the physical tables and columns with business-oriented names. Failing that, use the view layer. We dislike changing the names in the BI tools for several reasons:</p>
+							<ul>
+							<li>Most organizations have several BI tools; the names should be consistent across all BI tools.</li>
+							<li>The more business logic you put into the BI tool, the more challenging it will be to migrate to a different tool.</li>
+							<li>If the names are only in the BI tool, there is a barrier to communication between users, front room support team, and back room database people.</li>
+							</ul>
+							<p><strong>10.Â Be consistent!<br>
+							</strong>Itâ€™s only a <em>foolish</em> consistency thatâ€™s the hobgoblin of little minds. Consistency in naming is hugely valuable to your users.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../../../resources/jquery.min.js"></script>
+		<script src="../../../resources/menu.js"></script>
+			
+		
+		<a id="scrollUp" href="../../../archive/bi/dwh/design-tip-168-whats-name.html#top" title="Volver" style="position: fixed; z-index: 2147483647; display: none;">
+			<i class="fa fa-chevron-up"></i>
+		</a>
+	</body>
+</html>

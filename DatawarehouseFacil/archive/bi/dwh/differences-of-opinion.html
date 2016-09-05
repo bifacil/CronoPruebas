@@ -1,0 +1,104 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Differences of Opinion</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description">
+		<meta name="application-name">
+		<meta name="title">
+		<link href="../../../favicon.ico" rel="shortcut icon" />
+		<link rel="stylesheet" href="../../../resources/main.css">
+	</head>
+	
+
+	<body>
+	
+		<div class="jumbotron1" id="jumbotron1">
+			<div class="container">
+				<h1 class="article-header">Differences of Opinion</h1>
+				<div class="article-date">mi&#233;rcoles, 3 de marzo de 2004</div>
+			</div>
+		</div>
+	
+		<hr id="anchor-point"/>
+		<div class="container-fluid">
+			<a href="../../../archive/bi/dwh/differences-of-opinion.html#" class="navigationBars">
+				<div class="iconBars closed">
+					<span id="icon-bar1" class="iconBar colorChange background"></span>
+					<span id="icon-bar2" class="iconBar colorChange background"></span>
+					<span id="icon-bar3" class="iconBar colorChange background"></span>
+				</div>
+			</a>
+			<div class="navLinks">
+				<a id="link1" class="colorChange navLink link1" href="../../../index.html">Home</a>
+				<a class="iconLink" href="../../../index.html"><i title="Home" id="icon1" class="fa fa-home colorChange link1"></i></a>
+	
+				<a id="link2" class="colorChange navLink link2" href="../../../about.html">Sobre mi</a>
+				<a class="iconLink" href="../../../about.html"><i title="Sobre mi" id="icon2" class="fa fa-envelope colorChange link2"></i></a>
+
+				<a id="link2" class="colorChange navLink link3" href="../../../archive.html">Archivo</a>
+				<a class="iconLink" href="../../../about.html"><i title="Archivo" id="icon3" class="fa fa-archive colorChange link3"></i></a>
+			</div>			
+			
+			<div class="row">
+				<div class="content col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+					<div class="article">
+						<p class="article-description"></p>				
+						<div class="article-content">
+							<div class="pf-content">
+							<h4><span style="font-size: medium;">The Kimball bus architecture and the Corporate Information Factory: What are the fundamental differences?</span></h4>
+							<p>Based on recent inquiries, many of you are in the midst of architecting (or rearchitecting) your data warehouse. There&#8217;s no dispute that planning your data warehouse from an enterprise perspective is a good idea, but do you need an enterprise data warehouse? It depends on your definition. In this column, we&#8217;ll clarify the similarities and differences between the two dominant approaches to enterprise warehousing.</p>
+							<h3>Common Ground</h3>
+							<p>We all agree on some things related to data warehousing. First, at the most rudimentary level, nearly all organizations benefit from creating a data warehouse and analytic environment to support decision-making. Maybe it&#8217;s like asking your barber if you need a haircut, but personal bias aside, businesses profit from well-implemented data warehouses. No one would attempt to run a business without operational processes and systems in place. Likewise, complementary analytic processes and systems are needed to leverage the operational foundation.</p>
+							<p>Second, the goal of any data warehouse environment is to publish the &#8220;right&#8221; data and make it easily accessible to decision makers. The two primary components of this environment are staging and presentation. The staging (or acquisition) area consists of extract-transform-load (ETL) processes and support. Once the data is properly prepared, it is loaded into the presentation (or delivery) area where a variety of query, reporting, business intelligence, and analytic applications are used to probe, analyze, and present data in endless combinations.</p>
+							<p>Both approaches agree that it&#8217;s prudent to embrace the enterprise vantage point when architecting the data warehouse environment for long-term integration and extensibility. Although subsets of the data warehouse will be implemented in phases over time, it&#8217;s beneficial to begin with the integrated end goal in mind during planning.</p>
+							<p>Finally, standalone data marts or warehouses inÂ Figure 1Â are problematic. These independent silos are built to satisfy specific needs, without regard to other existing or planned analytic data. They tend to be departmental in nature, often loosely dimensionally structured. Although often perceived as the path of least resistance because no coordination is required, the independent approach is unsustainable in the long run. Multiple, uncoordinated extracts from the same operational sources are inefficient and wasteful. They generate similar, but different variations with inconsistent naming conventions and business rules. The conflicting results cause confusion, rework and reconciliation. In the end, decision-making based on independent data is often clouded by fear, uncertainty, and doubt.</p>
+							<p>Â <img src="../../../wp-content/uploads/2004/03/Picture11.png" alt="" width="379" height="372"><strong></strong></p>
+							<p><strong>Figure 1</strong>Â Independent data marts/warehouses.</p>
+							<p>So we all see eye to eye on some matters. Before turning to our differences of opinion, we&#8217;ll review the two dominant approaches to enterprise data warehousing.</p>
+							<h3>Kimball Bus Architecture</h3>
+							<p>If you&#8217;ve been regularly reading the last 100 or so columns, you&#8217;re familiar with the Kimball approach inÂ Figure 2. As we described in our last column &#8220;<a href="../../01/01/data-warehouse-dining-experience/index.html">Data Warehouse Dining Experience</a>&#8221; (Jan. 1, 2004), raw data is transformed into presentable information in the staging area, ever mindful of throughput and quality. Staging begins with coordinated extracts from the operational source systems. Some staging &#8220;kitchen&#8221; activities are centralized, such as maintenance and storage of common reference data, while others may be distributed.</p>
+							<p><img src="../../../wp-content/uploads/2004/03/Picture21.png" alt="" width="420" height="304"></p>
+							<p><strong>Figure 2</strong>Â Dimensional data warehouse.</p>
+							<p>The presentation area is dimensionally structured, whether centralized or distributed. A dimensional model contains the same information as a normalized model, but packages it for ease-of-use and query performance. It includes both atomic detail and summarized information (aggregates in relational tables or multidimensional cubes) as required for performance or geographic distribution of the data. Queries descend to progressively lower levels of detail, without reprogramming by the user or application designer.</p>
+							<p>Dimensional models are built by business process (corresponding to a business measurement or event), not business departments. For example, orders data is populated once in the dimensional data warehouse for enterprise access, rather than being replicated in three departmental marts for marketing, sales, and finance. Once foundation business processes are available in the warehouse, consolidated dimensional models deliver cross-process metrics. The enterprise data warehouse bus matrix identifies and enforces the relationships between business process metrics (facts) and descriptive attributes (dimensions).</p>
+							<h3>Corporate Information Factory</h3>
+							<p>Figure 3Â illustrates the Corporate Information Factory (CIF) approach, once known as the EDW approach. Like the Kimball approach, there are coordinated extracts from the source systems. From there, a third normal form (3NF) relational database containing atomic data is loaded. This normalized data warehouse is used to populate additional presentation data repositories, including special-purpose warehouses for exploration and data mining, as well as data marts.</p>
+							<p><img src="../../../wp-content/uploads/2004/03/Picture31.png" alt="" width="557" height="325"></p>
+							<p><strong>Figure 3</strong>Â Normalized data warehouse with summary dimensional marts (CIF).</p>
+							<p>In this scenario, the marts are tailored by business department/function with dimensionally structured summary data. Atomic data is accessible via the normalized data warehouse. Obviously, the atomic data is structured very differently from summarized information.</p>
+							<h3>Fundamental Differences</h3>
+							<p>There are two fundamental differentiators between the CIF and Kimball approaches. The first concerns the need for a normalized data structure before loading the dimensional models. Although this is a requisite underpinning of the CIF, the Kimball approach says the data structures required prior to dimensional presentation depend on the source data realities, target data model, and anticipated transformation. Although we don&#8217;t advocate centrally normalizing the atomic data prior to loading the dimensional targets, we don&#8217;t absolutely admonish it, presuming there&#8217;s a real need, financial willpower (for both the redundant ETL development and data storage), and clear understanding of the two-step throughput.</p>
+							<p>In the vast majority of the cases, we find duplicative storage of core performance measurement data in both normalized and dimensional structures is unwarranted. Advocates of the normalized data structures claim it&#8217;s faster to load than the dimensional model, but what sort of optimization is really achieved if the data needs to undergo ETL multiple times before being presented to the business?</p>
+							<p>The second primary difference between the two approaches is the treatment of atomic data. The CIF says atomic data should be stored in the normalized data warehouse. The Kimball approach says atomic data must be dimensionally structured. Of course, if you only provide summary information in a dimensional structure, you&#8217;ve &#8220;presupposed the questions.&#8221; However, if you make atomic data available in dimensional structures, you always have the ability to summarize the data &#8220;any which way.&#8221; We need the most finely grained data in our presentation area so that users can ask the most precise questions possible.</p>
+							<p>Business users may not care about the details of a single atomic transaction, but we can&#8217;t predict the ways they&#8217;ll want to summarize the transaction activity (perhaps for all customers of a certain type living in a range of ZIP codes that have been customers for more than two years). Anyone that&#8217;s worked side by side with a business analyst knows the questions asked are unpredictable and constantly changing. Details must be available so that they can be rolled up to answer the questions of the moment, without encountering a totally different data structure. Storing the atomic data in dimensional structures delivers this fundamental capability. If only summary data is dimensional with the atomic data stored in normalized structures, then drilling into the details is often akin to running into a brick wall. Skilled professionals must intervene because the underlying data structures are so different.</p>
+							<p>Both approaches advocate enterprise data coordination and integration, but the implementations differ. CIF says the normalized data warehouse fills this role. While normalized models communicate data relationships, they don&#8217;t inherently apply any pressure to resolve data integration issues. Normalization alone doesn&#8217;t begin to address the common data keys and labels required for integration.</p>
+							<p>From the earliest planning activities, the Kimball approach uses the enterprise data warehouse bus architecture with common, conformed dimensions for integration and drill-across support. Common, conformed dimensions have consistent descriptive attribute names, values, and meanings. Likewise, conformed facts are consistently defined; if they don&#8217;t use consistent business rules, then they&#8217;re given a distinct name.</p>
+							<p>Conformed dimensions are the backbone of any enterprise approach as they provide the integration &#8220;glue.&#8221; We&#8217;ve provided detailed design and implementation guidance regarding conformed dimensions in our books and columns. Conformed dimensions are typically built and maintained as central persistent master data in the staging area, then reused across the enterprise&#8217;s presentation marts and warehouses to ensure data integration and semantic consistency. It may not be practical or useful to get everyone to agree to everything related to a dimension; however, conformity directly correlates to an organization&#8217;s ability to integrate business results. Without conformity, you end up with isolated data that cannot be tied together. This situation perpetuates incompatible views of the enterprise, diverting attention to data inconsistencies and reconciliations while degrading the organization&#8217;s decision-making ability.</p>
+							<h3>Hybrid Approach?</h3>
+							<p>Some organizations adopt a hybrid approach, theoretically marrying the best of both the CIF and Kimball methods. As shown inÂ Figure 4, the hybrid combinesÂ Figure 1Â andÂ 2. There&#8217;s a normalized data warehouse from the CIF, plus a dimensional data warehouse of atomic and summary data based on the Kimball bus architecture.</p>
+							<p><img src="../../../wp-content/uploads/2004/03/Picture41.png" alt="" width="597" height="282"></p>
+							<p><strong>Figure 4</strong>Â Hybrid of normalized data warehouse and dimensional data warehouse.</p>
+							<p>Given the final presentation deliverable, this approach is viable. However, there are significant incremental costs and time lags associated with staging and storing atomic data redundantly. If you&#8217;re starting with a fresh slate and appreciate the importance of presenting atomic data to avoid presupposing the business questions, then why would you want to ETL, store, and maintain the atomic details twice? Isn&#8217;t the value proposition more compelling to focus the investment in resources and technology into appropriately publishing additional key performance metrics for the business?</p>
+							<p>Of course, if you have already built a normalized data warehouse and now recognize the need for robust presentation capabilities to deliver value, then the hybrid approach lets you leverage your preexisting investment.</p>
+							<h3>Success Criteria</h3>
+							<p>When evaluating approaches, people often focus strictly on IT&#8217;s perception of success, but it must be balanced with the business&#8217; perspective. We agree that data warehouses should deliver a flexible, scalable, integrated, granular, accurate, complete, and consistent environment; however, if it&#8217;s not being leveraged by the business for decision-making, then it&#8217;s impossible to declare it successful. Does the business community use the data warehouse? Is it understandable to them (including nontechnical users)? Does it answer their business questions? Is the performance acceptable from their vantage point?</p>
+							<p>In our opinion, the success of any data warehouse is measured by the business&#8217;s acceptance of the analytic environment and their benefits realized from it. You should choose the data warehouse architecture that best supports these success criteria, regardless of the label.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../../../resources/jquery.min.js"></script>
+		<script src="../../../resources/menu.js"></script>
+			
+		
+		<a id="scrollUp" href="../../../archive/bi/dwh/differences-of-opinion.html#top" title="Volver" style="position: fixed; z-index: 2147483647; display: none;">
+			<i class="fa fa-chevron-up"></i>
+		</a>
+	</body>
+</html>

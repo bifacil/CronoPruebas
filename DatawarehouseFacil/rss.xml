@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+ <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+ <channel>
+   <title></title>
+   <atom:link href="/rss.xml" rel="self" type="application/rss+xml" />
+   <link></link>
+   <description></description>
+   
+
+ <item>
+      <guid isPermaLink="true">/archive/bi/dwh/design-tip-180-the-future-is-bright.html</guid>
+      <link>/archive/bi/dwh/design-tip-180-the-future-is-bright.html</link>
+      <title>Design Tip #180 The Future Is Bright</title>
+      <pubDate>Tue, 01 Dec 2015 01:01:32 GMT</pubDate>
+      <atom:updated>2015-12-01T01:01:32Z</atom:updated>
+      <description>&lt;div style=&quot;width:700px&quot;&gt;&lt;div class=&quot;pf-content&quot;&gt;
+&lt;p&gt;Data warehousing has never been more valuable and interesting than it is now. Making decisions based on data is so fundamental and obvious that the current generation of business users and data warehouse designers/implementers can&#226;€™t imagine a world without access to data. I&#226;€™ll resist the urge to tell stories about what it was like before 1980.&lt;/p&gt;
+&lt;p&gt;But this is a time of change for the practice of data warehousing. It is essential that &#226;€œdata warehousing&#226;€ always encompasses the gathering of business needs and the enumeration of all the data assets of an organization in the broadest possible senses. If data warehousing is ever relegated to just reporting text and number data out of transaction systems of record, then huge opportunities will be lost.&lt;/p&gt;
+&lt;p&gt;Data warehousing has defined an architecture for &lt;em&gt;Publishing the Right Data&lt;/em&gt; to decision makers, and that architecture has names: dimensional modeling, fact tables, dimension tables, surrogate keys, slowly changing dimensions, conformed dimensions, and many more.&lt;/p&gt;
+&lt;p&gt;Big changes are occurring today in the business world, with new torrents of data from social media, free text, sensors and meters, geo-positioning devices, satellites, cameras, and other recording devices. Business users are expecting to make decisions based on these data sources. Marketing, the traditional driver of data warehousing, is now competing with manufacturing, operations, and research. Many of these departments new to data analysis are building their own systems, often in good faith, but ignorant of the deep legacy and accumulated architectural skills of data warehousing. It is incumbent on the data warehouse community to meet these new business users half way, not only to offer our useful perspectives, but for us to learn about these new business areas.&lt;/p&gt;
+&lt;p&gt;In this, my final Kimball Group &lt;em&gt;Design Tip&lt;/em&gt;, I&#226;€™ll describe how I think the main components of data warehousing are changing and will change in the near future. It&#226;€™s an exciting and challenging time to be a data warehouse professional!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The Future of ETL&lt;br&gt;
+&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If data warehousing is going to encompass all the data assets of an organization, then it must deal with the immense new torrents of strangely structured data. Several big changes must take place in the ETL environment. First, the data feeds from original sources must support huge bandwidths, at least gigabytes per second. Learn about Sqoop loading data into Hadoop. If these words mean nothing to you, you have some reading to do! Start with Wikipedia. Second, many of the analytic clients for these new data streams insist that no transformations be applied to the incoming data. In other words, the ETL landing zone must be able to store files consisting of un-interpreted bits with no assumptions made about how that file will be stored in a database or analyzed. Third, the storage architecture must be open so that multiple diverse decision support tools and analytic clients can access the data through a universal metadata layer. And fourth, the metadata descriptions of data files of all types must be much more extensible, customizable and powerful as new complex data sources are made available. We have gone far too long with simple text-and-number RDBMS files where the metadata contained in RDBMS system files has little or no semantics.&lt;/p&gt;
+&lt;p&gt;The proprietary stacks of mainline RDBMSs will be challenged to be pried apart into separate storage, metadata, and query layers. This has already happened in the Hadoop open source environment under the Hadoop Distributed File System (HDFS). This means that ETL processing in some cases can be delayed until a point in time after the data is loaded into accessible files. Query and analysis tools, through the metadata, may wish to declare the target schema at query time as a kind of powerful &#226;€œview&#226;€ at query time, not at load time. As exotic as this &#226;€œschema on read&#226;€ sounds, this is just another form of data virtualization which we have used for more than a decade. The tradeoff in all these forms of data virtualization is that by substituting computation for ETL data restructuring, one pays a significant performance penalty. At some point after an exploratory query phase, the designer will usually loop back and do normal ETL processing to prepare more performant file structures.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The Future of Database Technology&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Relational databases are the bedrock of data warehousing and will always be such. But RDBMSs will never be extended to natively process all the new data types. Many specialty analytic tools will compete with each other to analyze the data, and gracefully coexist with RDBMS databases that will cherry pick the parts of the incoming data streams that relational databases can handle.&lt;/p&gt;
+&lt;p&gt;On a related topic, archiving will never be the same. Disk storage has won the war for the long term archiving choice for many reasons, but the biggest factor is the amazing low cost per petabyte. Additionally disk storage is always online, thus the archived data remains active and accessible, awaiting new analysis modes, and new retrospective questions. This is called &#226;€œactive archiving.&#226;€&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The Future of Dimensional Modeling&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Even in the brave new world of strange data types and non-relational processing, dimensional modeling is enormously relevant. Even the most bizarre data types can be thought of as a set of observations recorded in the real world. These observations always have context: date, time, location, customer/person/patient, action, and the list goes on. These, of course, are our familiar dimensions. When we realize this, suddenly all the familiar dimensional machinery kicks in. We can attach high quality curated dimensions from our EDW to any data source. Expand your minds: this attachment doesn&#226;€™t have to be through a conventional relational database join, because the correspondence can be made in other ways.&lt;/p&gt;
+&lt;p&gt;Dimensions, of course, are the soul of the data warehouse. Facts are merely observations that always exist in a dimensional context. Going forward, we can expect dimensions to become more powerful in order to support more sophisticated behavior based queries and predictive analytics. Already there have been proposals for generalizing the star schema to a supernova schema. In a supernova schema, dimensional attributes are allowed to become complex objects rather than simple text. Supernova dimensions also become much more malleable and extensible from one analysis to another. Contrast the traditional customer dimension with the supernova customer dimension in Figure 1. Note that much of this is not future pie-in-the-sky. You can generalize a single dimension attribute today with an ARRAY of STRUCTS. Time to read the SQL reference manual.&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone wp-image-20635 size-full&quot; src=&quot;../../../wp-content/uploads/2015/11/DT-180-Figure.png&quot; alt=&quot;DT #180 Figure&quot; width=&quot;555&quot; height=&quot;680&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Figure&#194;&#160;1: Traditional and Supernova Customer Dimensions.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The Future of BI Tools&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The space of BI tools will grow to include many non-SQL kinds of analysis. Of course this has already happened, especially in the open source Hadoop environment, and we have always relied on powerful non-SQL tools such as SAS. So in some ways this is a matter of definition of what is a BI tool. I am arguing this point mainly to prod data warehouse teams to expand their scope and not get left out of the new data sources and new kinds of analysis.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The Future of Data Warehouse Professionals&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I have remarked many times that a successful data warehouse professional must be interested in three things: the business, the technology, and the business users. This will always be true in the future. If you want to spend your time coding and not talking to business users, that&#226;€™s great but you don&#226;€™t belong on the data warehouse team. Having said that, data warehouse professionals going forward need to have Unix and Java skills at a minimum, and familiarity with some of the principal non-SQL analytic environments such as Spark, MongoDB, and HBase, as well as data transfer tools such as Sqoop.&lt;/p&gt;
+&lt;p&gt;I think the big exciting challenge going forward is the expansion of the data warehouse professional&#226;€™s job description. New departments are suddenly appearing who are trying to grapple with torrents of data, and are probably reinventing the data warehouse wheel. Find out who these departments are and educate them about the power of conformed dimensions and surrogate keys. Offer to attach your high quality EDW dimensions to their data.&lt;/p&gt;
+&lt;p&gt;And as Margy says: Go forth and be dimensional&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+</item>
+ <item>
+      <guid isPermaLink="true">/archive/bi/dwh/design-tip-179-key-tenets-of-kimball-method.html</guid>
+      <link>/archive/bi/dwh/design-tip-179-key-tenets-of-kimball-method.html</link>
+      <title>Design Tip #179 Key Tenets of the Kimball Method</title>
+      <pubDate>Thu, 05 Nov 2015 01:01:20 GMT</pubDate>
+      <atom:updated>2015-11-05T01:01:20Z</atom:updated>
+      <description>&lt;div style=&quot;width:700px&quot;&gt;&lt;div class=&quot;pf-content&quot;&gt;
+&lt;p&gt;Most of the guidance in the Kimball method for designing, developing, and deploying a DW/BI system is just that: guidance. There are hundreds or thousands of rules in the Kimball Group&#226;€™s many books, and I confess to having bent many of those rules over the decades, when faced with conflicting goals or unpleasant political realities.&lt;/p&gt;
+&lt;p&gt;There are several tenets to the Kimball method that I am passionate about. This &lt;em&gt;Design Tip &lt;/em&gt;lists the things I say over and over, to audiences experienced and new. Any reader who has attended a class that I&#226;€™ve taught, or hired me as a consultant, has heard me discourse on most or all of the items on this list.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt; The dimensional model is the key asset.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The Kimball method, as outlined in &lt;em&gt;&lt;a href=&quot;../../../data-warehouse-business-intelligence-resources/books/data-warehouse-dw-lifecycle-toolkit/index.html&quot;&gt;The Data Warehouse Lifecycle Toolkit, Second Edition&lt;/a&gt;&lt;/em&gt;, is centered on the dimensional model. Dimensional modeling principles are Ralph Kimball&#226;€™s and the Kimball Group&#226;€™s most widely known contribution to the world of business intelligence. It&#226;€™s our focus because a good dimensional model is absolutely vital to the success of your DW/BI endeavor. If you get the model right, and populate it with integrity, the rest is straightforward.&lt;/p&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;&lt;strong&gt; Dimensional modeling is a group activity.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Even the best dimensional modeler will create a poor dimensional model if she works solo. Not only is dimensional modeling a group activity, it is a group activity that must involve the business user community. Over the years, we have turned down countless consulting requests to design a model without business input. Or, worse, struggled through painful projects where the promised business user participation did not materialize.&lt;/p&gt;
+&lt;p&gt;It is undoubtedly a huge request of the user community. Our design process usually requires 50-60 hours of sessions over a 4 to 6 week period (or more, depending on project complexity). The people whom we want to participate in the design sessions are always valuable and in demand. But if they can&#226;€™t be convinced to put in the time and energy, the resulting system will fail.&lt;/p&gt;
+&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;&lt;strong&gt; The dimensional model is the best specification for the DW/BI system.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The majority of clients that I work with don&#226;€™t have a written specification for the DW/BI system, certainly no document that reflects reality in a meaningful way. The most common specification format includes mind-numbing lists of what users want to filter and drill on, as well as the demand that all 2000 of the existing reports be supported by the new system. If all we&#226;€™ve accomplished with our new DW/BI system is re-platforming the existing canned reports, we have failed.&lt;/p&gt;
+&lt;p&gt;We ask the business users at the end of the design process to think about the analyses they&#226;€™ve recently done, tried to do, or would have liked to do, from the information in the current design scope. We want them to say &#226;€œYes, this model meets our needs.&#226;€ At the same time, the IT people on the team have been watching the discussion of data sources, transformations, and other technical details. We ask them to affirm &#226;€œYes, we can populate this data model.&#226;€ The dimensional model design write-up is a meaningful and actionable specification of the requirements.&lt;/p&gt;
+&lt;ol start=&quot;4&quot;&gt;
+&lt;li&gt;&lt;strong&gt;The dimensional model should add value beyond restructuring.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Some of the most valuable improvements that you can deliver in your DW/BI system are to add improved descriptors and groups to frequently used data. Yet these opportunities are often missed by the design team. I&#226;€™ve even encountered teams with an explicit policy to add nothing beyond what is in the source system.&lt;/p&gt;
+&lt;p&gt;Examples of valuable data model additions include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Making it easy for users to filter out the seldom used transaction codes.&lt;/li&gt;
+&lt;li&gt;Providing attractive sort columns for pick lists and reports.&lt;/li&gt;
+&lt;li&gt;Precompute banding, such as age ranges or transaction quality measures.&lt;/li&gt;
+&lt;li&gt;Supporting different or deeper hierarchies than are managed in the source systems, such as marketing versus manufacturing views of the product dimension.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&quot;5&quot;&gt;
+&lt;li&gt;&lt;strong&gt; Master data management systems are a great source.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;De-duplication is one of the most difficult tasks facing a data warehouse team. Since the earliest days of data warehousing, the back room team has struggled to design ETL processes that de-duplicate entities such as customer. The increasing popularity and functionality of master data management (MDM) technology and programs provides a much better solution than within the ETL flow. And not just because it&#226;€™s hard! The rhythm of the ETL process, which on an ongoing basis we want to be bullet proof and hands free, is fundamentally at odds with the de-duplication process. No matter how great our tools, how clever our code, how complete our business rules, the automated de-duplication process cannot achieve 100% accuracy. A person is required to make a judgment on the questionable cases. This works much better if it is a job responsibility during the business day, rather than waiting for the ETL load.&lt;/p&gt;
+&lt;p&gt;A simple MDM system can be used to build the value-added data elements discussed previously in this &lt;em&gt;Design Tip&lt;/em&gt;. Dimension hierarchies are notorious for being imperfectly structured if sourced from users&#226;€™ desktops; the MDM tools deliver a simple platform to manage this information.&lt;/p&gt;
+&lt;ol start=&quot;6&quot;&gt;
+&lt;li&gt;&lt;strong&gt;Don&#226;€™t skip the relational data warehouse.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Designing and populating an enterprise conformed data warehouse is hard. Everyone would like to skip this step. Throughout the 23+ years of my career in data warehousing, I have observed any number of technological attempts to simplify the process, from building the BI layer directly on the transaction system, to so-called virtual data warehouses, back full circle to the current flavor of visualization tool build scripts.&lt;/p&gt;
+&lt;p&gt;As I discussed in &lt;em&gt;&lt;a href=&quot;../../../2014/01/design-tip-162-leverage-data-visualization-tools-but-avoid-anarchy/index.html&quot;&gt;Design Tip #162 Leverage Data Visualization Tools, But Avoid Anarchy&lt;/a&gt;&lt;/em&gt;, just say no! Unless you completely control all of your source data, you should leave ETL to the ETL tool, leave data storage and management to a relational database engine, and let the BI tools shine at what they do best: great visualizations and user experience.&lt;/p&gt;
+&lt;ol start=&quot;7&quot;&gt;
+&lt;li&gt;&lt;strong&gt; It&#226;€™s all about the business.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I say this many times during classes and consulting. It&#226;€™s the most important characteristic of the Kimball Lifecycle method: practical, uncompromising focus on the business. It infuses everything we do, and it&#226;€™s the single most important message to carry forward.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Looking Forward&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I feel incredibly lucky to have been part of Kimball Group for the past twelve years. It&#226;€™s been an honor to work not only with Ralph, Margy, Bob, and Warren, but also with the hundreds of students, clients, and colleagues from whom I&#226;€™ve learned so much. I am humbled by what we&#226;€™ve achieved together, and blessed to have had what I consider to be the best job in the world.&lt;/p&gt;
+&lt;p&gt;I feel particularly blessed in comparison to Warren, whose death last year from brain cancer profoundly affected me and all of Kimball Group. In 2016, I will be celebrating Warren and his passion for fitness by cycling across the United States to raise funds for brain cancer research. I&#226;€™d be honored if you&amp;#8217;d follow our blog that will chronicle this journey (&lt;a href=&quot;https://itinerantphilosopher.wordpress.com/&quot;&gt;https://itinerantphilosopher.wordpress.com/&lt;/a&gt;)&#194;&#160;and thrilled if you would consider donating to our efforts to raise research funds for brain cancer.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+</item>
+ <item>
+      <guid isPermaLink="true">/archive/bi/dwh/design-tip-178-tried-and-true-concepts-for-dw-bi-success.html</guid>
+      <link>/archive/bi/dwh/design-tip-178-tried-and-true-concepts-for-dw-bi-success.html</link>
+      <title>Design Tip #178 Tried and True Concepts for DW-BI Success</title>
+      <pubDate>Thu, 01 Oct 2015 02:15:45 GMT</pubDate>
+      <atom:updated>2015-10-01T02:15:45Z</atom:updated>
+      <description>&lt;div style=&quot;width:700px&quot;&gt;&lt;div class=&quot;pf-content&quot;&gt;
+&lt;p&gt;Time marches on and soon the collective retirement of the Kimball Group will be upon us. At the end of 2015 we will all retire. In my final &lt;em&gt;Design Tip&lt;/em&gt;, I would like to share the perspective for DW/BI success I&#226;€™ve gained from my 26 years in the data warehouse/business intelligence industry.&lt;/p&gt;
+&lt;p&gt;While data warehousing has been around now for a long while, there continue to be significant opportunities for organizations to leverage information for more effective decision-making. New technologies consistently emerge that create and allow us to gather increasingly more granular data from the world that surrounds us. The data and the analytics surrounding it are as interesting and important as ever &#226;€“ perhaps more so. New and improved DW/BI solutions will continue to be deployed. There will be no future shortage of opportunities to apply the lessons learned about creating a successful DW/BI environment.&lt;/p&gt;
+&lt;p&gt;By now, we all recognize that data warehousing is a mature industry. We are long past the pioneering stage of DW/BI evolution. We are working with proven, capable hardware and software technologies with new and more capable technologies evolving all the time. As an industry, we have been implementing data warehouse and business intelligence capabilities for a long time &#226;€“ decades in fact.&#194;&#160; Lessons have been learned, technologies improved, techniques honed and methodologies matured. Countless individuals have been trained, baptized by the fire of experience, and have proven capable of building successful DW/BI solutions. Clearly, there will always be newbies to be trained, mentored, and seasoned. Yet, as an industry, we know what it takes to be successful. There are no excuses for failure.&lt;/p&gt;
+&lt;p&gt;My suggestion for ongoing success is to keep your eyes wide open and constantly focus on the basics &#226;€“ the fundamental blocking and tackling of data warehousing. Embrace these tried and true concepts that years of experience have revealed to be true:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Focus on the business and business requirements&lt;/em&gt; &amp;#8211; Never forget to maintain a laser-like focus on achieving business value. The success of a DW/BI effort is totally dependent on business user engagement; keeping the business users involved and meeting their requirements dramatically increases the probability of success. In fact, it ensures it.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Obtain strong senior management sponsorship&lt;/em&gt; &amp;#8211; Lack of organizational support undermines the success of a DW/BI effort. Senior management must accept, support, manage and fund these efforts as long-term programs.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Organize for success&lt;/em&gt; &amp;#8211; Successful DW/BI initiatives are undertaken as a partnership between the IT team and the business units. The DW/BI effort cannot be identified as just an IT effort. The business community (not IT) needs to take ownership of the vision, strategy, roadmap (priorities), scope, timelines, governance, and quality of the DW/BI environment.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Integration is critical&lt;/em&gt; &amp;#8211; Leverage conformed dimensions as the basis for integration. Understand and embrace the discipline of dimensional design as the organizing theme for the data within the DW/BI environment.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Establish and enforce common vocabulary&lt;/em&gt; &amp;#8211; The first step to eliminating data inconsistency issues is to establish and enforce common names, definitions and descriptors across the DW/BI environment. Again, embracing the discipline of dimensional modeling is the secret to victory.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Focus on data quality&lt;/em&gt; &amp;#8211; At its foundation, the DW/BI environment must be a repository of high quality data. The biggest challenges for most DW/BI efforts are data-related. In general, the effort to develop the ETL processes required to provide high quality data is typically more demanding than anticipated. Adequate time and resources, including key subject area experts, must be allocated to these tasks.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Establish a phased design, development and deployment plan&lt;/em&gt; &amp;#8211; Constructing a DW/BI environment is a significant effort. It is nearly impossible to tackle everything at once. Embrace an iterative development plan that avoids an overly ambitious scope. Project iterations need to be identified to phase-in the overall design, development and deployment effort. The environment should grow by tackling new and additional business processes (i.e., fact tables).&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Exhibit patience&lt;/em&gt; &#226;€“ The initial phase of a DW/BI initiative usually takes a disproportionately long time; I call this the &amp;#8220;big gulp.&amp;#8221; This is necessarily true. While the initial phase corresponds to deploying a single business process, the bulk of the time in this phase is committed to designing, developing and deploying the critical, core set of conformed dimensions that will be leveraged throughout the DW/BI environment in later phases. This is normal and to be expected.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Finally, on a personal note &#226;€“ I would like to thank my clients, students, partners, family, and friends for your support all these years. I have learned more from all of you than you will ever appreciate. Each of you has my deepest gratitude.&lt;/p&gt;
+&lt;p&gt;Thank you and good luck!&lt;/p&gt;
+&lt;p&gt;Bob&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+</item>
+ <item>
+      <guid isPermaLink="true">/archive/bi/dwh/design-tip-177-final-word-of-the-day-collaboration.html</guid>
+      <link>/archive/bi/dwh/design-tip-177-final-word-of-the-day-collaboration.html</link>
+      <title>Design Tip #177 Final Word of the Day: Collaboration</title>
+      <pubDate>Tue, 01 Sep 2015 03:55:19 GMT</pubDate>
+      <atom:updated>2015-09-01T03:55:19Z</atom:updated>
+      <description>&lt;div style=&quot;width:700px&quot;&gt;&lt;div class=&quot;pf-content&quot;&gt;
+&lt;p&gt;For my final &lt;em&gt;Design Tip&lt;/em&gt;, I&#226;€™m returning to a fundamental theme that&#226;€™s not rocket science, but too often ignored: business-IT collaboration. If you buy into the proposition that the true measure of DW/BI success is business acceptance of the deliverables to improve their decision-making, then buying into the importance of collaboration should be easy. Achieving business adoption is a pipedream if the IT resources on a DW/BI team don&#226;€™t collaborate with their business counterparts. Likewise, the business needs to be willing to collaborate with IT.&lt;/p&gt;
+&lt;p&gt;Collaborative multi-disciplinary teams create successful DW/BI programs. Every major juncture of the Kimball Lifecycle approach lends itself to joint activities that bolster business-IT alignment:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Program/project planning &amp;#8211;&#194;&#160;&lt;/em&gt;Drive priorities based on business goals and objectives, balanced with delivery feasibilities.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Program/project management&lt;/em&gt; &amp;#8211; Communicate openly regarding checkpoint updates and solicit joint input regarding scope modifications.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Business requirements&lt;/em&gt; &amp;#8211; Focus on what the business does and why, plus how the business hopes to make decisions in the future, rather than asking &#226;€œwhat do you want in a DW/BI system?&#226;€&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Technical architecture and product selection&lt;/em&gt; &amp;#8211; Involve business representatives to select their tools. As a friendly reminder to the technologists: technology is a prerequisite enabler, but should not be the DW/BI team&#226;€™s primary focus! Don&#226;€™t bother educating (or perhaps overeducating) the business about infrastructure and plumbing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Dimensional modeling&lt;/em&gt; &amp;#8211; Derive dimensional models from interactive workshops with business and IT representatives rather than from an isolated designer sitting in an ivory tower. Engaging subject matter experts from the business is absolutely critical to designing appropriate dimensional models. They should also be included in the data discovery and associated data governance decisions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;ETL design and development&lt;/em&gt; &amp;#8211; Enlist business subject matter experts to appropriately address data quality issues with IT representatives; IT shouldn&#226;€™t make these decisions in a vacuum.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;BI application design and development&lt;/em&gt; &amp;#8211; Prototype BI reports and analytics with the business.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Deployment&lt;/em&gt; &amp;#8211; Solicit business input on the initial and ongoing education/support needs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Since many &lt;em&gt;Design Tip&lt;/em&gt; subscribers reside in the IT organization, I&#226;€™ve focused on the importance of IT breaking down barriers with the business so they&#226;€™re viewed as partners instead of bottlenecks. But collaboration is a two-way street. It&#226;€™s equally important that business representatives collaborate with their IT counterparts by considering the following guidance:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Invite IT to sit alongside you during business strategy sessions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Invest the time to educate IT about the business. The more IT knows, the better they can support your needs. It&#226;€™s insufficient and ineffective to merely provide IT with a report or dataset specification.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Engage IT at the beginning of an initiative rather than involving them mid-project (or after your consultants are gone).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Appreciate IT&#226;€™s need to think about the enterprise, not just your individual department. Their concerns regarding data governance and master data are real.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Strive to avoid recreating the wheel with a proliferation of similar, but often slightly different, datasets, reports and analyses. This proliferation typically results in significant hard and soft costs for the organization.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Tap into IT&#226;€™s expertise. Don&#226;€™t make technology decisions in a vacuum without their involvement. And ask yourself whether you really want to maintain silo datasets, applications, and supplier relationships without IT&#226;€™s help.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The Kimball Lifecycle approach discourages a customer-vendor mindset where the business provides IT with an order which IT then attempts to fulfill. Our approach has always advocated for a partnership between IT and business stakeholders. Collaboration is far more than scheduling a meeting with interested parties; collaboration means working differently to actively engage both sides in joint decisions. Unfortunately, collaboration between the business and IT doesn&#226;€™t come naturally in some organizations. People may think differently, communicate using different vocabulary, and be incented differently. The goal is mutual engagement and understanding which typically requires strong cross-organizational support at leadership levels, especially if business and IT resources need to be nudged out of their &#226;€œsame as always&#226;€ attitudes. Ultimately, the line between the camps will blur with resources who comfortably straddle both worlds.&lt;/p&gt;
+&lt;p&gt;Finally, this is my last chance to speak with all of you. I want to express my gratitude and appreciation for the countless people who&#226;€™ve crossed my path during the last 34 years. Thanks to my husband and daughter for your unwavering patience and support. Thanks to my Metaphor colleagues whose influence has persisted throughout my career. Thanks to my DecisionWorks and Kimball Group partners for your intelligence and inspiration. And most importantly, thanks to my clients, students, and readers; you&#226;€™ve made it an amazing journey! Breaking up the band is always hard. While the Kimball Group is shutting its doors, our methods will live on through all of you. Good luck!&#194;&#160; Just remember: focus on the business and be dimensional!&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;javascript:;&quot; data-enc-email=&quot;znetlebff1[at]tznvy.pbz&quot; class=&quot;mail-link&quot;&gt;Margy&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+</item>
+ <item>
+      <guid isPermaLink="true">/archive/bi/dwh/design-tip-176-dimensional-models-logical-or-physical.html</guid>
+      <link>/archive/bi/dwh/design-tip-176-dimensional-models-logical-or-physical.html</link>
+      <title>Design Tip #176 Dimensional Models &amp;#8211; Logical or Physical?</title>
+      <pubDate>Tue, 28 Jul 2015 11:44:51 GMT</pubDate>
+      <atom:updated>2015-07-28T11:44:51Z</atom:updated>
+      <description>&lt;div style=&quot;width:700px&quot;&gt;&lt;div class=&quot;pf-content&quot;&gt;
+&lt;p&gt;Dimensional data models have been around for a very long time, almost certainly tracing their lineage back to the original Data Cube project between Dartmouth and General Mills in the late 1960s. The appeal of dimensional modeling stems from the obvious simplicity of the models and the natural way in which both business people and technical folks can understand what the models mean.&lt;/p&gt;
+&lt;p&gt;Dimensional models have two distinctly different expressions, logical and physical. The purely logical expression is the bubble diagram.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;../../../wp-content/uploads/2015/07/DT-176-Figure.png&quot;&gt;&lt;img class=&quot; size-medium wp-image-20603 aligncenter&quot; src=&quot;../../../wp-content/uploads/2015/07/DT-176-Figure-300x275.png&quot; alt=&quot;DT #176 Figure&quot; width=&quot;300&quot; height=&quot;275&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The box in the center always represents event measurements, e.g., order line items in the example. We call these facts. The bubbles around the edge represent the natural dimensions associated with the event measurements. There is very little database technical content in the bubble diagram logical model, but a lot of business content. Once the source of the fact measurements has been identified, the logical model is the place to begin the serious design.&lt;/p&gt;
+&lt;p&gt;Once agreed to, the bubble diagram logical model morphs fairly rapidly into a much more specific technical design replete with table names, field names, and primary key-foreign key declarations. This is what most IT folks think of as a dimensional model. Hmmm, this looks pretty physical. When this physical design has been declared, it seems like the only remaining step is to write the explicit DDL creating all the target tables, and then get down to the business of implementing the ETL pipelines to populate these physical tables.&lt;/p&gt;
+&lt;p&gt;Wait. Not so fast! If we are honest about this very physical appearing dimensional model, we have to admit that at the true physical storage level, our dimensional model may be implemented very differently. The two big elephants in the room are columnar databases and data virtualization. Columnar databases radically rearrange the data into sorted and compressed columns while preserving the surface illusion of the original dimensional model. Data virtualization transforms actual physical data in almost any original form at query time while preserving the surface illusion of the original dimensional model. Extreme forms of data virtualization popular in the Hadoop world are sometimes called &amp;#8220;deferred binding&amp;#8221; or &amp;#8220;schema on read.&amp;#8221; But in all cases, the end result is the familiar dimensional model.&lt;/p&gt;
+&lt;p&gt;Rather than getting hung up on religious arguments about logical versus physical models, we should simply recognize that a dimensional model is actually a data warehouse applications programming interface (API). The power of this API lies in the consistent and uniform interface seen by all observers, both users and BI applications. We see that it doesn&amp;#8217;t matter where the bits are stored or how they are delivered when an API request is launched.&lt;/p&gt;
+&lt;p&gt;The dimensional model API is very specific. It must expose fact tables, denormalized dimension tables, and single column surrogate keys. The requesting BI application cannot and must not care how the results sets are actually implemented and delivered. We see now that the true identity of the dimensional model is as a data warehouse API.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+</item>
+
+
+</channel>
+</rss>

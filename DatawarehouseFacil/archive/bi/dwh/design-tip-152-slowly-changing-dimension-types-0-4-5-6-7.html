@@ -1,0 +1,89 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Design Tip #152 Slowly Changing Dimension Types 0, 4, 5, 6 and 7</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description">
+		<meta name="application-name">
+		<meta name="title">
+		<link href="../../../favicon.ico" rel="shortcut icon" />
+		<link rel="stylesheet" href="../../../resources/main.css">
+	</head>
+	
+
+	<body>
+	
+		<div class="jumbotron1" id="jumbotron1">
+			<div class="container">
+				<h1 class="article-header">Design Tip #152 Slowly Changing Dimension Types 0, 4, 5, 6 and 7</h1>
+				<div class="article-date">martes, 5 de febrero de 2013</div>
+			</div>
+		</div>
+	
+		<hr id="anchor-point"/>
+		<div class="container-fluid">
+			<a href="../../../archive/bi/dwh/design-tip-152-slowly-changing-dimension-types-0-4-5-6-7.html#" class="navigationBars">
+				<div class="iconBars closed">
+					<span id="icon-bar1" class="iconBar colorChange background"></span>
+					<span id="icon-bar2" class="iconBar colorChange background"></span>
+					<span id="icon-bar3" class="iconBar colorChange background"></span>
+				</div>
+			</a>
+			<div class="navLinks">
+				<a id="link1" class="colorChange navLink link1" href="../../../index.html">Home</a>
+				<a class="iconLink" href="../../../index.html"><i title="Home" id="icon1" class="fa fa-home colorChange link1"></i></a>
+	
+				<a id="link2" class="colorChange navLink link2" href="../../../about.html">Sobre mi</a>
+				<a class="iconLink" href="../../../about.html"><i title="Sobre mi" id="icon2" class="fa fa-envelope colorChange link2"></i></a>
+
+				<a id="link2" class="colorChange navLink link3" href="../../../archive.html">Archivo</a>
+				<a class="iconLink" href="../../../about.html"><i title="Archivo" id="icon3" class="fa fa-archive colorChange link3"></i></a>
+			</div>			
+			
+			<div class="row">
+				<div class="content col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+					<div class="article">
+						<p class="article-description"></p>				
+						<div class="article-content">
+							<div class="pf-content">
+							<p>Ralph introduced the concept of slowly changing dimension (SCD) attributes in 1996. Dimensional modelers, in conjunction with the businessâ€™s data governance representatives, must specify the data warehouseâ€™s response to operational attribute value changes. Most Kimball readers are familiar with the core SCD approaches: type 1 (overwrite), type 2 (add a row), and type 3 (add a column). Since legibility is a key component of the Kimball mantra, we sometimes wish Ralph had given these techniques more descriptive names, such as â€œoverwriteâ€ instead of â€œtype 1.â€ But at this point, the SCD type numbers are part of our industryâ€™s vernacular.</p>
+							<p>We have written about more advanced SCD patterns, such as the 2005 article entitled â€œ<a href="../../../2005/03/10/slowly-changing-dimensions-are-not-always-as-easy-as-1-2-3/index.html">Slowly Changing Dimensions are Not Always as Easy as 1, 2, 3.</a>â€ However, weâ€™ve not consistently named the more advanced and hybrid techniques. With the third edition of <a href="http://www.amazon.com/The-Data-Warehouse-Toolkit-Dimensional/dp/1118530802/ref=sr_1_12"><em>The Data Warehouse Toolkit</em></a> (Wiley, 2013), weâ€™ve decided to assign â€œtype numbersâ€ to several techniques that have been described, but not precisely labeled in the past. Our hope is that more specific technique names will facilitate clearer communication between DW/BI team members.</p>
+							<p><strong>Type 0: Retain Original</strong></p>
+							<p>With type 0, the dimension attribute value never changes, so facts are always grouped by this original value. Type 0 is appropriate for any attribute labeled â€œoriginal,â€ such as a customerâ€™s original credit score, or any durable identifiers. Type 0 also applies to most date dimension attributes.</p>
+							<p><strong>Type 4: Add Mini-Dimension</strong></p>
+							<p>The type 4 technique is used when a group of dimension attributes are split off into a separate mini-dimension. This approach is useful when dimension attribute values are relatively volatile. Frequently-used attributes in multi-million row dimension tables are also mini-dimension design candidates, even if they donâ€™t change frequently. A surrogate key is assigned to each unique profile or combination of attribute values in the mini-dimension. The surrogate keys of both the base dimension and mini-dimension profile are captured as foreign keys in the fact table.</p>
+							<p><a class="ether-frame ether-frame-1 alignnone" href="../../../wp-content/uploads/2013/02/type-441.png" rel="shadowbox"><img title="type 4" src="../../../wp-content/uploads/2013/02/type-441.png" alt="" width="538" height="163"></a></p>
+							<p>&nbsp;</p>
+							<p>The following type 5, 6, and 7 techniques are hybrids that combine the basics to support the common requirement to both accurately preserve historical attribute values, plus report historical facts according to current attribute values. The hybrid approaches provide more analytic flexibility, albeit with greater complexity.</p>
+							<p><strong>Type 5: Add Mini-Dimension and Type 1 OutriggerÂ Â Â Â Â Â Â Â Â Â </strong></p>
+							<p>The type 5 technique builds on the type 4 mini-dimension by embedding a â€œcurrent profileâ€ mini-dimension key in the base dimension thatâ€™s overwritten as a type 1 attribute. This approach, called type 5 because 4 + 1 equals 5, allows the currently-assigned mini-dimension attribute values to be accessed along with the base dimensionâ€™s others without linking through a fact table. Logically, we typically represent the base dimension and current mini-dimension profile outrigger as a single table in the presentation layer. The outrigger attributes should have distinct column names, like â€œCurrent Income Level,â€ to differentiate them from attributes in the mini-dimension linked to the fact table. The ETL team must update/overwrite the type 1 mini-dimension reference whenever the current mini-dimension changes over time. If the outrigger approach does not deliver satisfactory query performance, then the mini-dimension attributes could be physically embedded (and updated) in the base dimension.</p>
+							<p><a class="ether-frame ether-frame-1 alignnone" href="../../../wp-content/uploads/2013/02/type-521.png" rel="shadowbox"><img title="type 5" src="../../../wp-content/uploads/2013/02/type-521.png" alt="" width="593" height="162"></a></p>
+							<p>&nbsp;</p>
+							<p><strong>Type 6: Add Type 1 Attributes to Type 2 Dimension</strong></p>
+							<p>Type 6 builds on the type 2 technique by also embedding current attributes in the dimension so that fact rows can be filtered or grouped by either the type 2 value in effect when the measurement occurred or the attributeâ€™s current value. The type 6 moniker was suggested by an HP engineer in 2000 because itâ€™s a type 2 row with a type 3 column thatâ€™s overwritten as a type 1; both 2 + 3 + 1 and 2 x 3 x 1 equal 6. With this approach, the current attributes are updated on <span style="text-decoration: underline;">all</span> prior type 2 rows associated with a particular durable key, as illustrated by the following sample rows:</p>
+							<p><a class="ether-frame ether-frame-1 alignnone" href="../../../wp-content/uploads/2013/02/type-621.png" rel="shadowbox"><img title="type 6" src="../../../wp-content/uploads/2013/02/type-621.png" alt="" width="545" height="319"></a></p>
+							<p>&nbsp;</p>
+							<p><strong>Type 7: Dual Type 1 and Type 2 Dimensions</strong></p>
+							<p>With type 7, the fact table contains dual foreign keys for a given dimension: a surrogate key linked to the dimension table where type 2 attributes are tracked, plus the dimensionâ€™s durable supernatural key linked to the current row in the type 2 dimension to present current attribute values.</p>
+							<p>Type 7 delivers the same functionality as type 6, but itâ€™s accomplished via dual keys instead of physically overwriting the current attributes with type 6. Like the other hybrid approaches, the current dimension attributes should be distinctively labeled to minimize confusion.</p>
+							<p><a class="ether-frame ether-frame-1 alignnone" href="../../../wp-content/uploads/2013/02/type-711.png" rel="shadowbox"><img title="type 7" src="../../../wp-content/uploads/2013/02/type-711.png" alt="" width="547" height="178"></a></p>
+							<p>Finally, hereâ€™s a figure from the<em>The Data Warehouse Toolkit, Third Edition</em> that highlights the implications of each slowly changing dimension technique on the analysis of fact table performance metrics. As weâ€™ve warned in the past, thereâ€™s more to consider than simply 1, 2 and 3!</p>
+							<p><a class="ether-frame ether-frame-1 alignnone" href="../../../wp-content/uploads/2013/02/SCD-recap11.png" rel="shadowbox"><img title="SCD recap" src="../../../wp-content/uploads/2013/02/SCD-recap11.png" alt="" width="618" height="344"></a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../../../resources/jquery.min.js"></script>
+		<script src="../../../resources/menu.js"></script>
+			
+		
+		<a id="scrollUp" href="../../../archive/bi/dwh/design-tip-152-slowly-changing-dimension-types-0-4-5-6-7.html#top" title="Volver" style="position: fixed; z-index: 2147483647; display: none;">
+			<i class="fa fa-chevron-up"></i>
+		</a>
+	</body>
+</html>

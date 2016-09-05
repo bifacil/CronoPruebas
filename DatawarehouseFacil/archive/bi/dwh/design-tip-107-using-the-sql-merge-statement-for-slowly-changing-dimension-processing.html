@@ -1,0 +1,111 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Design Tip #107 Using the SQL MERGE Statement for Slowly Changing Dimension Processing</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description">
+		<meta name="application-name">
+		<meta name="title">
+		<link href="../../../favicon.ico" rel="shortcut icon" />
+		<link rel="stylesheet" href="../../../resources/main.css">
+	</head>
+	
+
+	<body>
+	
+		<div class="jumbotron1" id="jumbotron1">
+			<div class="container">
+				<h1 class="article-header">Design Tip #107 Using the SQL MERGE Statement for Slowly Changing Dimension Processing</h1>
+				<div class="article-date">jueves, 6 de noviembre de 2008</div>
+			</div>
+		</div>
+	
+		<hr id="anchor-point"/>
+		<div class="container-fluid">
+			<a href="../../../archive/bi/dwh/design-tip-107-using-the-sql-merge-statement-for-slowly-changing-dimension-processing.html#" class="navigationBars">
+				<div class="iconBars closed">
+					<span id="icon-bar1" class="iconBar colorChange background"></span>
+					<span id="icon-bar2" class="iconBar colorChange background"></span>
+					<span id="icon-bar3" class="iconBar colorChange background"></span>
+				</div>
+			</a>
+			<div class="navLinks">
+				<a id="link1" class="colorChange navLink link1" href="../../../index.html">Home</a>
+				<a class="iconLink" href="../../../index.html"><i title="Home" id="icon1" class="fa fa-home colorChange link1"></i></a>
+	
+				<a id="link2" class="colorChange navLink link2" href="../../../about.html">Sobre mi</a>
+				<a class="iconLink" href="../../../about.html"><i title="Sobre mi" id="icon2" class="fa fa-envelope colorChange link2"></i></a>
+
+				<a id="link2" class="colorChange navLink link3" href="../../../archive.html">Archivo</a>
+				<a class="iconLink" href="../../../about.html"><i title="Archivo" id="icon3" class="fa fa-archive colorChange link3"></i></a>
+			</div>			
+			
+			<div class="row">
+				<div class="content col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+					<div class="article">
+						<p class="article-description"></p>				
+						<div class="article-content">
+							<div class="pf-content">
+							<p>Most ETL tools provide some functionality for handling slowly changing dimensions. Every so often,Â when the tool isnâ€™t performing as needed, the ETL developer will use the database to identify new andÂ changed rows, and apply the appropriate inserts and updates. Iâ€™ve shown examples of this code inÂ the Data Warehouse Lifecycle in Depth class using standard INSERT and UPDATE statements. AÂ few months ago, my friend Stuart Ozer suggested the new MERGE command in SQL Server 2008Â might be more efficient, both from a code and an execution perspective. His reference to a blog byÂ Chad Boyd on MSSQLTips.com gave me some pointers on how it works. MERGE is a combinationÂ INSERT, UPDATE and DELETE that provides significant control over what happens in each clause.</p>
+							<p>This example handles a simple customer dimension with two attributes: first name and last name.Â We are going to treat first name as a Type 1 and last name as a Type 2. Remember, Type 1 is whereÂ we handle a change in a dimension attribute by overwriting the old value with the new value; Type 2Â is where we track history by adding a new row that becomes effective when the new value appears.</p>
+							<p><strong>Step 1: Overwrite the Type 1 Changes</strong><br>
+							I tried to get the entire example working in a single MERGE statement, but the function isÂ deterministic and only allows one update statement, so I had to use a separate MERGE for the TypeÂ 1 updates. This could also be handled with an update statement since Type 1 is an update byÂ definition.</p>
+							<p>MERGE INTO dbo.Customer_Master AS CM<br>
+							USING Customer_Source AS CS<br>
+							ON (CM.Source_Cust_ID = CS.Source_Cust_ID)<br>
+							WHEN MATCHED AND &#8212; Update all existing rows for Type 1 changes<br>
+							CM.First_Name &lt;&gt; CS.First_Name<br>
+							THEN UPDATE SET CM.First_Name = CS.First_Name</p>
+							<p>This is a simple version of the MERGE syntax that says merge the Customer_Source table into theÂ Customer_Master dimension by joining on the business key, and update all matched rows whereÂ First_Name in the master table does not equal the First_Name in the source table.</p>
+							<p><strong>Step 2: Handle the Type 2 Changes</strong><br>
+							Now weâ€™ll do a second MERGE statement to handle the Type 2 changes.</p>
+							<p>This is where things get a little tricky because there are several steps involved in tracking Type 2Â changes. Our code will need to:</p>
+							<p>1. Insert brand new customer rows with the appropriate effective and end dates<br>
+							2. Expire the old rows for those rows that have a Type 2 attribute change by setting theÂ appropriate end date and current_row flag = â€˜nâ€™<br>
+							3. Insert the changed Type 2 rows with the appropriate effective and end dates and current_rowÂ flag = â€˜yâ€™</p>
+							<p>The problem with this is itâ€™s one too many steps for the MERGE syntax to handle. Fortunately, theÂ MERGE can stream its output to a subsequent process. Weâ€™ll use this to do the final insert of theÂ changed Type 2 rows by INSERTing into the Customer_Master table using a SELECT from theÂ MERGE results. This sounds like a convoluted way around the problem, but it has the advantage ofÂ only needing to find the Type 2 changed rows once, and then using them multiple times.</p>
+							<p>The code starts with the outer INSERT and SELECT clause to handle the changed row inserts at theÂ end of the MERGE statement. This has to come first because the MERGE is nested inside theÂ INSERT. The code includes several references to getdate; the code presumes the change wasÂ effective yesterday (getdate()-1) which means the prior version would be expired the day beforeÂ (getdate()-2). Finally, following the code, there are comments that refer to the line numbers</p>
+							<p>1 INSERT INTO Customer_Master<br>
+							2 SELECT Source_Cust_ID, First_Name, Last_Name, Eff_Date, End_Date, Current_Flag<br>
+							3 FROM<br>
+							4 ( MERGE Customer_Master CM<br>
+							5 USING Customer_Source CS<br>
+							6 ON (CM.Source_Cust_ID = CS.Source_Cust_ID)<br>
+							7 WHEN NOT MATCHED THEN<br>
+							8 INSERT VALUES (CS.Source_Cust_ID, CS.First_Name, CS.Last_Name,Â convert(char(10), getdate()-1, 101), &#8217;12/31/2199&#8242;, &#8216;y&#8217;)<br>
+							9 WHEN MATCHED AND CM.Current_Flag = &#8216;y&#8217;<br>
+							10 AND (CM.Last_Name &lt;&gt; CS.Last_Name ) THEN<br>
+							11 UPDATE SET CM.Current_Flag = &#8216;n&#8217;, CM.End_date = convert(char(10), getdate()-Â 2, 101)<br>
+							12 OUTPUT $Action Action_Out, CS.Source_Cust_ID, CS.First_Name, CS.Last_Name,Â convert(char(10), getdate()-1, 101) Eff_Date, &#8217;12/31/2199&#8242; End_Date, &#8216;y&#8217;Current_Flag<br>
+							13 ) AS MERGE_OUT<br>
+							14 WHERE MERGE_OUT.Action_Out = &#8216;UPDATE&#8217;;</p>
+							<p><strong>Code Comments</strong><br>
+							Lines 1-3 set up a typical INSERT statement. What we will end up inserting are the new values of theÂ Type 2 rows that have changed.</p>
+							<p>Line 4 is the beginning of the MERGE statement which ends at line 13. The MERGE statement hasÂ an OUTPUT clause that will stream the results of the MERGE out to the calling function. This syntaxÂ defines a common table expression, essentially a temporary table in the FROM clause, calledÂ MERGE_OUT.</p>
+							<p>Lines 4-6 instruct the MERGE to load Customer_Source data into the Customer_Master dimensionÂ table.</p>
+							<p>Line 7 says when there is no match on the business key, we must have a new customer, so Line 8Â does the INSERT. You could parameterize the effective date instead of assuming yesterdayâ€™s date.</p>
+							<p>Lines 9 and 10 identify a subset of the rows with matching business keys, specifically, where itâ€™s theÂ current row in the Customer_Master AND any one of the Type 2 columns is different.</p>
+							<p>Line 11 expires the old current row in the Customer_Master by setting the end date and current rowÂ flag to â€˜nâ€™.</p>
+							<p>Line 12 is the OUTPUT clause which identifies what attributes will be output from the MERGE, if any.</p>
+							<p>This is what will feed into the outer INSERT statement. The $Action is a MERGE function that tells usÂ what part of the MERGE each row came from. Note that the OUTPUT can draw from both the sourceÂ and the master. In this case, we are outputting source attributes because they contain the new TypeÂ 2 values.</p>
+							<p>Line 14 limits the output row set to only the rows that were updated in Customer_Master. TheseÂ correspond to the expired rows in Line 11, but we output the current values from Customer_Source inÂ Line 12.</p>
+							<p><strong>Summary</strong><br>
+							The big advantage of the MERGE statement is being able to handle multiple actions in a single passÂ of the data sets, rather than requiring multiple passes with separate inserts and updates. A wellÂ tuned optimizer could handle this extremely efficiently.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../../../resources/jquery.min.js"></script>
+		<script src="../../../resources/menu.js"></script>
+			
+		
+		<a id="scrollUp" href="../../../archive/bi/dwh/design-tip-107-using-the-sql-merge-statement-for-slowly-changing-dimension-processing.html#top" title="Volver" style="position: fixed; z-index: 2147483647; display: none;">
+			<i class="fa fa-chevron-up"></i>
+		</a>
+	</body>
+</html>

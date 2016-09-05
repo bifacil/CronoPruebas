@@ -1,0 +1,76 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Design Tip #174 Does Your Organization Need an Analytic Sandbox?</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description">
+		<meta name="application-name">
+		<meta name="title">
+		<link href="../../../favicon.ico" rel="shortcut icon" />
+		<link rel="stylesheet" href="../../../resources/main.css">
+	</head>
+	
+
+	<body>
+	
+		<div class="jumbotron1" id="jumbotron1">
+			<div class="container">
+				<h1 class="article-header">Design Tip #174 Does Your Organization Need an Analytic Sandbox?</h1>
+				<div class="article-date">mi&#233;rcoles, 6 de mayo de 2015</div>
+			</div>
+		</div>
+	
+		<hr id="anchor-point"/>
+		<div class="container-fluid">
+			<a href="../../../archive/bi/dwh/design-tip-174-does-your-organization-need-an-analytic-sandbox.html#" class="navigationBars">
+				<div class="iconBars closed">
+					<span id="icon-bar1" class="iconBar colorChange background"></span>
+					<span id="icon-bar2" class="iconBar colorChange background"></span>
+					<span id="icon-bar3" class="iconBar colorChange background"></span>
+				</div>
+			</a>
+			<div class="navLinks">
+				<a id="link1" class="colorChange navLink link1" href="../../../index.html">Home</a>
+				<a class="iconLink" href="../../../index.html"><i title="Home" id="icon1" class="fa fa-home colorChange link1"></i></a>
+	
+				<a id="link2" class="colorChange navLink link2" href="../../../about.html">Sobre mi</a>
+				<a class="iconLink" href="../../../about.html"><i title="Sobre mi" id="icon2" class="fa fa-envelope colorChange link2"></i></a>
+
+				<a id="link2" class="colorChange navLink link3" href="../../../archive.html">Archivo</a>
+				<a class="iconLink" href="../../../about.html"><i title="Archivo" id="icon3" class="fa fa-archive colorChange link3"></i></a>
+			</div>			
+			
+			<div class="row">
+				<div class="content col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+					<div class="article">
+						<p class="article-description"></p>				
+						<div class="article-content">
+							<div class="pf-content">
+							<p>Countless organizations have created mature dimensional data warehouses that are considered tremendous successes within their organizations. These data warehouse environments support key reporting and analysis requirements for the enterprise. Many are capable of supporting self-serve data access and analysis capabilities for disparate business users.</p>
+							<p>Nonetheless, regardless of the success achieved by these dimensional data warehouses, they are sometimes criticized as being too slow to react to new requirements, implement new data sources, and support new analytic capabilities. Sometimes these concerns are overstated as it clearly takes a certain amount of time to react to any new requirements, but sometimes these criticisms are true. Many data warehouses have grown and evolved to become mission-critical environments supporting key enterprise reporting, dashboards/scorecards, and self-serve data access capabilities. Due to the mission-critical nature, the data modeling, governance, ETL rules development, and change management requirements result in lengthy approval, design and development cycles for new requirements and changes. In many ways, these challenges are the price of success.</p>
+							<p>The data warehouse is likely to be very structured, heavily designed, subject to well-defined business rules, and tightly governed by the enterprise. Much of the data warehouse data is extensively cleansed and transformed to ensure it represents the true picture of what actually happened in the business. In addition, data warehouse data is frequently synchronized with the production environments via regularly scheduled loads. Thus, in the end, it is fairly rigid; it simply takes time to react to new data and analytic requests.</p>
+							<p>Yet, in todayâ€™s competitive world, organizations need to be more nimble. They want to quickly test new ideas, new hypotheses, new data sources, and new technologies. The creation of an analytic sandbox may be an appropriate response to these requirements. An analytic sandbox complements your dimensional data warehouse. It is not intended to replace the data warehouse, but rather stand beside it and provide an environment that can react more quickly to new requirements. The analytic sandbox is not really a new concept, but the recent big data discussions have brought the concept back to the forefront. Typically an analytic sandbox is thought of as an area carved out of the existing data warehouse infrastructure or as a separate environment living adjacent to the data warehouse. It provides the environment and resources required to support experimental or developmental analytic capabilities. Itâ€™s a place where these new ideas, hypotheses, data sources, and tools can be utilized, tested, evaluated, and explored. Meanwhile, the data warehouse stands as the prerequisite data foundation containing the historically-accurate enterprise data that the analytic sandbox efforts spin around and against.</p>
+							<p>Sometimes key data is fed from the existing data warehouse environment into the analytic sandbox and aligned with other non-data warehouse data stores. It is a place where new data sources can be tested to determine their value to the enterprise. Examples of these new data sources might be externally-acquired market intelligence, externally-acquired customer attributes, or sources such as social media interactions, mobile app interactions, mobile dust, and website activity. Often it may be too onerous to bring these new data sources into the existing data warehouse environment unless or until their value has been proven. Data in the analytic sandbox typically does not need to be synchronized on a recurring basis with production environment and these data sets expire after the passage of time.</p>
+							<p>A key objective of the analytic sandbox is to test a variety of hypotheses about data and analytics. Thus, it shouldnâ€™t be a huge surprise that most analytic sandbox projects result in â€œfailure.â€ That is, the hypothesis doesnâ€™t pan out as expected. This is one of the big advantages of the analytic sandbox. The data utilized in these â€œfailuresâ€ didnâ€™t and wonâ€™t need to be run through the rigor expected of data contained in the data warehouse. In this case, failure is its own success; each failure is a step towards finding the right answer.</p>
+							<p>Most business users will rightfully view the data warehouse as the go-to source for enterprise data. Their reporting, dashboards/scorecards and â€œself-serveâ€ ad hoc requests will be readily supported by the data warehouse. The target users of the analytic sandbox are often called â€œdata scientists.â€ These individuals are the small cadre of business users technologically savvy enough to identify potential sources of data, create their own â€œshadowâ€ databases, and build special purpose analyses. Often these individuals have to work â€œoff the grid.â€ They have crafted and created their own shadow analytic environments in spreadsheets, local data sets, under the desk data marts, or whatever it takes to get the job done. The analytic sandbox recognizes that these individuals have real requirements. It provides an environment for them to work â€œon the gridâ€ in an environment that is blessed, supported, funded, available, performant and, to some light extent, governed.</p>
+							<p>Having the right skills in house is critical to the success of the analytic sandbox. The users of the analytic sandbox need to be able to engage with the data with far fewer rules of engagement than most business users. They are users capable of self-provisioning their required data whether it comes from the data warehouse or not. They are capable of building the analytics and models directly against this data without assistance.</p>
+							<p>The analytic sandbox should be minimally governed. The idea is to create an environment that lives without all the overhead of the data warehouse environment. It should not be used to support the organizationâ€™s mission critical capabilities. It shouldnâ€™t be used to directly control or support any core operational capabilities. Likewise, it is not intended to be utilized for ongoing reporting or analytics required by the business on an ongoing basis, especially any reporting that supports external reporting to meet financial or government regulations.</p>
+							<p>An important characteristic of the analytic sandbox is that it is transient in nature. Data and analysis come and go as needed to support new analytic requirements. The data does not persist and it is not regularly updated via ongoing ETL capabilities. Data in the analytic sandbox typically has an agreed upon expiration date. Thus, any new findings or capabilities identified as important to the organization and critical for supporting ongoing capabilities will need to be incorporated into the enterprise operation or data warehouse environments.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../../../resources/jquery.min.js"></script>
+		<script src="../../../resources/menu.js"></script>
+			
+		
+		<a id="scrollUp" href="../../../archive/bi/dwh/design-tip-174-does-your-organization-need-an-analytic-sandbox.html#top" title="Volver" style="position: fixed; z-index: 2147483647; display: none;">
+			<i class="fa fa-chevron-up"></i>
+		</a>
+	</body>
+</html>

@@ -1,0 +1,95 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Design Tip #134 Data Warehouse Testing Recommendations</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description">
+		<meta name="application-name">
+		<meta name="title">
+		<link href="../../../favicon.ico" rel="shortcut icon" />
+		<link rel="stylesheet" href="../../../resources/main.css">
+	</head>
+	
+
+	<body>
+	
+		<div class="jumbotron1" id="jumbotron1">
+			<div class="container">
+				<h1 class="article-header">Design Tip #134 Data Warehouse Testing Recommendations</h1>
+				<div class="article-date">mi&#233;rcoles, 4 de mayo de 2011</div>
+			</div>
+		</div>
+	
+		<hr id="anchor-point"/>
+		<div class="container-fluid">
+			<a href="../../../archive/bi/dwh/design-tip-134-data-warehouse-testing-recommendations.html#" class="navigationBars">
+				<div class="iconBars closed">
+					<span id="icon-bar1" class="iconBar colorChange background"></span>
+					<span id="icon-bar2" class="iconBar colorChange background"></span>
+					<span id="icon-bar3" class="iconBar colorChange background"></span>
+				</div>
+			</a>
+			<div class="navLinks">
+				<a id="link1" class="colorChange navLink link1" href="../../../index.html">Home</a>
+				<a class="iconLink" href="../../../index.html"><i title="Home" id="icon1" class="fa fa-home colorChange link1"></i></a>
+	
+				<a id="link2" class="colorChange navLink link2" href="../../../about.html">Sobre mi</a>
+				<a class="iconLink" href="../../../about.html"><i title="Sobre mi" id="icon2" class="fa fa-envelope colorChange link2"></i></a>
+
+				<a id="link2" class="colorChange navLink link3" href="../../../archive.html">Archivo</a>
+				<a class="iconLink" href="../../../about.html"><i title="Archivo" id="icon3" class="fa fa-archive colorChange link3"></i></a>
+			</div>			
+			
+			<div class="row">
+				<div class="content col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+					<div class="article">
+						<p class="article-description"></p>				
+						<div class="article-content">
+							<div class="pf-content">
+							<p>A data warehouse / business intelligence system is challenging to test. Standard testing methodology tests one little thing at a time, but a DW/BI system is all about integration and complexity, not to mention large data volumes. Here are my top five recommendations for building and executing a testing environment for your DW/BI project.</p>
+							<p><strong>1. Create a small static test database, derived from real data.</strong><br>
+							You want it to be small so tests can run quickly. You want it to be static so that the expected results are known in advance. And you want it to be derived from real data because thereâ€™s nothing like real data to give you a realistic combination of scenarios, both good and bad. You will need to â€œcookâ€ additional rows into the test database to test any branch of your ETL code that covers a data scenario not included in the original test data.</p>
+							<p><strong>2. Test early and often.</strong><br>
+							Start testing as soon as you write a line of code (or connect two boxes in your ETL toolâ€™s user interface). Developers do this all the time, of course, developing and running unit tests to ensure their code does what itâ€™s supposed to do. Many developers arenâ€™t as good about keeping track of all those tests, and running them often. Daily. Every time you check in code. If you run your tests daily, and prioritize fixing any tests that broke yesterday, it will be easy to determine what went wrong.</p>
+							<p>Unit testing assures that a developerâ€™s code works as designed. System testing ensures that the entire system works, end to end, according to specifications. System testing should also begin early. Thereâ€™s an official test phase before you go live; this test phase is for running tests and fixing problems, not for identifying what the tests should be and how to run them. Start system testing early in the development process, so all the kinks are worked out long before the pressure-cooker system testing phase begins.</p>
+							<p><strong>3. Use testing tools and automate the test environment.</strong><br>
+							The suggestion to test early and often is practical only if you automate the process. No developer is going to spend the last hour of the work day babysitting unit tests! And few teams can afford a full time tester to do that work on the developersâ€™ behalf.<br>
+							To automate testing, you need tools. Many organizations will already have system quality assurance testing tools in place. If you donâ€™t, or if youâ€™re convinced your tools wonâ€™t meet the needs of the DW/BI system testing, try googling â€œsoftware quality assurance toolsâ€ for an overwhelming list of products and methodologies available at a wide range of costs.</p>
+							<p>All commercial software test tools will allow you to enter tests, execute tests, log the results of test runs, and report on those results. For unit testing and data quality testing, define tests to run a query in the source and target data warehouse. Youâ€™re looking for row counts and amounts to match up.</p>
+							<p>A testing tool used for DW/BI testing must be able to run a script that sets up the test environment before the tests are run. Tasks you may need to execute include:</p>
+							<ul>
+							<li>Restoring a virtual machine environment with clean test data</li>
+							<li>Modifying the static test data with special rows to test unusual conditions</li>
+							<li>Running your ETL program</li>
+							</ul>
+							<p>After the tests are executed and logged, end with a cleanup script, which may be as simple as dropping the VM environment.<br>
+							Standard testing methodology has you change one thing, run a test, and log results. In the DW/BI world, you should expect to group together many tests into a test group. Even with a tiny test database, you donâ€™t want to execute your ETL code for each of the hundreds of unit tests that you should be running.</p>
+							<p><strong>4. Enlist the business users to define system tests.</strong><br>
+							We need the business usersâ€™ expertise to define good system tests. How do we know the data is correct? How do we know that query performance meets their expectations? Enlisting business users in the test specification process will ensure better testing than if the DW/BI team just made up tests based on what they think is interesting. Engaging key business users in the quality assurance process also provides a huge credibility boost.</p>
+							<p><strong>5. The test environment must be as similar as possible to the production environment.</strong><br>
+							It is vitally important that the test environment be similar to production. Ideally, itâ€™s exactly the same hardware, software, and configuration. In the real world, relatively few organizations have the budget for two big DW servers. But any organization can, and should, make the following elements matchup:</p>
+							<ul>
+							<li>Drive configuration (relative names for drives). Disk is cheap and you should be able to duplicate your disk for test. But if you canâ€™t, at least make the drive letters and database file layout the same. Many people have whined at me that this is so much work to change the environment and make them the same. Yes it is! And so much better to do it now than in the final testing phase of your project.</li>
+							<li>Software versions from the operating system to the database to the usersâ€™ desktops, and everywhere in between.</li>
+							<li>Server layout. If the reporting system software will be on its own server in production, test it that way.</li>
+							<li>Security roles and privileges for back room service accounts. Your deployment is virtually guaranteed to fail if you donâ€™t test security roles first. I donâ€™t know why, but it always seems to go wrong.</li>
+							</ul>
+							<p>If you follow these suggestions, especially the suggestion for continuous testing, you are likely to have a smooth, crisis-free test phase and move into production on schedule. If not, youâ€™re running a serious risk of having an otherwise fabulous project be delayed interminably in QA hell, with business users and management rattling the doors.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../../../resources/jquery.min.js"></script>
+		<script src="../../../resources/menu.js"></script>
+			
+		
+		<a id="scrollUp" href="../../../archive/bi/dwh/design-tip-134-data-warehouse-testing-recommendations.html#top" title="Volver" style="position: fixed; z-index: 2147483647; display: none;">
+			<i class="fa fa-chevron-up"></i>
+		</a>
+	</body>
+</html>

@@ -1,0 +1,79 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Design Tip #147 Durable &#226;€œSuper-Natural&#226;€ Keys</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description">
+		<meta name="application-name">
+		<meta name="title">
+		<link href="../../../favicon.ico" rel="shortcut icon" />
+		<link rel="stylesheet" href="../../../resources/main.css">
+	</head>
+	
+
+	<body>
+	
+		<div class="jumbotron1" id="jumbotron1">
+			<div class="container">
+				<h1 class="article-header">Design Tip #147 Durable &#226;€œSuper-Natural&#226;€ Keys</h1>
+				<div class="article-date">martes, 10 de julio de 2012</div>
+			</div>
+		</div>
+	
+		<hr id="anchor-point"/>
+		<div class="container-fluid">
+			<a href="../../../archive/bi/dwh/design-tip-147-durable-super-natural-keys.html#" class="navigationBars">
+				<div class="iconBars closed">
+					<span id="icon-bar1" class="iconBar colorChange background"></span>
+					<span id="icon-bar2" class="iconBar colorChange background"></span>
+					<span id="icon-bar3" class="iconBar colorChange background"></span>
+				</div>
+			</a>
+			<div class="navLinks">
+				<a id="link1" class="colorChange navLink link1" href="../../../index.html">Home</a>
+				<a class="iconLink" href="../../../index.html"><i title="Home" id="icon1" class="fa fa-home colorChange link1"></i></a>
+	
+				<a id="link2" class="colorChange navLink link2" href="../../../about.html">Sobre mi</a>
+				<a class="iconLink" href="../../../about.html"><i title="Sobre mi" id="icon2" class="fa fa-envelope colorChange link2"></i></a>
+
+				<a id="link2" class="colorChange navLink link3" href="../../../archive.html">Archivo</a>
+				<a class="iconLink" href="../../../about.html"><i title="Archivo" id="icon3" class="fa fa-archive colorChange link3"></i></a>
+			</div>			
+			
+			<div class="row">
+				<div class="content col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+					<div class="article">
+						<p class="article-description"></p>				
+						<div class="article-content">
+							<div class="pf-content">
+							<p>One of the tasks of the ETL systemâ€™s customer dimension manager is to â€œassign a unique durable key to each customer.â€ By durable key, we mean a single key value that uniquely and reliably identifies a given customer over time. In most cases, this unique durable key is the natural business key from the operational systems, and all we have to do is copy it over as an attribute in the dimension table. However, there are cases where the natural key changes, and when it does, the dimension manager has to step in.</p>
+							<p>Some common causes for natural key changes include business reasons, duplicate entries, and integration of data from multiple sources. All of these require the creation and management of a unique durable key, also known as a super-natural key, during the ETL process.</p>
+							<p>A good example of a natural key change for business reasons comes from the credit card industry. Credit card account numbers are natural keys; they appear in transactions, and are mapped to surrogate keys in the dimension table. If a credit card is stolen, a new account number is issued. Without awareness of this change, the new account number would look like a totally new account and be entered as a new entity in the account dimension. The full history of the account would be lost because it now has two natural keys.</p>
+							<p>When this kind of business-driven change happens, the transaction system must generate a notification record telling the ETL process that a new account has been created to replace an old account. This could be as simple as a table with the old account number, the new account number, and the effective date. The ETL system must then create a new row with the new account number and a separate durable key column that ties the old and new accounts together. Figure 1 shows how this durable key would look in an account dimension.</p>
+							<p style="text-align: center;"><a class="ether-frame ether-frame-1 aligncenter" href="../../../wp-content/uploads/2012/07/design-tip-147-fig-1-e13436640286961.png" rel="shadowbox"><img class="aligncenter" title="design tip 147 fig 1" src="../../../wp-content/uploads/2012/07/design-tip-147-fig-1-e13436640286961.png" alt="" width="600" height="143"></a></p>
+							<p style="text-align: center;">Figure 1 â€“ A durable key in an account dimension.</p>
+							<p>In Figure 1, the Account_Key is the surrogate key assigned by the ETL system to uniquely identify each row. The Account_ID is the ETL substitute for the natural key from the transaction system because you would not usually load a sensitive element such as a credit card account number directly into the data warehouse. The third key column, called the Durable_Account_ID, is the durable key assigned by the ETL system to tie all related rows together. Figure 1 shows four rows for the same account because there were two Type 2 changes to track, one state change and one last name change, in addition to the Account_ID change.</p>
+							<p>Another useful design pattern is to add the durable account key to the fact table in addition to the dimensionâ€™s surrogate key. This joins back to the current rows in the dimension to make it easier to report all of history by the current dimension attributes. See the article titled â€œ<a href="../../../2005/03/slowly-changing-dimensions-are-not-always-as-easy-as-1-2-3/index.html">Slowly Changing Dimensions Are Not Always as Easy as 1, 2, 3</a>â€ for more information.</p>
+							<p>Dealing with duplicate entries in a dimension, or integrating disparate sources into a single dimension, involves more complex business logic that relies on durable keys. The end result is similar to Figure 1, but the integration process has to generate the list of related items rather than relying on the transaction system. Figure 2 shows the integration of products from multiple source systems. The MDM subsystem in the ETL process has identified these three products as the same and assigned them to the same durable key.</p>
+							<p style="text-align: center;"><a class="ether-frame ether-frame-1 aligncenter" href="../../../wp-content/uploads/2012/07/design-tip-147-fig-2-e13436642838501.png" rel="shadowbox"><img class="aligncenter" title="design tip 147 fig 2" src="../../../wp-content/uploads/2012/07/design-tip-147-fig-2-e13436642838501.png" alt="" width="600" height="133"></a></p>
+							<p style="text-align: center;">Figure 2 â€“ Duplicate product entries.</p>
+							<p>In this case, you might need to mark the natural keys from the different sources so they donâ€™t collide with each other. Try using a character data type for the source natural key, prepended by a source code. For example, if the products in Figure 2 came from SAP or the CRM system, the Product_ID column might contain the following values: SAP|37285, CRM|39101, and SAP|17195. This table then becomes input to the dimension and fact managers.</p>
+							<p>Durable keys are mandatory for dealing with ambiguities in the source system natural keys. Creating and assigning durable keys allows you to work around business changes to the natural keys, or to integrate duplicate or disparate data. But durable keys are just the start; there is a lot more to deduplicating and data integration.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../../../resources/jquery.min.js"></script>
+		<script src="../../../resources/menu.js"></script>
+			
+		
+		<a id="scrollUp" href="../../../archive/bi/dwh/design-tip-147-durable-super-natural-keys.html#top" title="Volver" style="position: fixed; z-index: 2147483647; display: none;">
+			<i class="fa fa-chevron-up"></i>
+		</a>
+	</body>
+</html>

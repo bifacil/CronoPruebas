@@ -1,0 +1,93 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Design Tip #115 Kimball Lifecycle in a Nutshell</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description">
+		<meta name="application-name">
+		<meta name="title">
+		<link href="../../../favicon.ico" rel="shortcut icon" />
+		<link rel="stylesheet" href="../../../resources/main.css">
+	</head>
+	
+
+	<body>
+	
+		<div class="jumbotron1" id="jumbotron1">
+			<div class="container">
+				<h1 class="article-header">Design Tip #115 Kimball Lifecycle in a Nutshell</h1>
+				<div class="article-date">martes, 4 de agosto de 2009</div>
+			</div>
+		</div>
+	
+		<hr id="anchor-point"/>
+		<div class="container-fluid">
+			<a href="../../../archive/bi/dwh/design-tip-115-kimball-lifecycle-in-a-nutshell.html#" class="navigationBars">
+				<div class="iconBars closed">
+					<span id="icon-bar1" class="iconBar colorChange background"></span>
+					<span id="icon-bar2" class="iconBar colorChange background"></span>
+					<span id="icon-bar3" class="iconBar colorChange background"></span>
+				</div>
+			</a>
+			<div class="navLinks">
+				<a id="link1" class="colorChange navLink link1" href="../../../index.html">Home</a>
+				<a class="iconLink" href="../../../index.html"><i title="Home" id="icon1" class="fa fa-home colorChange link1"></i></a>
+	
+				<a id="link2" class="colorChange navLink link2" href="../../../about.html">Sobre mi</a>
+				<a class="iconLink" href="../../../about.html"><i title="Sobre mi" id="icon2" class="fa fa-envelope colorChange link2"></i></a>
+
+				<a id="link2" class="colorChange navLink link3" href="../../../archive.html">Archivo</a>
+				<a class="iconLink" href="../../../about.html"><i title="Archivo" id="icon3" class="fa fa-archive colorChange link3"></i></a>
+			</div>			
+			
+			<div class="row">
+				<div class="content col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+					<div class="article">
+						<p class="article-description"></p>				
+						<div class="article-content">
+							<div class="pf-content">
+							<p>A student in a recent Data Warehouse Lifecycle in Depth class asked me for an overview of theÂ Kimball Lifecycle approach to share with their manager. Confident that weâ€™d published an executiveÂ summary, I was happy to oblige. Much to my surprise, our only published Lifecycle overview was aÂ chapter in a Toolkit book, so this Design Tip addresses the unexpected content void in our archives.</p>
+							<p>The Kimball Lifecycle approach has been around for decades. The concepts were originally conceivedÂ in the 1980s by members of the Kimball Group and several colleagues at Metaphor ComputerÂ Systems. When we first published the methodology in <em>The Data Warehouse Lifecycle Toolkit</em> in 1998, it was referred to as the Business Dimensional Lifecycle because this name reinforced three fundamental concepts:</p>
+							<ul>
+							<li>Focus on adding business value across the enterprise</li>
+							<li>Dimensionally structure the data delivered to the business via reports and queries</li>
+							<li>Iteratively develop the solution in manageable lifecycle increments rather than attempting a BigÂ Bang deliverable</li>
+							</ul>
+							<p>Rewinding back to the 1990s, our methodology was one of the few emphasizing this set of coreÂ principles, so the Business Dimensional Lifecycle name differentiated our approach from others in theÂ industry. Fast forwarding to 2008 when we published the second edition of <em><a href="../../../data-warehouse-business-intelligence-resources/books/data-warehouse-dw-lifecycle-toolkit/index.html">The Data Warehouse LifecycleÂ Toolkit</a></em>, we still absolutely believed in these concepts, but the industry had evolved. OurÂ principles had become mainstream best practices touted by many, so we condensed theÂ methodologyâ€™s official name to simply the Kimball Lifecycle.</p>
+							<p>In spite of dramatic advances in technology and understanding during the last couple of decades, theÂ basic constructs of the Kimball Lifecycle have remained strikingly constant. Our approach to designing,Â developing and deploying DW/BI solutions is tried and true. It has been utilized by thousands of projectÂ teams in virtually every industry, application area, business function, and technology platform. TheÂ Kimball Lifecycle approach has proven to work again and again.</p>
+							<p>The Kimball Lifecycle approach is illustrated in Figure 1. Successful DW/BI implementations depend onÂ the appropriate amalgamation of numerous tasks and components; itâ€™s not enough to have a perfectÂ data model or best of breed technology. The Lifecycle diagram is the overall roadmap depicting theÂ sequence of tasks required for effective design, development, and deployment.</p>
+							<p><img class="ether-frame ether-frame-1 alignnone" title="dt115" src="../../../wp-content/uploads/2009/08/dt115-e13402308721581.png" alt="" width="600" height="286"></p>
+							<p>Figure 1 The Kimball Lifecycle diagram.</p>
+							<p><strong>Program/Project Planning and Management:</strong><br>
+							The first box on the roadmap focuses on getting the program/project launched, includingÂ scoping, justification and staffing. Throughout the Lifecycle, ongoing program and projectÂ management tasks keep activities on track.</p>
+							<p><strong>Business Requirements:</strong><br>
+							Eliciting business requirements is a key task in the Kimball Lifecycle as these findings drive mostÂ upstream and downstream decisions. Requirements are collected to determine the key factorsÂ impacting the business by focusing on what business users do today (or want to do in theÂ future), rather than asking â€œwhat do you want in the data warehouse?â€ Major opportunitiesÂ across the enterprise are identified, prioritized based on business value and feasibility, and thenÂ detailed requirements are gathered for the first iteration of the DW/BI system development.Â Three concurrent Lifecycle tracks follow the business requirements definition.</p>
+							<p><strong>Technology Track:</strong><br>
+							DW/BI environments mandate the integration of numerous technologies, data stores, andÂ associated metadata. The technology track begins with system architecture design to establish aÂ shopping list of needed capabilities, followed by the selection and installation of productsÂ satisfying those architectural needs.</p>
+							<p><strong>Data Track:</strong><br>
+							The data track begins with the design of a target dimensional model to address the businessÂ requirements, while considering the underlying data realities. The word Kimball is synonymousÂ with dimensional modeling where data is divided into either measurement facts or descriptiveÂ dimensions. Dimensional models can be instantiated in relational databases, referred to as starÂ schemas, or multidimensional databases, known as OLAP cubes. Regardless of the platform,Â dimensional models attempt to address two simultaneous goals: ease of use from the usersâ€™Â perspective and fast query performance. The Enterprise Data Warehouse Bus Matrix is a keyÂ Kimball Lifecycle deliverable representing an organizationâ€™s core business processes andÂ associated common conformed dimensions; itâ€™s a data blueprint to ensure top-down enterpriseÂ integration with manageable bottom-up delivery by focusing on a single business process at aÂ time. The bus matrix is tremendously important because it simultaneously serves as a technicalÂ guide, a management guide, and a forum for communication with executives.</p>
+							<p>The dimensional model is converted into a physical design where performance tuning strategiesÂ are considered, then the ETL system design and development challenges are tackled. TheÂ Lifecycle describes 34 subsystems in the extract, transformation and load process flow groupedÂ into four major operations: extracting the data from the source, performing cleansing andÂ conforming transformations, delivering the data to the presentation layer, and managing theÂ backroom ETL processes and environment.</p>
+							<p><strong>Business Intelligence Track:</strong><br>
+							While some project members are immersed in the technology and data, others focus onÂ identifying and constructing a broad range of BI applications, including standardized reports,Â parameterized queries, dashboards, scorecards, analytic models, data mining applications,Â along with the associated navigational interfaces.</p>
+							<p><strong>Deployment, Maintenance, and Growth:</strong><br>
+							The three Lifecycle tracks converge at deployment, bringing together the technology, data andÂ BI applications. The deployed iteration enters a maintenance phase, while growth is addressedÂ by the arrow back to project planning for the next iteration of the DW/BI system. Remember thatÂ a DW/BI system is a long term process, not a one-off project!</p>
+							<p>Throughout the Kimball Lifecycle, thereâ€™s a recurring theme acknowledging that DW/BI professionalsÂ must continuously straddle the businessâ€™s requirements and the underlying realities of the source data,Â technology, and related resources. Project teams who focus exclusively on the requirements (orÂ realities) in isolation will inevitably face significant delivery and/or business adoption risks.</p>
+							<p>Finally, weâ€™ve said it before, and weâ€™ll surely repeat it again. Regardless of your organizationâ€™s specificÂ DW/BI objectives, we believe your overarching goal should be business acceptance of the DW/BIÂ deliverables to support decision making. This target must remain in the bullâ€™s eye throughout theÂ design, development, and deployment lifecycle of any DW/BI system.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../../../resources/jquery.min.js"></script>
+		<script src="../../../resources/menu.js"></script>
+			
+		
+		<a id="scrollUp" href="../../../archive/bi/dwh/design-tip-115-kimball-lifecycle-in-a-nutshell.html#top" title="Volver" style="position: fixed; z-index: 2147483647; display: none;">
+			<i class="fa fa-chevron-up"></i>
+		</a>
+	</body>
+</html>

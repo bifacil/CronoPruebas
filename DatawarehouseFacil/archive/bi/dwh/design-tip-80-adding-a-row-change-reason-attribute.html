@@ -1,0 +1,108 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Design Tip #80 Adding a Row Change Reason Attribute</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description">
+		<meta name="application-name">
+		<meta name="title">
+		<link href="../../../favicon.ico" rel="shortcut icon" />
+		<link rel="stylesheet" href="../../../resources/main.css">
+	</head>
+	
+
+	<body>
+	
+		<div class="jumbotron1" id="jumbotron1">
+			<div class="container">
+				<h1 class="article-header">Design Tip #80 Adding a Row Change Reason Attribute</h1>
+				<div class="article-date">jueves, 1 de junio de 2006</div>
+			</div>
+		</div>
+	
+		<hr id="anchor-point"/>
+		<div class="container-fluid">
+			<a href="../../../archive/bi/dwh/design-tip-80-adding-a-row-change-reason-attribute.html#" class="navigationBars">
+				<div class="iconBars closed">
+					<span id="icon-bar1" class="iconBar colorChange background"></span>
+					<span id="icon-bar2" class="iconBar colorChange background"></span>
+					<span id="icon-bar3" class="iconBar colorChange background"></span>
+				</div>
+			</a>
+			<div class="navLinks">
+				<a id="link1" class="colorChange navLink link1" href="../../../index.html">Home</a>
+				<a class="iconLink" href="../../../index.html"><i title="Home" id="icon1" class="fa fa-home colorChange link1"></i></a>
+	
+				<a id="link2" class="colorChange navLink link2" href="../../../about.html">Sobre mi</a>
+				<a class="iconLink" href="../../../about.html"><i title="Sobre mi" id="icon2" class="fa fa-envelope colorChange link2"></i></a>
+
+				<a id="link2" class="colorChange navLink link3" href="../../../archive.html">Archivo</a>
+				<a class="iconLink" href="../../../about.html"><i title="Archivo" id="icon3" class="fa fa-archive colorChange link3"></i></a>
+			</div>			
+			
+			<div class="row">
+				<div class="content col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+					<div class="article">
+						<p class="article-description"></p>				
+						<div class="article-content">
+							<div class="pf-content">
+							<p>We are firm believers in the principle that business requirements drive the data model. Occasionally,Â weâ€™ll work with an organization that needs to analyze Type 2 changes in a dimension. They need toÂ answer questions like â€œHow many customers moved last year?â€, or â€œHow many new customers did weÂ get by month?â€ which can be difficult with the standard Type 2 control columns. When this happens,Â we add a control column called RowChangeReason to the design. I was recently approached byÂ someone who realized their business could use a RowChangeReason column and asked if it wasÂ possible to add one on to an existing dimension. In this design tip, weâ€™ll describe a bulk updateÂ technique for retroactively adding a RowChangeReason column to any of your dimensions.</p>
+							<p>In its simplest version, the RowChangeReason column contains a two character abbreviation for eachÂ Type 2 column that changed in a given row. For example if LastName and ZipCode changed, theÂ RowChangeReason would be â€œLN ZPâ€. You can certainly use more characters if you like, but makeÂ sure to put a space between the abbreviations. Although this is not meant to be a user queryableÂ column, it does let us easily identify and report on change events. A question like â€œHow many peopleÂ changed zip codes last year?â€ could be answered with the following SELECT statement:</p>
+							<p style="padding-left: 30px;">SELECT COUNT(DISTINCT CustomerBusinessKey)<br>
+							FROM Customer<br>
+							WHERE RowChangeReason LIKE &#8216;%ZP%&#8217;<br>
+							AND RowEffectiveDate BETWEEN &#8216;20050101&#8217; AND &#8216;20051231&#8217;</p>
+							<p>The LIKE operator and wildcards make the order of the entries unimportant. The RowChangeReasonÂ column allows us to answer a lot of interesting questions about behaviors in the dimension table.</p>
+							<p>Weâ€™ll use the simple customer dimension shown in Figure 1 as our example. In this table, FirstNameÂ is tracked as Type 1, and the other business attributes are tracked as Type 2. Since the table hasÂ Type 2 attributes, it also has the necessary Type 2 control columns: RowEffectiveDate, RowEndDateÂ and IsRowCurrent (which we realize is redundant, but we like the convenience). It also includes theÂ new column we are adding on called RowChangeReason.</p>
+							<p><img class="ether-frame ether-frame-1 alignnone" title="dt80" src="../../../wp-content/uploads/2012/06/dt801.png" alt="" width="260" height="330"><br>
+							Figure 1 â€“ A simple customer dimension</p>
+							<p>The process to bulk update the new RowChangeReason column takes two passes: One for the newÂ row for each business key, and one for all subsequent changed rows. The first pass joins theÂ dimension to itself using an outer join, treating the table as the current row and the alias as the priorÂ row. The query then finds all the new rows by constraining on all those entries that donâ€™t have priorÂ rows using the IS NULL limit in the WHERE clause.</p>
+							<p style="padding-left: 30px;">UPDATE Customer<br>
+							SET RowChangeReason = &#8216;NW&#8217;<br>
+							FROM Customer LEFT OUTER JOIN<br>
+							Customer PE ON &#8212; Prior Entry Customer table alias<br>
+							Customer.CustomerBusinessKey =<br>
+							PE.CustomerBusinessKey<br>
+							AND<br>
+							Customer.RowEffectiveDate = PE.RowEndDate+1<br>
+							WHERE PE.CustomerBusinessKey IS NULL</p>
+							<p>The second pass is a bit more complicated because it needs to create a RowChangeReason code forÂ all the rows that have been added to the dimension due to a change in a Type 2 attribute. In thisÂ case, we use an inner join between the current row and the prior row which automatically excludesÂ the new rows. Weâ€™ll also use a CASE statement to generate the string of abbreviations whichÂ identifies each of the four Type 2 columns that actually had a change from their prior values. Finally,Â weâ€™ll concatenate the abbreviations together to make the entry for the RowChangeReason column.</p>
+							<p style="padding-left: 30px;">UPDATE Customer<br>
+							SET RowChangeReason = Query1.RowChangeReason<br>
+							FROM<br>
+							(SELECT NE.CustomerBusinessKey, NE.RowEffectiveDate,<br>
+							(CASE WHEN NE.LastName &lt;&gt; PE.LastName<br>
+							THEN &#8216;LN &#8216; ELSE &#8221; END) +<br>
+							(CASE WHEN NE.City &lt;&gt; PE.City<br>
+							THEN &#8216;CT &#8216; ELSE &#8221; END) +<br>
+							(CASE WHEN NE.State &lt;&gt; PE.State<br>
+							THEN &#8216;ST &#8216; ELSE &#8221; END) +<br>
+							(CASE WHEN NE.Zip &lt;&gt; PE.Zip<br>
+							THEN &#8216;ZP &#8216; ELSE &#8221; END) RowChangeReason<br>
+							FROM Customer NE INNER JOIN &#8212; NE for new entry<br>
+							Customer PE ON &#8212; PE for prior entry<br>
+							NE.CustomerBusinessKey = PE.CustomerBusinessKey AND<br>
+							NE.RowEffectiveDate = PE.RowEndDate + 1<br>
+							) Query1<br>
+							INNER JOIN Customer ON<br>
+							Customer.CustomerBusinessKey = Query1.CustomerBusinessKey AND<br>
+							Customer.RowEffectiveDate = Query1.RowEffectiveDate</p>
+							<p>This SQL will work for the one-time process of adding on a RowChangeReason column if you left itÂ off your initial design. Of course, you will still need to add the appropriate comparison logic to yourÂ ETL programs to fill the RowChangeReason column moving forward.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../../../resources/jquery.min.js"></script>
+		<script src="../../../resources/menu.js"></script>
+			
+		
+		<a id="scrollUp" href="../../../archive/bi/dwh/design-tip-80-adding-a-row-change-reason-attribute.html#top" title="Volver" style="position: fixed; z-index: 2147483647; display: none;">
+			<i class="fa fa-chevron-up"></i>
+		</a>
+	</body>
+</html>

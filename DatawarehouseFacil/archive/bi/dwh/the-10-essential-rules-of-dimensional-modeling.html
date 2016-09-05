@@ -1,0 +1,91 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>The 10 Essential Rules of Dimensional Modeling</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description">
+		<meta name="application-name">
+		<meta name="title">
+		<link href="../../../favicon.ico" rel="shortcut icon" />
+		<link rel="stylesheet" href="../../../resources/main.css">
+	</head>
+	
+
+	<body>
+	
+		<div class="jumbotron1" id="jumbotron1">
+			<div class="container">
+				<h1 class="article-header">The 10 Essential Rules of Dimensional Modeling</h1>
+				<div class="article-date">viernes, 29 de mayo de 2009</div>
+			</div>
+		</div>
+	
+		<hr id="anchor-point"/>
+		<div class="container-fluid">
+			<a href="../../../archive/bi/dwh/the-10-essential-rules-of-dimensional-modeling.html#" class="navigationBars">
+				<div class="iconBars closed">
+					<span id="icon-bar1" class="iconBar colorChange background"></span>
+					<span id="icon-bar2" class="iconBar colorChange background"></span>
+					<span id="icon-bar3" class="iconBar colorChange background"></span>
+				</div>
+			</a>
+			<div class="navLinks">
+				<a id="link1" class="colorChange navLink link1" href="../../../index.html">Home</a>
+				<a class="iconLink" href="../../../index.html"><i title="Home" id="icon1" class="fa fa-home colorChange link1"></i></a>
+	
+				<a id="link2" class="colorChange navLink link2" href="../../../about.html">Sobre mi</a>
+				<a class="iconLink" href="../../../about.html"><i title="Sobre mi" id="icon2" class="fa fa-envelope colorChange link2"></i></a>
+
+				<a id="link2" class="colorChange navLink link3" href="../../../archive.html">Archivo</a>
+				<a class="iconLink" href="../../../about.html"><i title="Archivo" id="icon3" class="fa fa-archive colorChange link3"></i></a>
+			</div>			
+			
+			<div class="row">
+				<div class="content col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+					<div class="article">
+						<p class="article-description"></p>				
+						<div class="article-content">
+							<div class="pf-content">
+							<p>A student attending one of Kimball Group&#8217;s recent onsite dimensional modeling classes asked me for a list of &#8220;Kimball&#8217;s Commandments&#8221; for dimensional modeling. We&#8217;ll refrain from using religious terminology, but let&#8217;s just say the following are not-to-be-broken rules together with less stringent rule-of-thumb recommendations.</p>
+							<p><strong><em>Rule #1: Load detailed atomic data into dimensional structures.</em></strong></p>
+							<p>Dimensional models should be populated with bedrock atomic details to support the unpredictable filtering and grouping required by business user queries. Users typically don&#8217;t need to see a single record at a time, but you can&#8217;t predict the somewhat arbitrary ways they&#8217;ll want to screen and roll up the details. If only summarized data is available, then you&#8217;ve already made assumptions about data usage patterns that will cause users to run into a brick wall when they want to dig deeper into the details. Of course, atomic details can be complemented by summary dimensional models that provide performance advantages for common queries of aggregated data, but business users cannot live on summary data alone; they need the gory details to answer their ever-changing questions.</p>
+							<p><strong><em>Rule #2: Structure dimensional models around business processes.</em></strong></p>
+							<p>Business processes are the activities performed by your organization; they represent measurement events, like taking an order or billing a customer. Business processes typically capture or generate unique performance metrics associated with each event. These metrics translate into facts, with each business process represented by a single atomic fact table. In addition to single process fact tables, consolidated fact tables are sometimes created that combine metrics from multiple processes into one fact table at a common level of detail. Again, consolidated fact tables are a complement to the detailed single-process fact tables, not a substitute for them.</p>
+							<p><strong><em>Rule #3: Ensure that every fact table has an associated date dimension table.</em></strong></p>
+							<p>The measurement events described in Rule #2 always have a date stamp of some variety associated with them, whether it&#8217;s a monthly balance snapshot or a monetary transfer captured to the hundredth of a second. Every fact table should have at least one foreign key to an associated date dimension table, whose grain is a single day, with calendar attributes and nonstandard characteristics about the measurement event date, such as the fiscal month and corporate holiday indicator. Sometimes multiple date foreign keys are represented in a fact table.</p>
+							<p><strong><em>Rule #4: Ensure that all facts in a single fact table are at the same grain or level of detail.</em></strong></p>
+							<p>There are three fundamental grains to categorize all fact tables: transactional, periodic snapshot, or accumulating snapshot. Regardless of its grain type, every measurement within a fact table must be at the exact same level of detail. When you mix facts representing multiple levels of granularity in the same fact table, you are setting yourself up for business user confusion and making the BI applications vulnerable to overstated or otherwise erroneous results.</p>
+							<p><strong><em>Rule #5: Resolve many-to-many relationships in fact tables.</em></strong></p>
+							<p>Since a fact table stores the results of a business process event, there&#8217;s inherently a many-to-many (M:M) relationship between its foreign keys, such as multiple products being sold in multiple stores on multiple days. These foreign key fields should never be null. Sometimes dimensions can take on multiple values for a single measurement event, such as the multiple diagnoses associated with a health care encounter or multiple customers with a bank account. In these cases, it&#8217;s unreasonable to resolve the many-valued dimensions directly in the fact table, as this would violate the natural grain of the measurement event. Thus, we use a many-to-many, dual-keyed bridge table in conjunction with the fact table.</p>
+							<p><strong><em>Rule #6: Resolve many-to-one relationships in dimension tables.</em></strong></p>
+							<p>Hierarchical, fixed-depth many-to-one (M:1) relationships between attributes are typically denormalized or collapsed into a flattened dimension table. If you&#8217;ve spent most of your career designing entity-relationship models for transaction processing systems, you&#8217;ll need to resist your instinctive tendency to normalize or snowflake a M:1 relationship into smaller subdimensions; dimension denormalization is the name of the game in dimensional modeling.</p>
+							<p>It is relatively common to have multiple M:1 relationships represented in a single dimension table. One-to-one relationships, like a unique product description associated with a product code, are also handled in a dimension table. Occasionally many-to-one relationships are resolved in the fact table, such as the case when the detailed dimension table has millions of rows and its roll-up attributes are frequently changing. However, using the fact table to resolve M:1 relationships should be done sparingly.</p>
+							<p><strong><em>Rule #7: Store report labels and filter domain values in dimension tables.</em></strong></p>
+							<p>The codes and, more importantly, associated decodes and descriptors used for labeling and query filtering should be captured in dimension tables. Avoid storing cryptic code fields or bulky descriptive fields in the fact table itself; likewise, don&#8217;t just store the code in the dimension table and assume that users don&#8217;t need descriptive decodes or that they&#8217;ll be handled in the BI application. If it&#8217;s a row/column label or pull-down menu filter, then it should be handled as a dimension attribute.</p>
+							<p>Though we stated in Rule #5 that fact table foreign keys should never be null, it&#8217;s also advisable to avoid nulls in the dimension tables&#8217; attribute fields by replacing the null value with &#8220;NA&#8221; (not applicable) or another default value, determined by the data steward, to reduce user confusion if possible.</p>
+							<p><strong><em>Rule #8: Make certain that dimension tables use a surrogate key.</em></strong></p>
+							<p>Meaningless, sequentially assigned surrogate keys (except for the date dimension, where chronologically assigned and even more meaningful keys are acceptable) deliver a number of operational benefits, including smaller keys which mean smaller fact tables, smaller indexes, and improved performance. Surrogate keys are absolutely required if you&#8217;re tracking dimension attribute changes with a new dimension record for each profile change. Even if your business users don&#8217;t initially visualize the value of tracking attribute changes, using surrogates will make a downstream policy change less onerous. The surrogates also allow you to map multiple operational keys to a common profile, plus buffer you from unexpected operational activities, like the recycling of an obsolete product number or acquisition of another company with its own coding schemes.</p>
+							<p><strong><em>Rule #9: Create conformed dimensions to integrate data across the enterprise.</em></strong></p>
+							<p>Conformed dimensions (otherwise known as common, master, standard or reference dimensions) are essential for enterprise data warehousing. Managed once in the ETL system and then reused across multiple fact tables, conformed dimensions deliver consistent descriptive attributes across dimensional models and support the ability to drill across and integrate data from multiple business processes. The Enterprise Data Warehouse Bus Matrix is the key architecture blueprint for representing the organization&#8217;s core business processes and associated dimensionality. Reusing conformed dimensions ultimately shortens the time-to-market by eliminating redundant design and development efforts; however, conformed dimensions require a commitment and investment in data stewardship and governance, even if you don&#8217;t need everyone to agree on every dimension attribute to leverage conformity.</p>
+							<p><strong><em>Rule #10: Continuously balance requirements and realities to deliver a DW/BI solution that&#8217;s accepted by business users and that supports their decision-making.</em></strong></p>
+							<p>Dimensional modelers must constantly straddle business user requirements along with the underlying realities of the associated source data to deliver a design that can be implemented and that, more importantly, stands a reasonable chance of business adoption. The requirements-versus-realities balancing act is a fact of life for DW/BI practitioners, whether you&#8217;re focused on the dimensional model, project strategy, technical/ETL/BI architectures or deployment/maintenance plan.</p>
+							<p>If you&#8217;ve read ourÂ Intelligent Enterprise articles,Â <a href="../../../data-warehouse-and-business-intelligence-resources/data-warehouse-books/index.html" target="_blank">Toolkit books</a>Â or Design TipsÂ regularly, these rules shouldn&#8217;t be news to you, but here we&#8217;ve consolidated our rules into a single rulebook that you can refer to when you are gathered to design or review your models.</p>
+							<p>Good luck!</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../../../resources/jquery.min.js"></script>
+		<script src="../../../resources/menu.js"></script>
+			
+		
+		<a id="scrollUp" href="../../../archive/bi/dwh/the-10-essential-rules-of-dimensional-modeling.html#top" title="Volver" style="position: fixed; z-index: 2147483647; display: none;">
+			<i class="fa fa-chevron-up"></i>
+		</a>
+	</body>
+</html>

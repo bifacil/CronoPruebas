@@ -1,0 +1,76 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Design Tip #164 Have You Built Your Audit Dimension Yet?</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description">
+		<meta name="application-name">
+		<meta name="title">
+		<link href="../../../favicon.ico" rel="shortcut icon" />
+		<link rel="stylesheet" href="../../../resources/main.css">
+	</head>
+	
+
+	<body>
+	
+		<div class="jumbotron1" id="jumbotron1">
+			<div class="container">
+				<h1 class="article-header">Design Tip #164 Have You Built Your Audit Dimension Yet?</h1>
+				<div class="article-date">lunes, 3 de marzo de 2014</div>
+			</div>
+		</div>
+	
+		<hr id="anchor-point"/>
+		<div class="container-fluid">
+			<a href="../../../archive/bi/dwh/design-tip-164-built-your-audit-dimension.html#" class="navigationBars">
+				<div class="iconBars closed">
+					<span id="icon-bar1" class="iconBar colorChange background"></span>
+					<span id="icon-bar2" class="iconBar colorChange background"></span>
+					<span id="icon-bar3" class="iconBar colorChange background"></span>
+				</div>
+			</a>
+			<div class="navLinks">
+				<a id="link1" class="colorChange navLink link1" href="../../../index.html">Home</a>
+				<a class="iconLink" href="../../../index.html"><i title="Home" id="icon1" class="fa fa-home colorChange link1"></i></a>
+	
+				<a id="link2" class="colorChange navLink link2" href="../../../about.html">Sobre mi</a>
+				<a class="iconLink" href="../../../about.html"><i title="Sobre mi" id="icon2" class="fa fa-envelope colorChange link2"></i></a>
+
+				<a id="link2" class="colorChange navLink link3" href="../../../archive.html">Archivo</a>
+				<a class="iconLink" href="../../../about.html"><i title="Archivo" id="icon3" class="fa fa-archive colorChange link3"></i></a>
+			</div>			
+			
+			<div class="row">
+				<div class="content col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+					<div class="article">
+						<p class="article-description"></p>				
+						<div class="article-content">
+							<div class="pf-content">
+							<p>One of the most effective tools for managing data quality and data governance, as well as giving business users confidence in the data warehouse results, is the audit dimension. We often attach an audit dimension to every fact table so that business users can choose to illuminate the provenance and confidence in their queries and reports. Simply put, the audit dimension elevates metadata to the status of ordinary data and makes this metadata available at the top level of any BI tool user interface.</p>
+							<p>The secret to building a successful audit dimension is to keep it simple and not get too idealistic in the beginning. A simple audit dimension should contain environment variables and data quality indicators, such as the following:</p>
+							<p align="center"><a class="ether-frame ether-frame-1 alignleft" href="../../../wp-content/uploads/2014/03/DT-164-Figure-11.png" rel="shadowbox"><img class="aligncenter" title="DT #164 Figure 1" src="../../../wp-content/uploads/2014/03/DT-164-Figure-11.png" alt="" width="433" height="190"></a></p>
+							<p>Â The audit dimension, like all dimensions, provides the context for a particular fact row. Thus when a fact row is created, the environment variables are fetched from a small table containing the version numbers in effect for specific ranges of time. The data quality indicators are fetched from the error event fact table that records data quality errors encountered along the ETL pipeline. We have written extensively about the error event fact table and the audit dimension. See especially the white paper <a href="../../../2007/10/20/white-paper-an-architecture-for-data-quality/index.html"><em>An Architecture for Data Quality</em></a> on our website. This short Design Tip is really just a reminder for you to build your audit dimension if you have been putting it off!</p>
+							<p>The environment variables in the above figure are version numbers that change only occasionally. The ETL master version number is a single identifier, similar to a software version number, that refers to the complete ETL configuration in use when the particular fact row was created. The currency conversion version is another version number that identifies a specific set of foreign currency conversion business rules in effect when the fact table row was created. The allocation version is a number that identifies a set of business rules for allocating costs when calculating profitability. All of these environment variables are just examples to stimulate your thinking. But again, keep it simple.</p>
+							<p>The data quality indicators are flags that show whether some particular condition was encountered for the specific fact row. If the fact row contained missing or corrupt data (perhaps replaced by null) then the missing data flag would be set to true. If missing or corrupt data was filled in with an estimator, then the data supplied flag would be true. If the fact row contained anomalously high or low values, then the unlikely value flag would be true. Note that this simple audit dimension does not provide a precise description of the data quality problem, rather it only provides a warning that the business user should tread cautiously. Obviously, if you can easily implement more specific diagnostic warnings, then do so. But keep it simple. Donâ€™t try to win the elegance award.</p>
+							<p>The <a href="../../../2007/10/20/white-paper-an-architecture-for-data-quality/index.html">white paper</a> mentioned above does a deep dive into more sophisticated versions of the audit dimension, but I have been concerned that the really advanced audit dimension designs are daunting. Hence this Design Tip.</p>
+							<p>Finally, if you build an audit dimension, show it to your business users. Hereâ€™s a before and after portion of a simple tracking report using an out of bounds indicator with values â€œAbnormalâ€ and â€œOKâ€ that provides a useful warning that a large percentage of the Axon West data contains unlikely values. The instrumented report is created just by dragging the out of bounds indicator into the query. Business users are surprisingly grateful for this kind of information, since not only are they curious as to why the data has been flagged, but they appreciate not making business decisions based on too little information.</p>
+							<p><a class="ether-frame ether-frame-1 alignleft" href="../../../wp-content/uploads/2014/03/DT-164-Figure-21.png" rel="shadowbox"><img title="DT #164 Figure 2" src="../../../wp-content/uploads/2014/03/DT-164-Figure-21.png" alt="" width="482" height="264"></a></p>
+							<p>&nbsp;</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../../../resources/jquery.min.js"></script>
+		<script src="../../../resources/menu.js"></script>
+			
+		
+		<a id="scrollUp" href="../../../archive/bi/dwh/design-tip-164-built-your-audit-dimension.html#top" title="Volver" style="position: fixed; z-index: 2147483647; display: none;">
+			<i class="fa fa-chevron-up"></i>
+		</a>
+	</body>
+</html>
