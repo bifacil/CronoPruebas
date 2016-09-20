@@ -87,15 +87,27 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	font-weight:bold;
 }
 
-.page-title
+/*.page-title
 {
 	text-transform:uppercase;
 	font-weight:bold;
 	font-size:140%;
 	color:#7a7885;
-/*	border-bottom:2px dashed #7a7885;*/
+	border-bottom:2px dashed #7a7885;
 	padding-bottom:10px;
+}*/
+.page-title
+{
+	text-transform: uppercase;
+font-weight: bold;
+font-size: 18px;
+color: #7A7885;
+padding-bottom: 10px;
+line-height: 28px;
+font-weight: 900;
+font-family: "Roboto",Arial,sans-serif;
 }
+
 .imgpost img
 {
 	max-width:100%;
@@ -267,7 +279,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	font-weight:bold;
 	text-decoration:underline;
 }
-
+.blog-nav .active a , .sf-menu .active a
+{
+	color:#333 !important;
+}
 /*.blog-nav .active:after {
 	position: absolute;
 	bottom: 0;
