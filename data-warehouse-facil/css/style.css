@@ -186,7 +186,7 @@ p {margin: 0 0 30px;}
 @media screen and (max-width: 800px) {
 	
 .btn-primary {display:block !important;}
-.navbar-header {display: block;margin: 0 auto !important; width:100%;}
+.navbar-header {display: block;margin: 0 auto !important;}
 .cabecera .h1, .cabecera h1 {padding-top: 70px;position: relative;}
 .libro-img {margin-left: auto;margin-right: auto;display: block;}
 .pre-footer {height: 670px;}
@@ -203,5 +203,16 @@ p {margin: 0 0 30px;}
     margin-left: auto;
     width: 85%;
     margin-right: auto;
+}
+}
+
+@media screen and (max-width: 780px) {
+.header-divider {
+    border-right: 1px solid #006db0;
+    position: relative;
+    height: 30px;
+    top: 10px;
+    padding-right: 10px;
+    left: 0;
 }
 }
