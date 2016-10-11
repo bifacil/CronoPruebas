@@ -11,6 +11,8 @@ body {
 }
 .container {padding-bottom:10px;}
 p {margin: 0 0 30px;}
+.book-title {font-size:19px;}
+.books-row {padding-top:20px;padding-bottom:20px;}
 
 /** FOOTER **/
 .footer {
