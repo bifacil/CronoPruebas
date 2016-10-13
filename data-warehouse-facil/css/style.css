@@ -9,7 +9,7 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 220px;
   font-family: "Ubuntu", sans-serif;
-}
+	}
 .container {padding-bottom:10px;}
 p {margin: 0 0 30px;}
 .book-title {font-size:19px;}
@@ -132,6 +132,7 @@ p {margin: 0 0 30px;}
 .cabecera {background: url(img/Banner-Datawarehouse.jpg);background-size:cover;}
 .header-links {color:#fff;}
 .header-links:hover {color:#000;text-decoration: none;}
+
 
 /*** BLOG CATEGORIES ***/
 .blog-sidebar {position:sticky;}
