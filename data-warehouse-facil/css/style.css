@@ -8,6 +8,7 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 220px;
+  font-family: "Ubuntu", sans-serif;
 }
 .container {padding-bottom:10px;}
 p {margin: 0 0 30px;}
