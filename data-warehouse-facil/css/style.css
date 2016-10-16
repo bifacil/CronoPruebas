@@ -163,6 +163,10 @@ p {margin: 0 0 30px;}
 .header-links:hover {color:#000;text-decoration: none;}
 .navbar-default .navbar-nav>li>a {color: #006db0;}
 .navbar-default .navbar-nav>li>a:hover {color: #ccc;}
+.navbar-default {
+    background-color: #fff;
+    border-color: #e7e7e7;
+}
 
 
 /*** BLOG CATEGORIES ***/
