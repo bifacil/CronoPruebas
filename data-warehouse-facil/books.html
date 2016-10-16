@@ -20,8 +20,6 @@
     <link href="css/style.css" rel="stylesheet">
     <!-- FontAwesome -->
     <link href="css/font-awesome.css" rel="stylesheet">
-    <!-- Ubuntu Font -->
-	<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,700" rel="stylesheet">  
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -36,35 +34,41 @@
 
   <body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
+          <div class="header-divider"><a href="#"><img src="images/Logo-Datawarehouse.png" width="250" height="25" alt="" /></a></div>
         <div class="navbar-header">
-    <!-- if Menu>
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-              <! endif-->
-          <div class="header-divider"><a href="#"><img src="images/logo-data.jpg" width="250" height="30" alt="" /></div> <a class="navbar-brand" href="#">Índice artículos</a>
         </div>
-        
-    <!-- if navbar-collapse>
         <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-          </form>
-        </div><!--/.navbar-collapse -->
-        	<div class="navbar-right">
-            <a class="btn btn-primary btn-lg" href="#" role="button">Comprar Libro</a>
-            </div>
+          <ul class="nav navbar-nav">
+            <li><a href="#">Índice Artículos</a></li>
+                <!-- if Menu need more items...>
+            <li><a href="#contact">Contact</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+              <! endif-->
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a class="btn btn-primary btn-lg" href="#" role="button">Comprar Libro</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
       </div>
     </nav>
 
@@ -182,7 +186,7 @@
       <footer class="footer">
       	<div class="container foot">
       		<div class="row">
-        		<div class="col-md-4">
+        		<div class="col-md-4 col-sm-12 col-xs-12">
                 <ul class="list-styled">
                 	<li><a class="footer-links" href="/contacto">Contacto</a></li>
                 	<li>Sobre <a class="footer-links" href="/kimball-group">Kimball Group</a></li>
@@ -196,7 +200,7 @@
                         </ul>
                </div>
                
-        		<div class="col-md-4">
+        		<div class="col-md-4 col-sm-12 col-xs-12">
                 <div class="sm-footer">
                 	<a class="icon-facebook" href="#"></a>
                 	<a class="icon-twitter" href="#"></a>
@@ -204,10 +208,19 @@
                 </div>
                     <div class="sm-text"><span>Síguenos en Redes Sociales</span></div>
                 </div>
-        		<div class="col-md-4">
+        		<div class="col-md-4 col-md-pull-0 col-sm-12 col-sm-pull-1 col-xs-12">
+                <div class="col-md-6 col-xs-6 col-news">
+                	<h4 class="suscribir">Suscríbase a nuestra Newsletter</h4>
+                    <a class="boton-newsletter" href="#">IR</a>
+                </div>
+                <div class="col-md-6 col-xs-6">
+                 <img class="img-responsive" src="images/Chica-Datawarehouse.png" width="284" height="300" alt="" />
+                </div>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12">
+        			<p class="copyright-text">&copy; Data Warehouse Fácil. Todos los derechos reservados. 2016</p>
                 </div>
            </div>
-        <p class="copyright-text">&copy; Data Warehouse Fácil. Todos los derechos reservados. 2016</p>
         </div>
       </footer>
 
