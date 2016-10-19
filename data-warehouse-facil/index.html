@@ -8,7 +8,7 @@
     <meta name="author" content="Trending Consulting">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Data Warehous Fácil - Categorías</title>
+    <title>Data Warehous Fácil - Home</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -35,9 +35,9 @@
   <body>
 
     <!-- Fixed navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top navbar-home">
       <div class="container">
-          <div class="header-divider"><a href="#"><img src="images/Logo-Datawarehouse.png" width="250" height="25" alt="" /></a></div>
+          <div class="header-divider header-divider-home"><a href="#"><img src="images/Logo-Datawarehouse-white.png" width="250" height="25" alt="" /></a></div>
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
@@ -47,7 +47,7 @@
           </button>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
+          <ul class="nav navbar-nav indice-home">
             <li><a href="#">Índice Artículos</a></li>
                 <!-- if Menu need more items...>
             <li><a href="#contact">Contact</a></li>
@@ -66,96 +66,68 @@
               <! endif-->
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a class="btn btn-primary btn-lg" href="#" role="button">Comprar Libro</a></li>
+            <li><a class="btn btn-primary btn-lg boton-home-nav" href="#" role="button">Comprar Libro</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
 
     <!-- Main cabecera for a primary marketing message or call to action -->
-    <div class="cabecera">
+    <div class="cabecera-home">
       <div class="container">
-        <h1>Categorías</h1>
+      	<div class="row row-menu-home">
+		<ul class="nav nav-pills">
+		  <li class="active"><a href="#presentacion">Presentación</a></li>
+		  <li><a href="#suscribirse">Suscribirse</a></li>
+		  <li><a href="#articulos">Artículos</a></li>
+		  <li><a href="#kimball-group">Kimball Group</a></li>
+		  <li><a href="#ralph-kimball">Ralph Kimball</a></li>
+		  <li><a href="#crono">Crono</a></li>
+		</ul>
+        </div>
       </div>
     </div>
 
     <!-- Begin page content -->
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8 blog-main">
-
-          <div class="blog-post">
-            <h2 class="blog-post-category">Before Diving In</h2>
-            	<ul id="one" class="list-sytled-blog">
-                <li><a href="#">Consejos de diseño #107. <span>Utilizar la orden SQL MERGE...</span></a></li>
-                <li><a href="#">Consejos de diseño #107. <span>Utilizar la orden SQL</span></a></li>
-                <li><a href="#">Consejos de diseño #107. <span>Utilizar la orden</span></a></li>
-                <li><a href="#">Consejos de diseño #107. <span>Utilizar la</span></a></li>
-                <li><a href="#">Consejos de diseño #107. <span>Utilizar</span></a></li>
-                <li><a href="#">Consejos de diseño #107.</a></li>
-                </ul>
-                <hr>
-                
-            <h2 class="blog-post-category">Project/Programm Planning</h2>
-            	<ul id"two" class="list-sytled-blog">
-                <li><a href="#">Consejos de diseño #107. <span>Utilizar la orden SQL MERGE...</span></a></li>
-                <li><a href="#">Consejos de diseño #107. <span>Utilizar la orden SQL</span></a></li>
-                <li><a href="#">Consejos de diseño #107. <span>Utilizar la orden</span></a></li>
-                <li><a href="#">Consejos de diseño #107. <span>Utilizar la</span></a></li>
-                <li><a href="#">Consejos de diseño #107. <span>Utilizar</span></a></li>
-                <li><a href="#">Consejos de diseño #107.</a></li>
-                </ul>
-                <hr>
-                
-            <h2 class="blog-post-category">Before Diving In</h2>
-            	<ul id="three" class="list-sytled-blog">
-                <li><a href="#">Consejos de diseño #107. <span>Utilizar la orden SQL MERGE...</span></a></li>
-                <li><a href="#">Consejos de diseño #107. <span>Utilizar la orden SQL</span></a></li>
-                <li><a href="#">Consejos de diseño #107. <span>Utilizar la orden</span></a></li>
-                <li><a href="#">Consejos de diseño #107. <span>Utilizar la</span></a></li>
-                <li><a href="#">Consejos de diseño #107. <span>Utilizar</span></a></li>
-                <li><a href="#">Consejos de diseño #107.</a></li>
-                </ul>
-                <hr>
-          </div><!-- /.blog-post -->
-<!--/fin del texto -->
-        </div><!-- /.blog-main -->
-        
-        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
-          <div class="sidebar-module sidebar-module-inset">
-          </div>
-          <div class="sidebar-module">
-            <ol class="list-unstyled-categories">
-              <li class="blog-categories-item"><a href="#one" class="scroll">Before Diving In</a></li>
-              <li class="blog-categories-item"><a href="#two" class="scroll">Project/Programm Planning</a></li>
-              <li class="blog-categories-item"><a href="#three" class="scroll">Before Diving In</a></li>
-            </ol>
-          </div>
-        </div><!-- /.blog-sidebar -->
-        
-      </div><!-- /.row -->
-
-    </div> <!-- /container -->
-    
-    <!-- Begin author -->
-      <div class="libro-categories">
-      	<div class="container foot">
+    <!-- Begin Presentación section -->
+      <div id="presentacion" class="presentacion">
+      	<div class="container">
+      		<div class="row"><h3 class="encabezado-presentacion">¿Qué es esto?</h3></div>
       		<div class="row">
         		<div class="col-md-3">
-					<a href="#"><img class="libro-image" src="images/libro.png" width="192" height="250" alt="" /></a>
+					<a href="#"><img class="img-responsive center-block" src="images/libro-rojo.png" width="182" height="200" alt="" /></a>
                </div>
                
         		<div class="col-md-9">
-                	<h4 class="about-libro">Adquiere el Libro <span class="libro-name">The Kimball Group Reader, Remastered Collection</h4>
-                    <div class="col-md-3">
-                    	<a href="#"><img src="images/boton-amazon.png" width="180" height="42" alt="" /></a>
-                        </div>
-                    <div class="col-md-9">
-                    <p class="libro-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </div>
+                    <p class="p-presentacion">En esta web encontrarás los <strong>artículos de Kimball Group</strong> traducidos al español. Se trata de artículos excepcionales sobre el diseño y buenas prácticas en entornos <strong>Datawarehouse</strong>.</p>
+                    <p class="p-presentacion">Todos los artículos son de sus respectivos autores. Los artículos originales, en inglés, puedes consultarlos en la web de <a href="#">Kimball Group.</a></p>
+                    &nbsp;
+                    &nbsp;
+                    <p class="p-presentacion">Pretendemos ayudar a la divulgación de estas buenas prácticas para mejorar el diseño, construcción y mantenimiento de los datawarehouse en nuestras organizaciones.</p>
+                    <p class="p-presentacion">También te animamos a comprar los libros de Ralph Kimball y de todo su equipo. No te arrepentirás.</a></p>
                 </div>
            </div>
-        </div>
+         </div>
+      </div>
+    
+    <!-- Begin Presentación section -->
+      <div id="suscribete" class="suscribete">
+      	<div class="container">
+      		<div class="row"><h3 class="encabezado-suscribete">Suscríbete</h3></div>
+      		<div class="row">             
+        		<div class="col-md-7 parrafo-suscribete">
+                    <p class="p-suscribete">De momento solo hemos traducido unos pocos artículos (cada vez más), pero seguiremos trabajando para traducirlos todos.</p>
+                    &nbsp;
+                    &nbsp;
+                    <p class="p-suscribete"><strong>Suscríbete</strong> si quieres recibir los nuevos artículos directamente en tu bandeja de entrada, y formarás parte de la comunidad “Business Intelligence fácil” de profesionales BI/DWH.</p>
+                    &nbsp;
+                    <a class="boton-suscribete" role="button" href="#">Quiero Suscribirme</a>
+                </div>
+        		<div class="col-md-5">
+					<a href="#"><img class="img-responsive center-block buzon" src="images/suscribete.png" width="408" height="250" alt="" /></a>
+               </div>
+           </div>
+         </div>
       </div>
     
     <!-- Begin Footer -->
