@@ -323,6 +323,12 @@ h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif;}
 
 
 /*** RESPONSIVE ***/
+@media screen and (max-width: 1920) {
+.nav {
+    padding-left: 120px;
+}
+.cabecera-home {min-height:1080;}
+}
 
 @media screen and (max-width: 1600px) {
 .nav {
@@ -334,7 +340,7 @@ h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif;}
 
 @media screen and (max-width: 1440px) {
 .nav {
-    padding-left: 185px;
+    padding-left: 120px;
 }
 .header-divider {left:5px;}
 
