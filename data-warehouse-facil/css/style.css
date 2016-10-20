@@ -157,9 +157,10 @@ h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif;}
     text-transform: uppercase;
 }
 .btn-group-lg > .btn, .btn-lg {
-    border-radius: 6px;
+    border-radius: 4px;
     font-size: 18px;
-    padding: 10px 20px !important;
+    padding: 5px 20px !important;
+	text-transform:uppercase;
 }
 .btn-primary {
     background-color: #e31e25;
@@ -204,6 +205,7 @@ h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif;}
 .nav-pills>li a {font-weight:100;color:#f7f7f7;}
 .nav-pills>li a:hover {color: #ccc;background-color: transparent;}
 .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {font-weight:bold;color: #fff;background-color: transparent;}
+.nav > li > a:hover, .nav > li > a:focus {text-decoration: none;background-color: transparent;color:#ccc;}
 .boton-home-nav {
     color: #006db0 !important;
     background-color: #fff !important;
@@ -431,9 +433,11 @@ h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif;}
 
 
 /*** RESPONSIVE ***/
-@media screen and (max-width: 1920) {
-.nav {
+@media screen and (min-width: 1920px) {
+.logo-desktop {left: -150px !important;}
 }
+
+@media screen and (max-width: 1920px) {
 .cabecera-home {min-height:1080;}
 }
 
