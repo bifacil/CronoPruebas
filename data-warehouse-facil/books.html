@@ -21,7 +21,7 @@
     <!-- FontAwesome -->
     <link href="css/font-awesome.css" rel="stylesheet">
     <!-- Ubuntu Font -->
-	<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu:100,300,300i,400,400i,700" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -39,38 +39,17 @@
     <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
-          <div class="header-divider"><a href="#"><img src="images/Logo-Datawarehouse.png" width="250" height="25" alt="" /></a></div>
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="#">Índice Artículos</a></li>
-                <!-- if Menu need more items...>
-            <li><a href="#contact">Contact</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
-              <! endif-->
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a class="btn btn-primary btn-lg" href="#" role="button">Comprar Libro</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
+          <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 logo-desktop iphone-bug">
+          	<div class="col-lg-7 col-md-7 col-sm-8 col-xs-12">
+            <a class="header-divider" href="index.html"><img src="images/Logo-Datawarehouse.png" width="250" height="25" alt="" /></a>
+            </div>
+          	<div class="col-lg-5 col-md-5 col-sm-4 col-xs-12">
+            <a class="indice-others" href="categories.html">Índice Artículos</a>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-4 col-xs-12 boton-desktop">
+            <a class="btn btn-primary btn-lg boton-others-nav" href="books.html" role="button">Comprar Libro</a>
+        </div><!--/.fixed-navbar -->
       </div>
     </nav>
 
@@ -189,12 +168,12 @@
         		<div class="col-md-4 col-sm-12 col-xs-12">
                 <div class="encabezados-footer"><h5>Mapa del Sitio</h5></div>
                 <ul class="list-styled">
-                	<li><a class="footer-links" href="/contacto">Página de inicio</a></li>
-                	<li><a class="footer-links" href="/que-es-esto">¿Qué es esto?</a></li>
-                	<li><a class="footer-links" href="/kimball-group">Sobre Kimball Group</a></li>
-                	<li><a class="footer-links" href="/crono">Sobre Crono</a></li>
-                	<li><a class="footer-links" href="/comprar">Compra un libro</a></li>
-                	<li><a class="footer-links" href="/blog">Índice de artículos</a></li>
+                	<li><a class="footer-links" href="index.html">Página de inicio</a></li>
+                	<li><a class="footer-links scroll" href="/#presentacion">¿Qué es esto?</a></li>
+                	<li><a class="footer-links scroll" href="/#about-kimball">Sobre Kimball Group</a></li>
+                	<li><a class="footer-links scroll" href="https://businessintelligence.es/">Sobre Crono</a></li>
+                	<li><a class="footer-links" href="books.html">Compra un libro</a></li>
+                	<li><a class="footer-links" href="categories.html">Índice de artículos</a></li>
                 </ul>
                 <div class="encabezados-footer"><h5>Blogs Amigos</h5></div>
                     <ul class="list-unstyled">
@@ -214,13 +193,13 @@
         		<div class="col-md-4 col-md-pull-0 col-sm-12 col-sm-pull-1 col-xs-12 col-xs-pull-3">
                 <div class="col-md-6 col-xs-6 col-news">
                 	<h4 class="suscribir">Suscríbase a nuestra Newsletter</h4>
-                    <a class="boton-newsletter" href="#">IR</a>
+                    <a class="boton-newsletter" href="http://businessintelligence.us14.list-manage.com/subscribe?u=44515b3d91fba1a993d0dcc81&id=c76888fae1">IR</a>
                 </div>
                 <div class="col-md-6 col-xs-6">
                  <img src="images/Chica-Datawarehouse.png" width="220" height="auto" alt="" />
                 </div>
                 </div>
-                <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="col-md-12 col-sm-12 col-xs-12" style="display:none;">
         			<p class="copyright-text">&copy; Data Warehouse Fácil. Todos los derechos reservados. 2016</p>
                 </div>
            </div>
