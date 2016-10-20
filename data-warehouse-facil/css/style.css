@@ -383,7 +383,7 @@ h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif;}
 
 /*** BLOG CATEGORIES ***/
 .blog-sidebar {position:sticky;}
-.blog-post-category {font-size: 26px;}
+.blog-post-category {font-size: 26px;color:#000;}
 .blog-categories-item {padding-top:10px;padding-bottom:10px;padding-left:10px;}
 .blog-categories-item a {color:#000;}
 .blog-categories-item a:hover {color:#fff;text-decoration: none;}
@@ -699,6 +699,10 @@ h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif;}
 .cabecera {
     padding-top: 230px !important;
     padding-bottom: 50px !important;
+}
+.sidebar-module {
+    flex: 0 0 auto;
+    position: relative;
 }
 
 @media screen and (max-width: 380px) {
