@@ -113,9 +113,11 @@ h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif;}
 .author-image {
 	margin-top: -50px !important;
 }
+.after-content {padding-bottom: 40px;}
 
 
 /** HEADER **/
+.navbar-fixed-bottom, .navbar-fixed-top {position: absolute;}
 .cabecera .h1, .cabecera h1 {
     color: #fff;
     font-size: 50px;
@@ -179,7 +181,7 @@ h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif;}
 .navbar-inverse {background-color: #fefefe;}
 .navbar-inverse .navbar-brand {color: #006db0;}
 .navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-brand:hover {background-color: transparent;color: #9d9d9d;}
-.header-divider {border-right:1px solid #006db0;position:relative;height:30px;top:10px;padding-right:10px;}
+.header-divider {border-right:1px solid #006db0;position:relative;height:30px;top:10px;padding:10px;}
 .header-divider-home {border-right: 1px solid #fff !important;padding: 10px;}
 .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {margin-left: 0;}
 .cabecera {background: url(img/Banner-Datawarehouse.jpg);background-size:cover;}
@@ -189,6 +191,13 @@ h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif;}
 .navbar-default .navbar-nav>li>a {color: #006db0;}
 .navbar-default .navbar-nav>li>a:hover {color: #ccc;}
 .indice-home {color: #fff !important;padding-left:0px;position:relative;top: 12px;left:-30px;}
+.indice-others {
+    color: #006db0 !important;
+    padding-left: 0px;
+    position: relative;
+    top: 12px;
+    left: -30px;
+}
 .indice-home:hover {color: #ccc !important;}
 .navbar-default {
     background-color: #fff;
@@ -206,6 +215,7 @@ h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif;}
 .nav-pills>li a:hover {color: #ccc;background-color: transparent;}
 .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {font-weight:bold;color: #fff;background-color: transparent;}
 .nav > li > a:hover, .nav > li > a:focus {text-decoration: none;background-color: transparent;color:#ccc;}
+.boton-others-nav {float:right;}
 .boton-home-nav {
     color: #006db0 !important;
     background-color: #fff !important;
@@ -455,6 +465,19 @@ h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif;}
 
 }
 
+@media (min-width: 1440px) {
+
+.logo-desktop {left:-140px !important;}
+.boton-desktop {right: -120px !important;}
+}
+
+
+@media (min-width: 1200px) {
+
+.logo-desktop {left:-100px;}
+.boton-desktop {right: -80px;}
+}
+
 @media screen and (max-width: 1280px) {
 .nav {
 }
@@ -499,6 +522,14 @@ h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif;}
     left: -20px;
     top: 12px;
 }
+.indice-others {
+    color: #006db0 !important;
+    padding-left: 0px;
+    position: relative;
+    left: -20px;
+    top: 12px;
+}
+
 }
 
 @media screen and (max-width: 780px) {
@@ -541,6 +572,17 @@ h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif;}
     top: 10px;
     padding-right: 10px;
     max-width: 260px;
+}
+.boton-others-nav {
+    margin-top: 20px;
+    width: 275px;
+    display: block !important;
+    float: none;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 24px;
+	text-transform:uppercase;
+	margin-bottom: 30px;
 }
 .boton-home-nav {
     margin-top: 20px;
@@ -591,6 +633,9 @@ h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif;}
 .nav-pills {
     max-width: 300px;
 }
+.header-divider {
+    border-right: none !important;
+}
 .header-divider-home {
     border-right: none !important;
 }
@@ -612,6 +657,24 @@ h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif;}
 	text-transform:uppercase;
 	left: 0;
 }
+.indice-others {
+    color: #fff !important;
+    background-color: #e31e25;
+    position: relative;
+    top: 10px;
+    padding: 10px 20px;
+    display: block;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 275px;
+    font-size: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    text-transform: uppercase;
+    left: 0;
+}
 .navbar-fixed-bottom, .navbar-fixed-top {
     position: absolute;
     right: 0;
@@ -621,6 +684,10 @@ h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif;}
 .row-menu-home {
     padding-top: 300px;
 }
+.row-menu-others {
+    padding-top: 300px;
+}
+
 .nav-pills>li {
     float: none;
 }
@@ -629,12 +696,14 @@ h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif;}
 .crono-right {padding-right: 10px;}
 .p-ralph {margin-top:10px;}
 .sm-text {margin-left: 25px;}
+.cabecera {
+    padding-top: 230px !important;
+    padding-bottom: 50px !important;
 }
 
 @media screen and (max-width: 380px) {
 	
 .col-news {left: 75px;}
-.iphone-bug {margin-left:-10px;}
 }
 
 @media screen and (max-width: 320px) {
@@ -642,4 +711,8 @@ h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif;}
 .col-news {left: 60px;}
 .indice-home {width:250px;}
 .boton-home-nav {width:250px;}
+.boton-others-nav {width:250px;}
+.header-divider {margin-left: -20px;}
+.iphone-bug {margin-left:-10px;}
+
 }
