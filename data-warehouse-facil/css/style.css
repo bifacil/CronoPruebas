@@ -16,7 +16,7 @@ a {color: #006db0;text-decoration: none;}
 .container {padding-bottom:0px;}
 p {font-size: 17px;font-weight: 300;margin-bottom: 5px; font-family: "Ubuntu", sans-serif;}
 .book-title {font-size:19px;}
-.books-row {padding-top:20px;padding-bottom:20px;}
+.books-row {padding-top:35px;padding-bottom:30px;}
 h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif;}
 .h1,.h2,.h3,.h4,.h5,.h6 {font-family: "Ubuntu", sans-serif;}
 .h5, h5 {font-size: 15px;}
@@ -375,17 +375,18 @@ h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif;}
 .crono-right {float:right;}
 .p-nota {font-size: 15px;color:#a6c9dd;font-weight: 300;margin-bottom: 0px;text-align:center;}
 
-
-
-
-
-
 /*** BLOG CATEGORIES ***/
 .blog-sidebar {position:sticky;}
 .blog-post-category {font-size: 26px;color:#000;}
 .blog-categories-item {padding-top:10px;padding-bottom:10px;padding-left:10px;}
 .blog-categories-item a {color:#000;}
-.blog-categories-item a:hover {color:#fff;text-decoration: none;}
+.blog-categories-item a:hover,
+.blog-categories-item a:active,
+.blog-categories-item a:focus {
+  color: #fff;
+  text-decoration: none;
+  background-color:#e31e25;
+}
 .blog-categories-item:hover,
 .blog-categories-item:active,
 .blog-categories-item:focus {
@@ -398,6 +399,9 @@ h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif;}
 .titulo-libro {
     margin-top: 30px;
 }
+
+/** BOOKS **/
+.ajuste-libros {left: -15px;}
 
 /** LIBRO CATEGORIES **/
 .libro-categories {
@@ -504,6 +508,7 @@ h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif;}
 }
 .indice-home {left:20px;}
 .indice-others {left:20px;}
+.book-title {font-size: 17px;margin-top:0px;}
 
 }
 
@@ -676,6 +681,10 @@ padding-left: 30px;
 	margin-top: -70px;
 }
 .cabecera {padding-top: 230px !important;padding-bottom: 50px !important;}
+.book-title {margin-top:20px;text-align:center;}
+.amazon-responsive {margin-bottom:30px;}
+.ajuste-libros {left:0;}
+
 
 }
 
@@ -821,6 +830,10 @@ padding-left: 30px;
     flex: 0 0 auto;
     position: relative;
 }
+.books-row {padding-top: 10px;padding-bottom: 0px;}
+}
+
+
 
 @media screen and (max-width: 380px) {
 	
