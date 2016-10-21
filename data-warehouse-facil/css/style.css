@@ -380,17 +380,10 @@ h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif;}
 .blog-sidebar {position:sticky;}
 .blog-post-category {font-size: 26px;color:#000;}
 .blog-categories-item {padding-top:10px;padding-bottom:10px;padding-left:10px;}
-.blog-categories-item a {color:#000;}
+.blog-categories-item a {color:#000;padding:10px 20px;border-radius:5px;}
 .blog-categories-item a:hover,
 .blog-categories-item a:active,
 .blog-categories-item a:focus {
-  color: #fff;
-  text-decoration: none;
-  background-color:#e31e25;
-}
-.blog-categories-item:hover,
-.blog-categories-item:active,
-.blog-categories-item:focus {
   color: #fff;
   text-decoration: none;
   background-color:#e31e25;
