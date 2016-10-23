@@ -224,6 +224,8 @@ h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif;}
     background-color: #fff !important;
     border-color: #fff !important;
 	float:right;
+	margin-top: 12px;
+    margin-right: 5px;
 }
 .boton-home-nav:hover {
     color: #fff !important;
