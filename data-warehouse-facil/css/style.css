@@ -278,7 +278,7 @@ h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif;}
     margin-top: -10px;
 }
 .boton-suscribete {border:1px solid #000;color:#000;background-color:transparent;float:right;text-align:center;padding:10px 20px;font-size: 18px;}
-.boton-suscribete:hover {border:1px solid #066198;color:#fff;background-color:#066198;}
+.boton-suscribete:hover {border:1px solid #066198;color:#fff;background-color:#066198;text-decoration:none;}
 
 /* Últimos Artículos Traducidos */
 .last-articles {
