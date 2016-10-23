@@ -12,7 +12,6 @@ body {
 }
 footer {
 }
-a {color: #006db0;text-decoration: none;}
 .container {padding-bottom:0px;}
 p {font-size: 17px;font-weight: 300;margin-bottom: 5px; font-family: "Ubuntu", sans-serif;}
 .book-title {font-size:19px;}
@@ -279,6 +278,7 @@ h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif;}
     margin-top: -10px;
 }
 .boton-suscribete {border:1px solid #000;color:#000;background-color:transparent;float:right;text-align:center;padding:10px 20px;font-size: 18px;}
+.boton-suscribete:hover {border:1px solid #066198;color:#fff;background-color:#066198;}
 
 /* Últimos Artículos Traducidos */
 .last-articles {
@@ -299,18 +299,15 @@ h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif;}
 	font-family: "Ubuntu", sans-serif;
 }
 .p-last-articles {font-size: 17px;font-weight: 300;margin-bottom: 5px;padding-left:0;text-align:center;}
-.boton-last-articles {border:1px solid #066198;background-color:transparent;text-align:center;padding:20px;font-size: 18px;}
-.boton-last-articles:hover {border:1px solid #066198;background-color:#066198;text-align:center;font-size: 18px;}
-.boton-last-articles a {color:#066198;}
-.boton-last-articles a:hover {color:#fff;}
-.link-last-articles {font-size: 18px;}
-.link-last-articles:hover {color: #fff;text-decoration:none;}
+.boton-last-articles {border:1px solid #066198;background-color:transparent;text-align:center;padding:20px;font-size: 18px;color: #066198;}
+.boton-last-articles:hover {border:1px solid #066198;background-color:#066198;text-align:center;font-size: 18px; color: #fff;text-decoration:none;}
+.boton-last-articles a:hover,.boton-last-articles a:focus, .boton-last-articles a:active {color: #fff !important;text-decoration:none;}
 .subencabezado-last-articles {font-size: 18px;margin-top:0;}
 .span-last-articles {font-size: 12px;}
-.boton-more-articles {border:1px solid #066198;background-color:#066198;text-align:center;padding:35px;font-size: 18px;}
-.boton-more-articles:hover {border:1px solid #066198;background-color:transparent;text-align:center;font-size: 18px;}
-.boton-more-articles a {color:#fff;}
-.boton-more-articles a:hover {color:#066198;}
+.boton-more-articles {text-align:center;font-size: 18px; background-color:#066198;}
+.boton-more-articles:hover {text-align:center;font-size: 18px;color:#066198 !important;}
+.boton-more-articles a {color:#fff; background-color:#066198;border:1px solid #066198;display: flex;padding: 46px 88px;}
+.boton-more-articles a:hover {color:#066198;text-decoration:none;background-color:#fff;border:1px solid #066198;}
 .espacio-articles {
     margin-bottom: 30px;
     margin-top: 20px;
@@ -374,7 +371,7 @@ h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif;}
 
 .p-crono {font-size: 17px;font-weight: 300;margin-bottom: 5px;text-align:right;padding-left:10px;}
 .crono-right {float:right;}
-.p-nota {font-size: 15px;color:#a6c9dd;font-weight: 300;margin-bottom: 0px;text-align:center;}
+.p-nota {font-size: 15px;color:#006db0;font-weight: 300;margin-bottom: 0px;text-align:center;}
 
 /*** BLOG CATEGORIES ***/
 .blog-sidebar {position:sticky;}
