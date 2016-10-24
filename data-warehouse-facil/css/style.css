@@ -28,7 +28,8 @@ h3.entradas {color:#006db0;margin-top:40px;margin-bottom:20px;}
 h4.entradas {color:#006db0;margin-top:40px;margin-bottom:20px;}
 h5.entradas {color:#006db0;margin-top:40px;margin-bottom:20px;}
 h6.entradas {color:#006db0;margin-top:40px;margin-bottom:20px;}
-
+h2.header-libros {color:#006db0;}
+p.ultimos-articulos {margin-bottom:10px;}
 
 /** FOOTER **/
 .footer {
@@ -319,7 +320,7 @@ h6.entradas {color:#006db0;margin-top:40px;margin-bottom:20px;}
 	font-family: "Ubuntu", sans-serif;
 }
 .p-last-articles {font-size: 17px;font-weight: 300;margin-bottom: 5px;padding-left:0;text-align:center;}
-a.boton-last-articles {border:1px solid #066198;background-color:transparent;text-align:center;padding:20px;font-size: 18px;display:block;}
+a.boton-last-articles {border:1px solid #066198;background-color:transparent;text-align:center;padding:15px 20px;font-size: 18px;display:block;}
 a.boton-last-articles:hover {border:1px solid #066198;background-color:#066198;text-align:center;font-size: 18px; color: #fff !important;text-decoration:none;}
 .boton-last-articles a:hover,.boton-last-articles a:focus, .boton-last-articles a:active {color: #fff !important;text-decoration:none;}
 .subencabezado-last-articles {font-size: 18px;margin-top:0;}
@@ -395,7 +396,7 @@ a.boton-last-articles:hover {border:1px solid #066198;background-color:#066198;t
 
 /*** BLOG CATEGORIES ***/
 .blog-sidebar {position:sticky;}
-.blog-post-category {font-size: 26px;color:#000;}
+.blog-post-category {font-size: 26px;color:#006db0;}
 .blog-categories-item {padding-top:10px;padding-bottom:10px;padding-left:10px;}
 .blog-categories-item a {color:#000;padding:10px 20px;border-radius:5px;}
 .blog-categories-item a:hover,
@@ -428,7 +429,7 @@ ul.list-entradas-blog li {
 }
 .year {
 	 background-color: #ccc;
-    color: #fff;
+    color: #000;
     padding: 4px;
     font-size: 12px;
     border-radius: 5px;
@@ -490,15 +491,12 @@ ul.list-entradas-blog li {
 
 
 /*** RESPONSIVE ***/
-@media screen and (min-width: 1920px) {
-.logo-desktop {left: 0 !important;}
-}
 
 @media screen and (max-width: 1920px) {
 .cabecera-home {min-height:1080;}
 .nav-pills {max-width: 750px !important;}
-.indice-home {left:-95px;}
-.indice-others {left:-95px;}
+.indice-home {left:-60px;}
+.indice-others {left:-60px;}
 }
 
 @media screen and (max-width: 1600px) {
@@ -540,8 +538,6 @@ ul.list-entradas-blog li {
 
 .logo-desktop {left: 0px;}
 .boton-desktop {right: 0px;}
-.header-divider {border-right: 1px solid #006db0 !important;}
-
 
 }
 
