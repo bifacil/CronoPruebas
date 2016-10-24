@@ -13,7 +13,7 @@ body {
 footer {
 }
 .container {padding-bottom:0px;}
-p {font-size: 17px;font-weight: 300;margin-bottom: 5px; font-family: "Ubuntu", sans-serif;}
+p {font-size: 17px;font-weight: 300;margin-bottom: 5px; font-family: "Ubuntu", sans-serif;margin-top: 15px;margin-bottom:30px;}
 .book-title {font-size:19px;}
 .books-row {padding-top:35px;padding-bottom:30px;}
 .books-row-last {padding-top: 35px;padding-bottom: 70px;}
@@ -22,6 +22,12 @@ h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif;}
 .h5, h5 {font-size: 15px;}
 .header-pages {min-height:60px;}
 .blog-main {padding-bottom: 60px;}
+h1.entradas {color:#006db0;margin-top:40px;margin-bottom:20px;}
+h2.entradas {color:#006db0;margin-top:40px;margin-bottom:20px;}
+h3.entradas {color:#006db0;margin-top:40px;margin-bottom:20px;}
+h4.entradas {color:#006db0;margin-top:40px;margin-bottom:20px;}
+h5.entradas {color:#006db0;margin-top:40px;margin-bottom:20px;}
+h6.entradas {color:#006db0;margin-top:40px;margin-bottom:20px;}
 
 
 /** FOOTER **/
@@ -34,8 +40,13 @@ h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif;}
   left:0;
 }
 .footer-links {color:#fff;font-weight:100;font-size:15px;}
+.footer-links:hover {color:#ccc;text-decoration:none;}
 .list-styled {color:#fff; font-weight:300; list-style:none;padding-left: 0;}
-.list-styled-blog {color: #000;}
+.list-styled-blog {
+    color: #000;
+    font-weight: 300;
+    font-size: 16px;
+}
 .encabezados-footer {font-weight: bold;color: #79bae4;text-transform: uppercase;margin-bottom: -12px;}
 .sm-footer {display:block;margin: 5px auto; width:68%;}
 .sm-footer a{font-family:'Roboto';color:#006db0;float:left;margin:10px;font-weight:300;background-color:#fefefe;padding:10px 20px;}
@@ -74,7 +85,7 @@ h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif;}
   bottom: 0;
   width: 100%;
   height: auto;
-  background-color: #a6c9dd;
+  background-color: #ffcc01;
   left:0;
   padding-top:30px;
   padding-bottom:30px;
@@ -86,7 +97,8 @@ h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif;}
 .libro {
     font-size: 26px;
     text-align: center;
-	color: #fff;
+	color: #000;
+    font-weight: bold;
 }
 
 /** AUTHOR **/
@@ -285,8 +297,8 @@ h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif;}
     margin-bottom: -30px;
     margin-top: -10px;
 }
-.boton-suscribete {border:1px solid #000;color:#000;background-color:transparent;float:right;text-align:center;padding:10px 20px;font-size: 18px;}
-.boton-suscribete:hover {border:1px solid #066198;color:#fff;background-color:#066198;text-decoration:none;}
+.boton-suscribete {border:1px solid #000;color:#000;background-color:transparent;float:right;text-align:center;padding:10px 20px;font-size: 18px;margin-top:20px;}
+.boton-suscribete:hover {border:1px solid #000;color:#ffcc01;background-color:#000;text-decoration:none;}
 
 /* Últimos Artículos Traducidos */
 .last-articles {
@@ -307,8 +319,8 @@ h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif;}
 	font-family: "Ubuntu", sans-serif;
 }
 .p-last-articles {font-size: 17px;font-weight: 300;margin-bottom: 5px;padding-left:0;text-align:center;}
-.boton-last-articles {border:1px solid #066198;background-color:transparent;text-align:center;padding:20px;font-size: 18px;color: #066198;}
-.boton-last-articles:hover {border:1px solid #066198;background-color:#066198;text-align:center;font-size: 18px; color: #fff;text-decoration:none;}
+a.boton-last-articles {border:1px solid #066198;background-color:transparent;text-align:center;padding:20px;font-size: 18px;display:block;}
+a.boton-last-articles:hover {border:1px solid #066198;background-color:#066198;text-align:center;font-size: 18px; color: #fff !important;text-decoration:none;}
 .boton-last-articles a:hover,.boton-last-articles a:focus, .boton-last-articles a:active {color: #fff !important;text-decoration:none;}
 .subencabezado-last-articles {font-size: 18px;margin-top:0;}
 .span-last-articles {font-size: 12px;}
@@ -379,7 +391,7 @@ h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif;}
 
 .p-crono {font-size: 17px;font-weight: 300;margin-bottom: 5px;text-align:right;padding-left:10px;}
 .crono-right {float:right;}
-.p-nota {font-size: 15px;color:#006db0;font-weight: 300;margin-bottom: 0px;text-align:center;}
+.p-nota {font-size: 15px;color:#006db0;font-weight: 300;margin-bottom: -25px;text-align:center;}
 
 /*** BLOG CATEGORIES ***/
 .blog-sidebar {position:sticky;}
@@ -396,6 +408,11 @@ h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif;}
 .list-unstyled-categories {color: #000;font-weight:300;list-style: outside none none; padding-left:0;padding-top:30px;}
 .list-unstyled-categories:hover {text-decoration: none;}
 ul.list-styled-blog li {margin-bottom:8px;}
+ul.list-entradas-blog li {
+    margin-bottom: 20px;
+    font-size: 16px;
+	font-weight:300;
+}
 .titulo-libro {
     margin-top: 30px;
 }
@@ -409,7 +426,8 @@ ul.list-styled-blog li {margin-bottom:8px;}
     color: #fff;
     font-size: 18px;
 }
-.year {background-color: #e31e25;
+.year {
+	 background-color: #ccc;
     color: #fff;
     padding: 4px;
     font-size: 12px;
@@ -438,7 +456,7 @@ ul.list-styled-blog li {margin-bottom:8px;}
     text-align: left;
 	padding-bottom:5px;
 	border-bottom: 1px solid #000;
-	font-weight: bold;
+	font-weight: 300;
 }
 .about-ultimo-libro {
     font-size: 30px;
@@ -451,7 +469,7 @@ ul.list-styled-blog li {margin-bottom:8px;}
     font-size: 26px;
     text-align: left;
 	font-weight: bold;
-	color: #fff;
+	color: #000;
 }
 .libro-image {
 	margin-top: -50px !important;
@@ -487,6 +505,7 @@ ul.list-styled-blog li {margin-bottom:8px;}
 .nav {
 }
 .header-divider {left:5px;}
+.indice-others {left: -25px;}
 
 }
 
@@ -521,12 +540,16 @@ ul.list-styled-blog li {margin-bottom:8px;}
 
 .logo-desktop {left: 0px;}
 .boton-desktop {right: 0px;}
+.header-divider {border-right: 1px solid #006db0 !important;}
+
+
 }
 
 @media screen and (max-width: 1280px) {
 .nav {
 }
-
+.indice-others {left: 10px;}
+.header-divider {border-right: 1px solid #006db0 !important;}
 }
 
 @media screen and (max-width: 1024px) {
