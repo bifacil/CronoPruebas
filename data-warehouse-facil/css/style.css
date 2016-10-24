@@ -16,10 +16,12 @@ footer {
 p {font-size: 17px;font-weight: 300;margin-bottom: 5px; font-family: "Ubuntu", sans-serif;}
 .book-title {font-size:19px;}
 .books-row {padding-top:35px;padding-bottom:30px;}
+.books-row-last {padding-top: 35px;padding-bottom: 70px;}
 h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif;}
 .h1,.h2,.h3,.h4,.h5,.h6 {font-family: "Ubuntu", sans-serif;}
 .h5, h5 {font-size: 15px;}
 .header-pages {min-height:60px;}
+.blog-main {padding-bottom: 60px;}
 
 
 /** FOOTER **/
@@ -33,7 +35,7 @@ h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif;}
 }
 .footer-links {color:#fff;font-weight:100;font-size:15px;}
 .list-styled {color:#fff; font-weight:300; list-style:none;padding-left: 0;}
-.list-styled-blog {color: #006db0;}
+.list-styled-blog {color: #000;}
 .encabezados-footer {font-weight: bold;color: #79bae4;text-transform: uppercase;margin-bottom: -12px;}
 .sm-footer {display:block;margin: 5px auto; width:68%;}
 .sm-footer a{font-family:'Roboto';color:#006db0;float:left;margin:10px;font-weight:300;background-color:#fefefe;padding:10px 20px;}
@@ -393,7 +395,7 @@ h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif;}
 }
 .list-unstyled-categories {color: #000;font-weight:300;list-style: outside none none; padding-left:0;padding-top:30px;}
 .list-unstyled-categories:hover {text-decoration: none;}
-ul.list-sytled-blog li {margin-bottom:8px;}
+ul.list-styled-blog li {margin-bottom:8px;}
 .titulo-libro {
     margin-top: 30px;
 }
@@ -413,9 +415,13 @@ ul.list-sytled-blog li {margin-bottom:8px;}
     font-size: 12px;
     border-radius: 5px;
 }
+.leyenda-img {
+    text-align: center;
+    font-size: 14px;
+}
 
 /** BOOKS **/
-.ajuste-libros {left: -15px;}
+.ajuste-libros {left: -50px;}
 
 /** LIBRO CATEGORIES **/
 .libro-categories {
@@ -434,6 +440,13 @@ ul.list-sytled-blog li {margin-bottom:8px;}
 	border-bottom: 1px solid #000;
 	font-weight: bold;
 }
+.about-ultimo-libro {
+    font-size: 30px;
+    text-align: left;
+	padding-bottom:5px;
+	border-bottom: 1px solid #000;
+	font-weight: bold;
+}
 .libro-name {
     font-size: 26px;
     text-align: left;
@@ -444,7 +457,6 @@ ul.list-sytled-blog li {margin-bottom:8px;}
 	margin-top: -50px !important;
 }
 .libro-p {color:#000;font-weight:100;}
-
 .boton-comprar {
     margin-top: 60px;
     margin-bottom: auto;
@@ -526,6 +538,7 @@ ul.list-sytled-blog li {margin-bottom:8px;}
 .sm-footer {width:84%;}
 .ipad-air-chica {left: -60px}
 .author-image {margin-left:-20px;}
+.boton-amazon-ipad {margin-left:-20px;}
 
 }
 
@@ -727,6 +740,7 @@ padding-left: 30px;
 	
 .sm-footer {width:44%;}
 .sm-text {margin-left:-5px;}
+.boton-last-articles {margin-bottom:30px;}
 }
 
 @media screen and (max-width: 414px) {
@@ -830,7 +844,7 @@ padding-left: 30px;
     background-color: #e31e25;
     position: relative;
     top: 10px;
-    padding: 10px 20px;
+    padding: 5px 20px;
     display: block;
     border-radius: 5px;
     margin-top: 20px;
