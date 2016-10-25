@@ -49,9 +49,10 @@ p.ultimos-articulos {margin-bottom:10px;}
     font-size: 16px;
 }
 .encabezados-footer {font-weight: bold;color: #79bae4;text-transform: uppercase;margin-bottom: -12px;}
-.sm-footer {display:block;margin: 5px auto; width:68%;}
+.sm-footer {display:block;margin: 5px auto; width:70%;}
 .sm-footer a{font-family:'Roboto';color:#006db0;float:left;margin:10px;font-weight:300;background-color:#fefefe;padding:10px 20px;}
 .sm-footer a:hover{color:#fefefe;background-color:#e31e25;text-decoration:none;transition:all 0.5s ease 0s;}
+.icon-facebook {padding: 10px 25px !important;}
 .icon-twitter:before{content:"\f099";font-family:'FontAwesome';font-size:26px;margin:0 0px;}
 .icon-facebook:before{content:"\f09a";font-family:'FontAwesome';font-size:26px;margin:0 0px;}
 .icon-linkedin:before{content:"\f0e1";font-family:'FontAwesome';font-size:26px;margin:0 0px;}
@@ -438,6 +439,7 @@ ul.list-entradas-blog li {
     text-align: center;
     font-size: 14px;
 }
+.ajuste-banda {padding-top:10px;}
 
 /** BOOKS **/
 .ajuste-libros {left: -50px;}
@@ -476,6 +478,7 @@ ul.list-entradas-blog li {
 	margin-top: -50px !important;
 }
 .libro-p {color:#000;font-weight:100;}
+.libro-p-categories {color:#000;font-weight:100;margin-bottom:0;}
 .boton-comprar {
     margin-top: 60px;
     margin-bottom: auto;
@@ -621,7 +624,7 @@ ul.list-entradas-blog li {
 .sm-footer {
     display: block;
     margin-left: auto;
-    width: 70%;
+    width: 73%;
     margin-right: auto;
 	padding-bottom: 10px;
 }
@@ -646,7 +649,7 @@ ul.list-entradas-blog li {
     color: #006db0 !important;
     padding-left: 0px;
     position: relative;
-    left: -60px;
+    left: -15px;
     top: 12px;
 }
 .book-title {margin-top:20px;text-align:center;}
@@ -797,7 +800,7 @@ padding-left: 30px;
 
 @media screen and (max-width: 600px) {
 	
-.sm-footer {width:44%;}
+.sm-footer {width:45%;}
 .sm-text {margin-left:-5px;}
 .boton-last-articles {margin-bottom:30px;}
 }
@@ -856,6 +859,9 @@ padding-left: 30px;
     width: 50px;
     height: 50px !important;
     text-align: center;
+}
+.icon-facebook {
+    padding: 20px 25px !important;
 }
 .sm-text {margin-left:-5px !important;}
 .col-news {
