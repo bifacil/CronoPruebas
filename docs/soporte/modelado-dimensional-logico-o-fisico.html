@@ -1,0 +1,272 @@
+﻿
+<!DOCTYPE html>
+<html>
+	
+	<!-- HEAD -->
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    
+		<title>Consejo de dise&#241;o #176: Modelado dimensional: &#191;L&#243;gico o f&#237;sico?</title>
+		<meta name="description" content="La solicitud del modelado dimensional deriva de la evidente simplicidad de los modelos y de la forma natural en que la gente de negocios y la gente t&#233;cnica puedan entender lo que significan los modelos.">
+	
+		<link href="https://pruebas.es/rss.xml" rel="alternate" type="application/rss+xml" title="(RSS)" />
+		<link href="https://pruebas.es/soporte/modelado-dimensional-logico-o-fisico.html" rel="canonical" />
+	
+		
+		<!-- Favicons -->
+		<link rel="shortcut icon" href="../favicon.png">
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144-precomposed.png">
+	
+		<!-- Google Fonts -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,700,700italic,900,900italic">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,300,700">
+	
+		<!-- FontAwesome Icons 4.2.0 ////////  -->
+		<link rel="stylesheet" href="../css/fontawesome/font-awesome.min.css">
+	
+		<!-- Custom Icon Font -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../css/iconfontcustom/icon-font-custom.css">
+	
+		<!-- Template CSS -->
+		<link rel="stylesheet" href="../css/base.css">
+		<link rel="stylesheet" href="../css/grid.css">
+		<link rel="stylesheet" href="../css/layout.css">
+		<link rel="stylesheet" href="../css/elements.css">
+		<link rel="stylesheet" href="../css/crono.css">
+	    <link rel="stylesheet" href="../css/blog.css">
+	
+		<!-- /// JS Plugins CSS ////////  -->
+		<link rel="stylesheet" href="../js/revolutionslider/css/settings.css">
+		<link rel="stylesheet" href="../js/revolutionslider/css/custom.css">
+		<link rel="stylesheet" href="../js/bxslider/jquery.bxslider.css">
+		<link rel="stylesheet" href="../js/magnificpopup/magnific-popup.css">
+		<link rel="stylesheet" href="../js/animations/animate.min.css">
+		<link rel="stylesheet" href="../js/itplayer/css/YTPlayer.css">
+	    <link rel="stylesheet" href="../js/odometer/odometer.css">
+	
+	
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		  ga('create', 'UA-26559605-1', 'auto');
+		  ga('send', 'pageview');
+		</script>
+	</head>
+	<body>
+		<div id="wrap">
+			
+			
+
+			<!-- HEADER -->
+			<noscript>
+				<div class="javascript-required">
+					<i class="fa fa-times-circle"></i> Parece que tienes JavaScript desactivado. Este sitio web necesita JavaScript para funcionar correctamente!
+				</div>
+			</noscript>
+			
+			<!--[if lte IE 8]>
+				<div class="modern-browser-required">You are using an <strong>outdated</strong> browser. Please <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">upgrade your browser</a> to improve your experience.</div>
+			<![endif]-->
+			
+			<div id="header">
+				<div class="row">
+					<div class="span2">
+						<div id="logo">
+							<a href="index.html">
+								<img src="../images/logo.png" alt="">
+							</a>
+						</div>
+					</div>
+					<div class="span10">
+						<a href="#" id="mobile-menu-trigger"><i class="fa fa-bars"></i></a>
+						<nav>
+							<ul class="sf-menu fixed" id="menu">
+								<li class="dropdown"><a class="" href="../index.html">Inicio</a></li>
+								<li class="dropdown"><a class="" href="../crono-analysis.html">Productos</a></li>
+								<li class="dropdown"><a class="" href="../crono-precios.html">Precios</a></li>
+								<li class="dropdown"><a class="" href="../soporte/index.html">Soporte</a></li>
+								<li class="dropdown"><a class="" href="../blog/index.html">Blog</a></li>
+								<li class="dropdown"><a class="" href="../crono-contacto.html">Contacto</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		    <div id="content" class="blogc">
+			   <div class="row">
+					<div class="span8 blog-main">
+						
+						<div class="blog-post-full ">
+						  <div class="row">
+						    <div class="span8">
+							
+						      <div class="navegador">
+						        <div class="arrows"> 
+									<span>Artículo 6/10</span>
+<a href="../soporte/seis-claves-para-elegir-arquitectura-etl.html"><i class="arrow fa fa-arrow-circle-o-left"></i></a>																		<a href="../soporte/recomendaciones-testing-datawarehouse.html"><i class="arrow fa fa-arrow-circle-o-right"></i></a>																		
+								</div>
+						      </div>
+						    </div>
+						    <div class="w100p">
+						      <h2 class="blog-post-title">Consejo de dise&#241;o #176: Modelado dimensional: &#191;L&#243;gico o f&#237;sico?</h2>
+						      <div class="text">
+						        <p>Los modelos de datos dimensionales llevan aquí mucho tiempo. Ciertamente, casi podemos remontar sus orígenes al proyecto original <em>Data Cube</em> entre Dartmouth y General Mills a finales de 1960. La solicitud del modelado dimensional deriva de la evidente simplicidad de los modelos y de la forma natural en que la gente de negocios y la gente técnica puedan entender lo que significan los modelos.</p>
+						        <p>Los modelos dimensionales tienen dos expresiones diferentes, lógica y física. La expresión puramente lógica queda plasmada en el siguiente diagrama.</p>
+						        <p><img src="https://datawarehouse.es/images/dt-176-figure.png" alt="Imagen 1" /></p>
+						        <p>La caja del centro siempre representa mediciones de sucesos (&quot;líneas de pedido&quot; en el ejemplo). Llamamos a estos hechos. Las cajas de alrededor representan las dimensiones naturales asociadas con las mediciones del suceso. Hay poco contenido técnico de la base de datos en el diagrama del modelo lógico; pero mucho contenido de negocios. Una vez que la fuente de las mediciones de suceso ha sido identificada, el modelo lógico es el lugar donde empezar el diseño de forma seria.</p>
+						        <p>Una vez aceptado, el diagrama del modelo lógico se transformará con bastante rapidez a un diseño técnico más específico repleto de nombres de tablas, nombres de campos, y declaraciones de claves primarias y foráneas. Esto es lo que piensan la mayoría de la gente IT de un modelo dimensional. Hmmm... esto parece muy físico. Cuando este diseño físico ha sido declarado, parece que el único paso que queda es escribir el DDL explícito creando las tablas objetivo, y después entrar en materia de  implementar las conexiones ETL para rellenar los datos de estas tablas físicas.</p>
+						        <p>Espera. ¡No tan rápido! Para ser honestos sobre este atractivo modelo físico dimensional, tenemos que admitir que en el nivel real de almacenamiento físico, nuestro modelo dimensional sería implementado de manera muy diferente.  Los dos grandes &quot;elefantes en la sala&quot; son las bases de datos columnares y la virtualización de datos:</p>
+						        <ul>
+						        <li>Las bases de datos columnares reorganizan radicalmente los datos en columnas comprimidas y ordenadas mientras crean la ilusión modelo dimensional original.</li>
+						        <li>La virtualización de datos transforma los datos físicos actuales de casi cualquier forma original en el mismo momento de la consulta mientras crea una ilusión de la apariencia exterior del modelo dimensional original. Las formas extremas de virtualización de datos populares en el mundo Hadoop a veces son denominadas “vinculación diferida” (<em>deferred binding</em>) o “esquema en lectura” (<em>schema on read</em>). Pero en todos los casos el resultado final es el familiar modelo dimensional.</li>
+						        </ul>
+						        <p>En lugar de atascarnos en argumentos religiosos sobre modelos lógicos versus físicos, debemos simplemente reconocer que un modelo dimensional es actualmente una interfaz de programación de aplicaciones (API) de data warehouse. El poder de esta API reside en la interfaz consistente y uniforme que ven todos los observadores, ambos usuarios y aplicaciones BI. Vemos que no importa donde están almacenados los bits o como se entregan cuando se lanza una solicitud desde la API.</p>
+						        <p>El modelo dimensional API es muy específico. Debe exponer tablas de hechos, tablas dimensionales desnormalizadas y una columna para las claves subrogadas. La aplicación BI solicitante no puede y no debe ocuparse de cómo los grupos de resultados son implementados y entregados. Ahora vemos que la verdadera identidad del modelo dimensional es una API de data warehouse.</p>
+						        <p>Artículo original:  <a href="http://www.kimballgroup.com/2015/07/design-tip-176-dimensional-models-logical-or-physical/">http://www.kimballgroup.com/2015/07/design-tip-176-dimensional-models-logical-or-physical/</a></p>
+						      </div>
+						    </div>
+						    <div class="w100p socialshare"> <span>Comparte<br>
+						      este articulo</span>
+						      <ol>
+						        <li class="tw"><a href="javascript:void(0)" onclick="javascript:OpenPopup('http://twitter.com/share?text=La solicitud del modelado dimensional deriva de la evidente simplicidad de los modelos y de la forma natural en que la gente de negocios y la gente t&#233;cnica puedan entender lo que significan los modelos.&url=https://pruebas.es/soporte/modelado-dimensional-logico-o-fisico.html')"><i class="fa fa-twitter"></i></a></li>
+						        <li class="in"><a href="javascript:void(0)" onclick="javascript:OpenPopup('http://www.linkedin.com/shareArticle?mini=true&url=https://pruebas.es/soporte/modelado-dimensional-logico-o-fisico.html')"><i class="fa fa-linkedin"></i></a></li>
+						        <li class="fb"><a href="javascript:void(0)" onclick="javascript:OpenPopup('https://www.facebook.com/sharer/sharer.php?u=https://pruebas.es/soporte/modelado-dimensional-logico-o-fisico.html')"><i class="fa fa-facebook"></i></a></li>
+						        <li class="go"><a href="javascript:void(0)" onclick="javascript:OpenPopup('https://plus.google.com/share?url=https://pruebas.es/soporte/modelado-dimensional-logico-o-fisico.html')"><i class="fa fa-google-plus"></i></a></li>
+						        <li class="pi"><a href="javascript:void(0)" onclick="javascript:OpenPopup('http://pinterest.com/pin/create/button/?url=https://pruebas.es/soporte/modelado-dimensional-logico-o-fisico.html')"><i class="fa fa-pinterest"></i></a></li>
+						       <!-- <li class="ma"><a href="#"><i class="fa fa-envelope-o"></i></a></li> -->
+						      </ol>
+						    </div>
+							
+							
+							<div id="disqus_thread"></div>
+						
+						
+							
+							
+						  </div>
+						</div>
+					</div>
+		     
+				</div>
+		 	</div>
+		</div>
+		<!-- FOOTER -->
+		<div id="footer-wrapper">
+			<div class="row">
+				<div class="span12">
+					<div id="footer">
+						<div class="row">
+							
+							<div class="span4" id="footer-widget-area-1">
+								<div class="widget widget_text">
+									<div class="textwidget">
+										<img class="img-align-left hidden-tablet" src="../images/footer-logo.png" alt="">
+										<address>
+											<span class="text-uppercase">Crono Analytics<sup>&copy;</sup></span>
+											<br>Numancia 74,
+											<br>08029, Barcelona
+										</address>
+									</div>
+								</div>
+							</div>
+							
+							<div class="span4" id="footer-widget-area-2">
+								<div class="widget ewf_widget_contact_info">
+									<ul>
+										<li><strong>Teléfono: </strong>93 802 92 64 </li>
+										<li><strong>Email: </strong><a href="mailto:info@crono.net">info@crono.net</a></li>
+									</ul>
+								</div>
+							</div>
+		
+							<div class="span4" id="footer-widget-area-3">
+								<div class="widget ewf_widget_contact_info">
+									<ul>
+										<li><strong>Blog: </strong><a href="http://www.businessintelligence.info/" target="_blank">www.businessintelligence.info</a></li>
+										<li><strong>YouTube: </strong><a href="https://www.youtube.com/c/BusinessIntelligenceInfo" target="_blank">www.youtube.com</a></li>
+										<li><strong>Facebook: </strong><a href="https://www.facebook.com/CronoBusinessIntelligence" target="_blank">www.facebook.com</a></li>
+										<li><strong>LinkedIn: </strong><a href="https://www.linkedin.com/company/businessintelligence" target="_blank">www.linkedin.com</a></li>
+										<li><i class="fa fa-twitter"></i><a href="https://twitter.com/bifacil" target="_blank">@bifacil</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+		            <div id="footer-bottom">
+						<div class="row">
+							<div class="span6" id="footer-bottom-widget-area-1">
+								<div class="widget widget_text">
+									<div class="textwidget">
+										<p class="text-uppercase last"><strong>Todos los derechos reservados &copy; 2015 Crono Analytics</strong></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		    </div>
+		</div>
+		<a id="back-to-top" href="#"><i class="ifc-up4"></i></a>
+		
+		<!-- jQuery -->
+		<script src="../js/jquery-2.1.1.min.js"></script>
+		
+		<!--  ViewPort -->
+		<script src="../js/viewport/jquery.viewport.js"></script>
+		
+		<!--  Easing -->
+		<script src="../js/easing/jquery.easing.1.3.js"></script>
+		
+		<!--  SimplePlaceholder -->
+		<script src="../js/simpleplaceholder/jquery.simpleplaceholder.js"></script>
+		
+		<!--  Fitvids -->
+		<script src="../js/fitvids/jquery.fitvids.js"></script>
+		
+		<!--  Animations -->
+		<script src="../js/animations/animate.js"></script>
+		
+		<!--  Superfish Menu -->
+		<script src="../js/superfish/hoverIntent.js"></script>
+		<script src="../js/superfish/superfish.js"></script>
+		
+		<!--  Revolution Slider -->
+		<script src="../js/revolutionslider/js/jquery.themepunch.tools.min.js"></script>
+		<script src="../js/revolutionslider/js/jquery.themepunch.revolution.min.js"></script>
+		
+		<!--  bxSlider -->
+		<script src="../js/bxslider/jquery.bxslider.min.js"></script>
+		
+		
+		<!--  Parallax -->
+		<script src="../js/parallax/jquery.parallax.min.js"></script>
+		
+		
+		<!--  Custom JS   -->
+		<script src="../js/plugins.js"></script>
+		<script src="../js/scripts.js"></script>
+		
+		<script src="../js/crono.js"></script>
+		
+		<script id="dsq-count-scr" src="//cronoblog.disqus.com/count.js" async></script>
+		<script>
+		
+				var disqus_config = function () {
+					this.page.url = 'https://pruebas.es/soporte/modelado-dimensional-logico-o-fisico.html'
+					this.page.identifier = 'CZzUAhZOqN'
+				};	
+				(function() { 
+					var d = document, s = d.createElement('script');
+					s.src = '//cronoblog.disqus.com/embed.js';
+					s.setAttribute('data-timestamp', +new Date());
+					(d.head || d.body).appendChild(s);
+				})();
+					
+		</script>
+	</body>
+</html>

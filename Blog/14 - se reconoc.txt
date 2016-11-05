@@ -2,6 +2,7 @@
 UniqueId: bynMnCcyec
 Title: La simplicidad se reconoce cuando la ves
 Url: blog/pensamientos-innovadores.html
+Section: Blog
 Date: 2016-08-22T00:00:00.0000000
 Description: "Un pensamiento innovador es aquello que va mas allá de lo obvio y no tan obvio. Es ver en algo ordinario lo extraordinario."
 Image: pensamientos-innovadores.jpeg

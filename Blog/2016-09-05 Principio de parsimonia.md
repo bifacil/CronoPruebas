@@ -1,6 +1,7 @@
 ﻿---
 UniqueId: FCpimotIrV
 Title: Principio de parsimonia
+Section: Blog
 Url: blog/ockam.html
 Date: 2016-09-05T00:00:00.0000000
 Description: "El principio de Ockam nos invita a no multiplicar las entidades innecesariamente. Es un regla de profundas implicaciones en ciencia, filosofía, medicina, economía y..."

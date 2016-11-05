@@ -2,6 +2,7 @@
 UniqueId: rNGPdOKbuy
 Title: "Inversión en conocimiento"
 Url: blog/ganar-invertir-conocimiento.html
+Section: Blog
 Date: 2016-10-20T00:00:00.0000000
 Description: El ganar dinero y saber invertirlo en conocimiento es una de las mejores herramientas para mantenerse competitivos y alcanzar las metas .
 Image: ganar-invertir-conocimiento.jpg

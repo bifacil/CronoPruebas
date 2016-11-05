@@ -1,0 +1,18 @@
+﻿---
+Layout: layouts/base.cshtml
+---
+@{
+	var ShowHeader=true;
+}
+<div id="wrap">
+	@Include("layouts/header.cshtml")
+    <div id="content" class="blogc">
+	   @if(ShowHeader==true){<div id="page-header" style="background-image:url(@Root/images/backgrounds/head-blog.jpg);"></div>}
+	   <div class="row">
+			<div class="span8 blog-main">
+				@RenderBody()
+			</div>
+     
+		</div>
+ 	</div>
+</div>

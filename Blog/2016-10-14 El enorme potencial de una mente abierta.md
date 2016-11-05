@@ -1,6 +1,7 @@
 ﻿---
 UniqueId: CIhAhkWJQc
 Title: El enorme potencial de una mente abierta
+Section: Blog
 Url: blog/ser-flexible-mente-abierta.html
 Date: 2016-10-14T00:00:00.0000000
 Description: "Tener la \"mente abierta\" implicar ser receptivo a nuevas ideas y diferentes opiniones o puntos de vista. Tener una mentalidad abierta implica estar en disposición de escuchar las propuestas de los demás, incluso si van en contra de nuestro criterio."

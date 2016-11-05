@@ -2,6 +2,7 @@
 UniqueId: UUSiUSCWiD
 Title: Same Thinking, same results
 Url: blog/no-problemas-pensamiento-eficiente-abierto-diferente.html
+Section: Blog
 Date: 2016-10-06T00:00:00.0000000
 Description: "A veces para resolver los problemas se debe pensar fuera de lo común y corriente a lo que hacemos diariamente. Esta es una forma necesaria y eficiente de encontrar soluciones."
 Image: einstein-same-thinking.jpg

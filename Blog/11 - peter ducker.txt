@@ -2,6 +2,7 @@
 UniqueId: UNUQprvfYr
 Title: Si no lo puedes medir, no lo puedes gestionar
 Url: blog/peter-ducker.html
+Section: Blog
 Date: 2016-08-01T00:00:00.0000000
 Description: Los datos de negocio que tenemos son tan importantes como saber darle uso. Si no lo puedes medir, no lo puedes gestionar.
 Image: peter-ducker.jpeg

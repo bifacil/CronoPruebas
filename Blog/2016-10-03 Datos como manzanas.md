@@ -2,6 +2,7 @@
 UniqueId: fvCdagLVxY
 Title: Datos como manzanas
 Url: blog/datos-como-manzanas.html
+Section: Blog
 Date: 2016-10-03T14:12:16.8538948+02:00
 Description: "Muchas veces vemos empresas que recogen y recogen datos sin nunca llegar a hacer nada con ellos. Sabemos que la información es poder, pero, ¿De qué sirve recopilar la información si luego no es tratada ni analizada?"
 Image: datos-como-manzanas.jpg

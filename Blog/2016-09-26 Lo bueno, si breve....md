@@ -2,6 +2,7 @@
 UniqueId: oHcUcWfmML
 Title: Lo bueno, si breve...
 Url: blog/lo-bueno-si-breve-dos-veces-bueno.html
+Section: Blog
 Date: 2016-09-26T22:15:28.9201742+02:00
 Description: "En este blog nos hemos propuesto transmitir nuestros valores y nuestras opiniones sobre tecnología y Business Intelligence en pocas palabras. Porque valoramos vuestro tiempo."
 Image: lo-bueno-si-breve-dos-veces-bueno.jpg

@@ -1,6 +1,7 @@
 ﻿---
 UniqueId: IQtBvqXGpy
 Title: Si no lo sabes explicar, no lo entiendes suficientemente
+Section: Blog
 Url: blog/si-no-lo-sabes-explicar.html
 Date: 2016-08-15T00:00:00.0000000
 Description: "Si tenéis que dar muchas vueltas o usáis mucho tiempo y recursos para explicaros; es que no lo entiendes bien o te falta algo para poder atar lo que queréis mostrar."

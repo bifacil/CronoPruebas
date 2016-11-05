@@ -2,6 +2,7 @@
 UniqueId: JqutOFfvmM
 Title: Zapatero a tus zapatos
 Url: blog/especialistas-business-intelligence.html
+Section: Blog
 Date: 2016-10-18T16:47:47.3207818+02:00
 Description: "Los tiempos en que un Leonardo Da Vinci podía ser una eminencia en todos los campos del conocimiento ya han pasado y no volverán. En el mundo global y competitivo que vivimos la única manera de conseguir la excelencia es con la especialización."
 Image: zapatero-a-tus-zapatos.jpg

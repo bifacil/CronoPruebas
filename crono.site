@@ -1,12 +1,17 @@
 ﻿[Crono site] (
-  Name='CRONO',
-  BaseUri=URI 'https://businessintelligence.es/',
+  Name='CRONO PRUEBAS',
+  BaseUri=URI 'https://pruebas.es/',
   DestinationPath='docs\',
   ImagesDirectory='images\',
   DocumentsDirectory='Blog\',
   SiteTemplate='Template',
-  VisibleDocumentProperties=('Title', 'Url', 'Date', 'Description', 'Image', 'Layout'),
-  Categories=(),
+  VisibleDocumentProperties=('Title', 'Url', 'Section', 'Date', 'Description', 'Image', 'Layout'),
+  Categories=(
+    Category (Name='Fundamentos Business Intelligence', Title='Fundamentos Business Intelligence', Code='bi'),
+    Category (Name='Fundamentos diseño dimensional', Title='Fundamentos diseño dimensional', Code='dimensional'),
+    Category (Name='Planificación y gestión de proyectos', Title='Planificación y gestión de proyectos', Code='projectmanagment'),
+    Category (Name='ETL y calidad de datos', Title='ETL y calidad de datos', Code='etl')
+  ),
   Authors=(),
   Links=(),
   SocialLinks=()

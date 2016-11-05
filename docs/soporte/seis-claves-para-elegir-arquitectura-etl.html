@@ -1,0 +1,310 @@
+﻿
+<!DOCTYPE html>
+<html>
+	
+	<!-- HEAD -->
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    
+		<title>Seis claves para elegir la arquitectura ETL</title>
+		<meta name="description" content="Este art&#237;culo describe seis decisiones clave que deben incluirse durante la elaboraci&#243;n de la arquitectura ETL para un DWH dimensional. Estas decisiones tienen un impacto importante en el coste inicial y coste corriente y en la complejidad de la soluci&#243;n ETL y, finalmente, en el &#233;xito de toda la soluci&#243;n BI/DW en global.">
+	
+		<link href="https://pruebas.es/rss.xml" rel="alternate" type="application/rss+xml" title="(RSS)" />
+		<link href="https://pruebas.es/soporte/seis-claves-para-elegir-arquitectura-etl.html" rel="canonical" />
+	
+		
+		<!-- Favicons -->
+		<link rel="shortcut icon" href="../favicon.png">
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144-precomposed.png">
+	
+		<!-- Google Fonts -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,700,700italic,900,900italic">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,300,700">
+	
+		<!-- FontAwesome Icons 4.2.0 ////////  -->
+		<link rel="stylesheet" href="../css/fontawesome/font-awesome.min.css">
+	
+		<!-- Custom Icon Font -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../css/iconfontcustom/icon-font-custom.css">
+	
+		<!-- Template CSS -->
+		<link rel="stylesheet" href="../css/base.css">
+		<link rel="stylesheet" href="../css/grid.css">
+		<link rel="stylesheet" href="../css/layout.css">
+		<link rel="stylesheet" href="../css/elements.css">
+		<link rel="stylesheet" href="../css/crono.css">
+	    <link rel="stylesheet" href="../css/blog.css">
+	
+		<!-- /// JS Plugins CSS ////////  -->
+		<link rel="stylesheet" href="../js/revolutionslider/css/settings.css">
+		<link rel="stylesheet" href="../js/revolutionslider/css/custom.css">
+		<link rel="stylesheet" href="../js/bxslider/jquery.bxslider.css">
+		<link rel="stylesheet" href="../js/magnificpopup/magnific-popup.css">
+		<link rel="stylesheet" href="../js/animations/animate.min.css">
+		<link rel="stylesheet" href="../js/itplayer/css/YTPlayer.css">
+	    <link rel="stylesheet" href="../js/odometer/odometer.css">
+	
+	
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		  ga('create', 'UA-26559605-1', 'auto');
+		  ga('send', 'pageview');
+		</script>
+	</head>
+	<body>
+		<div id="wrap">
+			
+			
+
+			<!-- HEADER -->
+			<noscript>
+				<div class="javascript-required">
+					<i class="fa fa-times-circle"></i> Parece que tienes JavaScript desactivado. Este sitio web necesita JavaScript para funcionar correctamente!
+				</div>
+			</noscript>
+			
+			<!--[if lte IE 8]>
+				<div class="modern-browser-required">You are using an <strong>outdated</strong> browser. Please <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">upgrade your browser</a> to improve your experience.</div>
+			<![endif]-->
+			
+			<div id="header">
+				<div class="row">
+					<div class="span2">
+						<div id="logo">
+							<a href="index.html">
+								<img src="../images/logo.png" alt="">
+							</a>
+						</div>
+					</div>
+					<div class="span10">
+						<a href="#" id="mobile-menu-trigger"><i class="fa fa-bars"></i></a>
+						<nav>
+							<ul class="sf-menu fixed" id="menu">
+								<li class="dropdown"><a class="" href="../index.html">Inicio</a></li>
+								<li class="dropdown"><a class="" href="../crono-analysis.html">Productos</a></li>
+								<li class="dropdown"><a class="" href="../crono-precios.html">Precios</a></li>
+								<li class="dropdown"><a class="" href="../soporte/index.html">Soporte</a></li>
+								<li class="dropdown"><a class="" href="../blog/index.html">Blog</a></li>
+								<li class="dropdown"><a class="" href="../crono-contacto.html">Contacto</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		    <div id="content" class="blogc">
+			   <div class="row">
+					<div class="span8 blog-main">
+						
+						<div class="blog-post-full ">
+						  <div class="row">
+						    <div class="span8">
+							
+						      <div class="navegador">
+						        <div class="arrows"> 
+									<span>Artículo 10/10</span>
+<a href="../soporte/los-10-mandamientos-de-kimball.html"><i class="arrow fa fa-arrow-circle-o-left"></i></a>																		<a href="../soporte/recomendaciones-testing-datawarehouse.html"><i class="arrow fa fa-arrow-circle-o-right"></i></a>																		
+								</div>
+						      </div>
+						    </div>
+						    <div class="w100p">
+						      <h2 class="blog-post-title">Seis claves para elegir la arquitectura ETL</h2>
+						      <div class="text">
+						        <p>Este artículo describe seis decisiones clave que deben incluirse durante la elaboración de la arquitectura ETL para un DWH dimensional. Estas decisiones tienen un impacto importante en el coste inicial y coste corriente y en la complejidad de la solución ETL y, finalmente, en el éxito de toda la solución BI/DW en global.</p>
+						        <h2>1. ¿Debemos utilizar una herramienta ETL?</h2>
+						        <p>Una de las primeras y más fundamentales decisiones que debes tomar es si codificar tu proceso ETL a mano desde cero, o si debes utilizar un software específico de un proveedor. Dejando de lado  las cuestiones técnicas y los costes de licencia, no debes adoptar un método que a tus empleados y directores no les sea familiar sin considerar seriamente las implicaciones a largo plazo de estas decisiones. Esta decisión tendrá un mayor impacto en el contexto del ETL, guiando decisiones respecto al personal, diseñando enfoques, estrategias de metadatos, y implementando cronologías a largo plazo.</p>
+						        <p><strong>En el contexto actual, la mayoría de organizaciones deben usar un software suministrado por un proveedor.</strong> Sin embargo, esta decisión debe tomarse en base a los recursos disponibles para construir y dirigir el sistema. Las herramientas ETL construyen entornos que usan iconos, flechas y propiedades en lugar de escribir código para construir la solución ETL. Ten cuidado: Si tu equipo de desarrollo del ETL está integrado por cierto número de programadores de la vieja escuela, es posible que no se adapten bien a una herramienta ETL. Sólo por esta razón, algunas organizaciones piensan que un ETL personalizado es una solución razonable.</p>
+						        <p>Si decides utilizar una herramienta ETL, no esperes una gran amortización en tu primera iteración. Las ventajas aparecerán a medida que realices iteraciones adicionales y empieces a aprovechar las ventajas de utilizar la herramienta en las siguientes implementaciones. También experimentarás los beneficios en la capacidad de mantenimiento, documentación más completa y soporte mejorado para los metadatos.</p>
+						        <h2>2. ¿Dónde y cómo debe tener lugar la integración de datos?</h2>
+						        <p>La integración de datos es un tema importantísimo para IT porque, básicamente, se trata de hacer que todos los sistemas trabajen juntos eficientemente. La &quot;visión de 360 de la empresa&quot; es un objetivo comúnmente discutido que realmente implica la integración de datos. En muchos casos, la integración de datos debe realizarse en los sistemas de transacciones primarios de la organización antes de que los datos lleguen al data warehouse. Sin embargo, antes que enfrentarse a la integración en el entorno operacional, estos requisitos son normalmente encargados al DWH y al sistema ETL.</p>
+						        <p>La mayoría de nosotros entendemos el concepto principal de que la integración permite que bases de datos dispares funcionen juntas de una manera útil. Todos sabemos que lo necesitamos, simplemente no tenemos una idea clara de cómo dividirlo en partes manejables.</p>
+						        <p>¿Integración significa que todas las partes de grandes organizaciones estén de acuerdo con cada dato o sólo con alguno de ellos? Este es el punto crucial de la decisión que se debe tomar. ¿En qué datos la dirección empresarial está de acuerdo/insiste que suceda? ¿Están dispuestos a establecer definiciones comunes entre la organización y atenerse a esas definiciones?</p>
+						        <p>Fundamentalmente, integración significa llegar a un acuerdo en el sentido de los datos desde la perspectiva de dos o más bases de datos. Con la integración, los resultados de dos bases de datos pueden ser combinados en un solo análisis del DWH. Sin un acuerdo, las bases de datos permanecerán aisladas y no se podrán enlazar en una aplicación. En el contexto de nuestro entorno ETL, la integración de datos toma la forma de las dimensiones acordadas y de los hechos establecidos en el almacén de datos. Las dimensiones acordadas hacen referencia a establecer atributos dimensionales comunes entre tablas de hechos separadas de forma que informes puedan ser generados utilizando estos atributos. Los hechos establecidos hacen referencia a acuerdos en métricas comunes de negocios como los indicadores de actividad (KPIs) entre bases de datos separadas, para que estos números puedas ser comparados matemáticamente para calcular diferencias y ratios.</p>
+						        <h2>3. ¿Qué mecanismo de recopilación de cambios de datos debemos escoger?</h2>
+						        <p>Durante la carga inicial del histórico de datos del almacén de datos, recopilar cambios contenidos en las fuentes de datos no es importante ya que estás cargando datos en un punto futuro. Sin embargo, la mayoría de tablas del almacén de datos son tan extensas que no pueden ser actualizadas durante cada ciclo ETL. Debes tener la capacidad de transferir sólo los cambios relevantes para la fuente de datos  desde la última actualización. Aislar la última fuente de datos se denomina recopilación de cambio de datos (<em>change data capture</em>, CDC). <strong>La idea detrás de recopilar el cambio de datos es bastante simple: transferir solamente los datos que han sido cambiados desde la última actualización.</strong></p>
+						        <p>Pero construir un buen sistema de recopilación de cambio de datos no es tan fácil como suena. Asumamos  que el mecanismo seleccionado debe ser totalmente fiable y a prueba de fallos. Todos los datos cambiados deben ser identificados. Encontrar la estrategia más completa puede ser evasivo, muchas veces la actualización de los sistemas de tablas de la fuente puede ocurrir fuera de la misma aplicación. Un error aquí, provocará resultados que no podrán ser explicados fácilmente; frecuentemente esto deriva en la recuperación de datos para identificar el culpable.</p>
+						        <p>Los problemas pueden significar elevados costes en términos de rehacer el trabajo-sin mencionar la situación embarazosa. En resumen, <strong>recopilar los cambios de datos está lejos de ser una tarea trivial, y debes entender muy bien los sistemas de fuente de datos.</strong> Este conocimiento ayudará al equipo ETL a evaluar las fuentes de datos, identificar problemas en  la recopilación de los cambios de datos y determinar la estrategia más apropiada.</p>
+						        <h2>4. ¿Cuando debemos almacenar los datos?</h2>
+						        <p>En el entorno actual de almacenamiento de datos, es bastante posible para las herramientas ETL establecer una conexión directa con la fuente de la base de datos, extraer los datos, aplicar cualquier transformación requerida en la memoria y, finalmente, escribirla- sólo una vez- en la tabla objetivo del DWH. Desde el punto de vista de rendimiento, esta es una gran capacidad ya que el coste de escritura es elevado. Minimizar el número de escrituras en un buen objetivo de diseño.</p>
+						        <p>Sin embargo, a pesar de las ventajas de rendimiento, este puede no ser el mejor planteamiento. Hay diversas razones por las que una organización puede decidir para almacenar los datos físicamente  (por ejemplo, escribirlos en un disco) durante el proceso ETL:</p>
+						        <ul>
+						        <li><strong>El método CDC más apropiado requiere comparar la copia actual de la tabla fuente con la copia precedente de la misma tabla.</strong></li>
+						        <li>La organización ha elegido almacenar los datos inmediatamente después de la extracción con el propósito de archivar (posiblemente para cumplir los requerimientos de auditoria y control).</li>
+						        <li>A veces se requiere un punto de recuperación/reinicio cuando el ETL falla a mitad del trabajo.</li>
+						        <li>Los procesos ETL que se desarrollan durante largos períodos pueden abrir una conexión con el sistema fuente que crea problemas con bloqueos de la base de datos y sobrecarga el sistema de transacciones.</li>
+						        </ul>
+						        <h2>5. ¿Dónde debemos corregir los datos?</h2>
+						        <p>Los usuarios de negocios son conscientes de que la calidad de los datos es un problema serio y caro. Por este motivo, a la mayoría de organizaciones les gusta apoyar iniciativas para mejorar la calidad de los datos. Pero la mayoría de los usuarios probablemente no tienen ni idea de dónde se originan los problemas de calidad de los datos o que se debe hacer para mejorar la calidad de los datos. Deben pensar que la calidad de los datos es un simple problema de ejecución del equipo ETL. En este entorno, el equipo ETL necesita ser ágil y proactivo:</p>
+						        <ol>
+						        <li><strong>La calidad de los datos no puede ser mejorada solamente por el ETL.</strong></li>
+						        <li><strong>La clave está en que el equipo de ETL colabore con la empresa y los equipos de soporte del sistema fuente del IT.</strong></li>
+						        </ol>
+						        <p>La decisión clave es dónde corregir los datos. Claramente, la mejor solución es recopilar correctamente los datos en el momento que se generan. Por supuesto, este no es siempre el caso, pero <strong>en la mayoría de casos los datos deben ser corregidos en sistema fuente.</strong></p>
+						        <p>Sin embargo, desafortunadamente, es inevitable que datos de poca calidad lleguen al sistema ETL. En este caso, hay tres opciones:</p>
+						        <ol>
+						        <li>Detener el proceso de carga.</li>
+						        <li>Enviar los registros dañados a un archivo temporal para su posterior procesamiento.</li>
+						        <li>Únicamente etiquetar los datos y continuar</li>
+						        </ol>
+						        <p>La tercera opción es por mucho la mejor (siempre que sea posible). Detener el proceso es obviamente doloroso porque requiere intervención manual para diagnosticar el problema, reiniciar o reanudar el trabajo, o abortar completamente. Enviar registros a un archivo temporal siempre es una solución pobre porque no está claro cuándo estos registros serán revisados e introducidos en el DWH. Hasta que los registros son restaurados al flujo de datos, la integridad global de la base de datos es cuestionable ya que estos registros están perdidos. Recomiendo no utilizar el archivo temporal para infracciones menores de datos.</p>
+						        <p>La tercera opción de etiquetar los datos con la condición de error normalmente funciona bien. La tabla de hechos errónea puede ser etiquetada con una dimensión de control que describe la condición de calidad global de la fila del hecho problemático. Los datos mal dimensionados también pueden ser etiquetados con un valores únicos de error en el mismo campo. En este punto, las soluciones de <em>data quality</em> pueden ayudar aidentificar el hecho problemático y las filas de dimensión.</p>
+						        <h2>6. ¿Con que rapidez debe estar disponible la información de origen en el sistema DW/BI?</h2>
+						        <p>La latencia de  los datos  describe con qué frecuencia los datos fuente deben ser proporcionados a los usuarios de negocio vía el sistema DW/BI. La latencia de los datos obviamente tiene un gran efecto en el coste y la complejidad de tu entorno ETL. Algoritmos de procesamiento inteligentes, paralelización,  y hardware potente pueden acelerar el flujo de carga (tradicionalmente orientado por lotes). Pero en algún momento, si el requerimiento de la latencia de datos es suficientemente urgente, el proceso ETL debe pasar de estar orientado a lotes a estar orientado a flujos. Este cambio no es gradual ni evolutivo. Es un cambio de paradigma que puede implicar la re-implementación completa del sistema ETL.</p>
+						        <p>Habitualmente, el proceso ETL requiere una latencia de datos acorde al ritmo natural del negocio. <strong>En la mayoría de organizaciones esto se traduce en actualizaciones diarias para la mayoría de procesos  ETL y actualizaciones semanales o mensuales para otros procesos ETL.</strong></p>
+						        <p>Sin embargo, en algunas circunstancias, el ritmo del negocio requiere actualizaciones más frecuentes o incluso actualizaciones en tiempo real. La clave es reconocer que sólo un puñado de procesos empresariales dentro de una organización son apropiados para realizar actualizaciones en tiempo real. <strong>No hay ninguna razón de peso para convertir todo el proceso ETL a tiempo real.</strong> El ritmo de la mayoría de procesos empresariales simplemente no demandan un tratamiento en tiempo real.</p>
+						        <p>Hay que tener cuidado: Preguntar a los usuarios de negocio si quieren la entrega de datos en tiempo real es una invitación abierta para los problemas. Por supuesto, la mayoría de usuarios de negocios responderán positivamente a tener los datos actualizados más frecuentemente, independientemente de si entienden el impacto de su petición. Claramente este tipo de requerimiento de latencia de datos puede ser peligroso. Recomendamos dividir la dificultad del tiempo real en tres categorías: diaria, frecuente e instantánea. Necesitas que los usuarios finales describan sus requerimientos en cuanto a latencia de datos en estos términos y después diseñar tu solución ETL apropiadamente para respaldar cada set de requerimientos:</p>
+						        <ol>
+						        <li><strong>&quot;Instántaneo&quot;</strong> significa que los datos visibles en la pantalla del usuario final representan el estado real del sistema de fuente de transacción en cada instante. Cuando el estado del sistema de la fuente cambia, la pantalla debe también responder instantáneamente.</li>
+						        <li><strong>&quot;Frecuentemente&quot;</strong> significa que los datos visibles por el usuario final, se actualizan muchas veces al día pero no se garantiza que representen el  valor correcto absoluto en cada instante.</li>
+						        <li><strong>&quot;Diariamente&quot;</strong> significa que los datos visibles en la pantalla corresponden a la información del sistema fuente al final del día anterior laborable.</li>
+						        </ol>
+						        <p>En este artículo hemos discutido unas cuentas claves que deben ser evaluadas durante la creación de la arquitectura ETL para mantener DWH dimensional.</p>
+						        <p>Pocas veces hay una sola elección correcta para cualquiera de estas decisiones. Como siempre, la decisión correcta dependerá de las necesidades y características de tu empresa.</p>
+						        <p>Artículo original: <a href="http://www.kimballgroup.com/2009/10/six-key-decisions-for-etl-architectures/">http://www.kimballgroup.com/2009/10/six-key-decisions-for-etl-architectures/</a></p>
+						      </div>
+						    </div>
+						    <div class="w100p socialshare"> <span>Comparte<br>
+						      este articulo</span>
+						      <ol>
+						        <li class="tw"><a href="javascript:void(0)" onclick="javascript:OpenPopup('http://twitter.com/share?text=Este art&#237;culo describe seis decisiones clave que deben incluirse durante la elaboraci&#243;n de la arquitectura ETL para un DWH dimensional. Estas decisiones tienen un impacto importante en el coste inicial y coste corriente y en la complejidad de la soluci&#243;n ETL y, finalmente, en el &#233;xito de toda la soluci&#243;n BI/DW en global.&url=https://pruebas.es/soporte/seis-claves-para-elegir-arquitectura-etl.html')"><i class="fa fa-twitter"></i></a></li>
+						        <li class="in"><a href="javascript:void(0)" onclick="javascript:OpenPopup('http://www.linkedin.com/shareArticle?mini=true&url=https://pruebas.es/soporte/seis-claves-para-elegir-arquitectura-etl.html')"><i class="fa fa-linkedin"></i></a></li>
+						        <li class="fb"><a href="javascript:void(0)" onclick="javascript:OpenPopup('https://www.facebook.com/sharer/sharer.php?u=https://pruebas.es/soporte/seis-claves-para-elegir-arquitectura-etl.html')"><i class="fa fa-facebook"></i></a></li>
+						        <li class="go"><a href="javascript:void(0)" onclick="javascript:OpenPopup('https://plus.google.com/share?url=https://pruebas.es/soporte/seis-claves-para-elegir-arquitectura-etl.html')"><i class="fa fa-google-plus"></i></a></li>
+						        <li class="pi"><a href="javascript:void(0)" onclick="javascript:OpenPopup('http://pinterest.com/pin/create/button/?url=https://pruebas.es/soporte/seis-claves-para-elegir-arquitectura-etl.html')"><i class="fa fa-pinterest"></i></a></li>
+						       <!-- <li class="ma"><a href="#"><i class="fa fa-envelope-o"></i></a></li> -->
+						      </ol>
+						    </div>
+							
+							
+							<div id="disqus_thread"></div>
+						
+						
+							
+							
+						  </div>
+						</div>
+					</div>
+		     
+				</div>
+		 	</div>
+		</div>
+		<!-- FOOTER -->
+		<div id="footer-wrapper">
+			<div class="row">
+				<div class="span12">
+					<div id="footer">
+						<div class="row">
+							
+							<div class="span4" id="footer-widget-area-1">
+								<div class="widget widget_text">
+									<div class="textwidget">
+										<img class="img-align-left hidden-tablet" src="../images/footer-logo.png" alt="">
+										<address>
+											<span class="text-uppercase">Crono Analytics<sup>&copy;</sup></span>
+											<br>Numancia 74,
+											<br>08029, Barcelona
+										</address>
+									</div>
+								</div>
+							</div>
+							
+							<div class="span4" id="footer-widget-area-2">
+								<div class="widget ewf_widget_contact_info">
+									<ul>
+										<li><strong>Teléfono: </strong>93 802 92 64 </li>
+										<li><strong>Email: </strong><a href="mailto:info@crono.net">info@crono.net</a></li>
+									</ul>
+								</div>
+							</div>
+		
+							<div class="span4" id="footer-widget-area-3">
+								<div class="widget ewf_widget_contact_info">
+									<ul>
+										<li><strong>Blog: </strong><a href="http://www.businessintelligence.info/" target="_blank">www.businessintelligence.info</a></li>
+										<li><strong>YouTube: </strong><a href="https://www.youtube.com/c/BusinessIntelligenceInfo" target="_blank">www.youtube.com</a></li>
+										<li><strong>Facebook: </strong><a href="https://www.facebook.com/CronoBusinessIntelligence" target="_blank">www.facebook.com</a></li>
+										<li><strong>LinkedIn: </strong><a href="https://www.linkedin.com/company/businessintelligence" target="_blank">www.linkedin.com</a></li>
+										<li><i class="fa fa-twitter"></i><a href="https://twitter.com/bifacil" target="_blank">@bifacil</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+		            <div id="footer-bottom">
+						<div class="row">
+							<div class="span6" id="footer-bottom-widget-area-1">
+								<div class="widget widget_text">
+									<div class="textwidget">
+										<p class="text-uppercase last"><strong>Todos los derechos reservados &copy; 2015 Crono Analytics</strong></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		    </div>
+		</div>
+		<a id="back-to-top" href="#"><i class="ifc-up4"></i></a>
+		
+		<!-- jQuery -->
+		<script src="../js/jquery-2.1.1.min.js"></script>
+		
+		<!--  ViewPort -->
+		<script src="../js/viewport/jquery.viewport.js"></script>
+		
+		<!--  Easing -->
+		<script src="../js/easing/jquery.easing.1.3.js"></script>
+		
+		<!--  SimplePlaceholder -->
+		<script src="../js/simpleplaceholder/jquery.simpleplaceholder.js"></script>
+		
+		<!--  Fitvids -->
+		<script src="../js/fitvids/jquery.fitvids.js"></script>
+		
+		<!--  Animations -->
+		<script src="../js/animations/animate.js"></script>
+		
+		<!--  Superfish Menu -->
+		<script src="../js/superfish/hoverIntent.js"></script>
+		<script src="../js/superfish/superfish.js"></script>
+		
+		<!--  Revolution Slider -->
+		<script src="../js/revolutionslider/js/jquery.themepunch.tools.min.js"></script>
+		<script src="../js/revolutionslider/js/jquery.themepunch.revolution.min.js"></script>
+		
+		<!--  bxSlider -->
+		<script src="../js/bxslider/jquery.bxslider.min.js"></script>
+		
+		
+		<!--  Parallax -->
+		<script src="../js/parallax/jquery.parallax.min.js"></script>
+		
+		
+		<!--  Custom JS   -->
+		<script src="../js/plugins.js"></script>
+		<script src="../js/scripts.js"></script>
+		
+		<script src="../js/crono.js"></script>
+		
+		<script id="dsq-count-scr" src="//cronoblog.disqus.com/count.js" async></script>
+		<script>
+		
+				var disqus_config = function () {
+					this.page.url = 'https://pruebas.es/soporte/seis-claves-para-elegir-arquitectura-etl.html'
+					this.page.identifier = 'GYCVZOyZzN'
+				};	
+				(function() { 
+					var d = document, s = d.createElement('script');
+					s.src = '//cronoblog.disqus.com/embed.js';
+					s.setAttribute('data-timestamp', +new Date());
+					(d.head || d.body).appendChild(s);
+				})();
+					
+		</script>
+	</body>
+</html>

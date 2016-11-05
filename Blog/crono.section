@@ -1,0 +1,1 @@
+﻿Section (Name='Blog', Title='Blog', DefaultLayout='Layouts\post.cshtml')

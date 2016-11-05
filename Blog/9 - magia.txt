@@ -2,6 +2,7 @@
 UniqueId: xGOWxMMQhg
 Title: Indistinguible de la magia
 Url: blog/magia.html
+Section: Blog
 Date: 2016-07-18T00:00:00.0000000
 Description: "De todos es sabido que los informáticos tenemos superpoderes y que podemos hacer cosas que resultan incomprensibles para los simples mortales."
 Image: magia.jpeg
