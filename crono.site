@@ -1,0 +1,13 @@
+﻿[Crono site] (
+  Name='CRONO',
+  BaseUri=URI 'https://businessintelligence.es/',
+  DestinationPath='docs\',
+  ImagesDirectory='images\',
+  DocumentsDirectory='Blog\',
+  SiteTemplate='Template',
+  VisibleDocumentProperties=('Title', 'Url', 'Date', 'Description', 'Image', 'Layout'),
+  Categories=(),
+  Authors=(),
+  Links=(),
+  SocialLinks=()
+)

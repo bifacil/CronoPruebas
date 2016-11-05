@@ -1,0 +1,54 @@
+---
+Visible: NO
+---
+
+
+@{
+	var HomeClass=(@Page.Url=="index.html")?"active":"";
+	var ProductsClass=(@Page.Url=="crono-etl.html"| @Page.Url=="crono-analysis.html" | @Page.Url=="crono-metadata.html")?"active":"";
+	var ServicesClass=(@Page.Url=="crono-servicios.html")?"active":"";
+	var PricesClass=(@Page.Url=="crono-precios.html")?"active":"";
+	var ContactClass=(@Page.Url=="crono-contacto.html")?"active":"";
+	var BlogClass=(@Page.Url.StartsWith("blog"))?"active":"";
+}
+<!-- HEADER -->
+<noscript>
+	<div class="javascript-required">
+		<i class="fa fa-times-circle"></i> Parece que tienes JavaScript desactivado. Este sitio web necesita JavaScript para funcionar correctamente!
+	</div>
+</noscript>
+
+<!--[if lte IE 8]>
+	<div class="modern-browser-required">You are using an <strong>outdated</strong> browser. Please <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+<div id="header">
+	<div class="row">
+		<div class="span2">
+			<div id="logo">
+				<a href="index.html">
+					<img src="@Root/images/logo.png" alt="">
+				</a>
+			</div>
+		</div>
+		<div class="span10">
+			<a href="#" id="mobile-menu-trigger"><i class="fa fa-bars"></i></a>
+			<nav>
+				<ul class="sf-menu fixed" id="menu">
+					<li class="dropdown"><a class="@HomeClass" href="@Root/index.html">Inicio</a></li>
+					<li class="dropdown"><a class="@ProductsClass">Productos</a>
+						<ul>
+							<li><a href="@Root/crono-analysis.html">Crono Analysis</a></li>
+							<li><a href="@Root/crono-metadata.html">Crono Metadata</a></li>
+							<li><a href="@Root/crono-etl.html">Crono ETL</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a class="@ServicesClass" href="@Root/crono-servicios.html">Servicios</a></li>
+					<li class="dropdown"><a class="@PricesClass" href="@Root/crono-precios.html">Precios</a></li>
+					<li class="dropdown"><a class="@ContactClass" href="@Root/crono-contacto.html">Contacto</a></li>
+					<li class="dropdown"><a class="@BlogClass" href="@Root/blog/index.html">Blog</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,17 @@
+﻿---
+UniqueId: FMkzDHwLCL
+Title: Keep it simple
+Url: blog/kiss.html
+Date: 2016-07-25T00:00:00.0000000
+Description: "El principio KISS habla de simplicidad y sencillez Son unos valores que todos reconocemos y asumimos como propios. Sin embargo, existe también una tendencia irrefrenable a complicarlo y sobre-diseñarlo todo."
+Image: kiss.jpeg
+
+---
+
+
+
+
+El principio KISS habla de simplicidad y sencillez Son unos valores que todos reconocemos y
+asumimos como propios. Sin embargo, existe también una tendencia irrefrenable a complicarlo y sobre-diseñarlo
+todo. ¿Cuántas veces el día a día nos obliga y arrastra a procedimientos y maneras de hacer que dificultan
+nuestro trabajo? Cuando sientas que eso está ocurriendo en tu organización, tomate un respiro, y recuerda: ¡KEEP IT SIMPLE!

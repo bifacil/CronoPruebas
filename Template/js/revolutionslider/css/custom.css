@@ -1,0 +1,154 @@
+/**
+ * Name: custom.css
+ *
+ *	T.O.C
+ *
+ *	=Basics
+ *	=Rev Slider Pager
+ *	=Rev Slider Nav 
+ *	=Rev Typography
+ *
+ */
+ 
+ 
+/* ==========================================================================
+   =Basics
+   ========================================================================== */
+   
+	.fullwidthbanner-container {
+		position: relative;
+		width: 100% !important;
+		max-height: 700px !important;
+		overflow: hidden;
+		padding: 0;
+		margin-bottom: 125px; 
+	}
+
+	.fullwidthbanner-container ul { list-style: none; }
+
+	.fullwidthbanner-container .fullwidthbanner {
+		position: relative;
+		width: 100% !important;
+		max-height: 700px !important;
+	}
+
+/* ==========================================================================
+   =Rev Slider Pager
+   ========================================================================== */
+
+   /**
+ 	 * 1. changing the z-index from 1000 so that the bullets don't go over the sticky menu
+ 	 */
+   
+	.tp-bullets { 
+		z-index: 100; /* 1 */
+	}
+	   
+	.tp-bullets.simplebullets.round .bullet {
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		margin: 0 3px;
+		background: #fff;
+	}
+
+	.tp-bullets.simplebullets.round .bullet.selected { background: #7a7885;  }
+
+/* ==========================================================================
+   =Rev Slider Nav
+   ========================================================================== */
+
+	.tp-leftarrow.default,
+	.tp-rightarrow.default {
+		width: 36px;
+		height: 36px;
+		border: 2px solid #fff;
+		border-radius: 3px;
+		-webkit-transition: all 0.3s;
+				transition: all 0.3s;
+	}
+
+	.tp-leftarrow.default:hover,
+	.tp-rightarrow.default:hover {
+		border-color: #7a7885;
+		background-color: #7a7885; 
+	}
+
+	.tp-leftarrow.default { background: url(../../../images/left.png) no-repeat center center; }
+	.tp-rightarrow.default { background: url(../../../images/right.png) no-repeat center center; }
+
+/* ==========================================================================
+   =Rev Typography
+   ========================================================================== */
+   
+   	.caption.bg {
+		width: 475px;
+		height: 425px;
+		background-color: #7a7885;
+	}
+	
+	.caption.title {
+		color: #fff;
+		font-size: 24px;
+		line-height: 36px;
+		font-weight: 900;
+		text-transform: uppercase;
+	}
+	
+	.caption.title-2 {
+		color: #fff;
+		font-size: 48px;
+		line-height: 60px;
+		font-weight: 900;
+		text-transform: uppercase;
+	}
+	
+	.caption.text {
+		color: #fff;
+		font-size: 16px;
+		line-height: 27px;
+		font-weight: 300;
+	}
+	
+	.caption .btn {
+		border-color: #fff;
+		color: #fff;
+	}
+   
+   	.caption .btn:hover {
+		border-color: #7a7885;
+		background-color: #7a7885;
+		color: #fff;
+	}
+   
+
+	@media (min-width: 768px) and (max-width: 979px) {
+		
+		.tp-leftarrow.default,
+		.tp-rightarrow.default { display: none; }
+		
+		.caption.bg {
+			width: 285px;
+			height: 290px;
+		}
+		
+	}
+
+	@media (max-width: 767px) {
+		
+		.fullwidthbanner-container { margin-bottom: 75px; }
+		
+		.tp-leftarrow.default,
+		.tp-rightarrow.default { display: none; }
+		
+		.tp-bullets { bottom: 20px !important; }
+		
+		.caption.bg { display: none; }
+		
+		.caption .btn {
+			padding: 5px 10px;
+			font-size: 8px;
+			line-height: 8px;
+		}
+		
+	}
