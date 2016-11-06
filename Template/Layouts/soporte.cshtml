@@ -5,7 +5,27 @@ Layout: layouts/base.cshtml
 	var ShowHeader=true;
 }
 <div id="wrap">
-	@Include("layouts/header.cshtml")
+	<div id="header">
+		<div class="row">
+			<div class="span2">
+				<div id="logo">
+					<a href="@Root/soporte/index.html">
+						<img src="@Root/images/logo.png" alt="">
+					</a>
+				</div>
+			</div>
+			<div class="span10">
+				<a href="#" id="mobile-menu-trigger"><i class="fa fa-bars"></i></a>
+				<nav>
+					<ul class="sf-menu fixed" id="menu">
+						<li class="dropdown"><a href="@Root/index.html">Volver a Crono</a></li>
+						<li class="dropdown"><a href="@Root/crono-contacto.html">Contacto</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+
     <div id="content" class="blogc">
 	   @if(ShowHeader==true){<div id="page-header" style="background-image:url(@Root/images/backgrounds/head-blog.jpg);"></div>}
 	   <div class="row">
