@@ -485,17 +485,17 @@
 	 * 2. This value should be the height of the #header-top, if it exists	
  	 */
 		
-		#content { 
-			padding-top: 175px;		/* 1 */	 
+		/*#content { 
+			padding-top: 175px;		 
 		}
 		
 		#header {
 			position: absolute;
-			top: 0; 				/* 2 */	
+			top: 0; 				
 			right: 0;
 			left: 0;
 			margin: 0 auto; 	
-		}
+		}*/
 		
 		/**
 		 * 1. The z-index has to be 1020 so it is bigger than the back to top buttons z-index that is 1010

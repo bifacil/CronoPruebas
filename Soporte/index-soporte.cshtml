@@ -4,14 +4,9 @@ Url: soporte/index.html
 Section: "Artículos"
 Layout: layouts/soporte-articulo.cshtml
 ---
-<div class="row">
-  <div class="span9">
-    <h1 class="page-title">Manual de Crono</h1>
-  </div>
-</div>
 
 @{
-  var posts=(from post in Site.GetSection("Artículos").Pages orderby post.Date descending select post);
+  var posts=(from post in Site.FindSectionByName("Artículos").Pages orderby post.Date descending select post);
   foreach(var post in posts){
     <h2><a href="@Root/@post.Url">@post.Title</a></h2>
 }}

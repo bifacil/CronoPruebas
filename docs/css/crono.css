@@ -1,5 +1,73 @@
 /* Generals */
+	.sections-header{
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-top: 10px;
+		min-height: 50px;
+	}
+	
+	.sections-header img{
+		max-height: 43px;
+		margin-left: 10px;
+	}
 
+	.header-left-part{
+		width:50%;
+		float:left;
+	}
+
+	.header-right-part{
+		width:50%;
+		float:right;
+		text-align: right;
+		margin-top: 5px;
+	}	
+	
+	.header-right-part a{
+		margin-right: 5px;
+		margin-bottom: 0;
+	}
+	
+	.header-caption{
+		padding-bottom: 48px;
+		padding-top: 48px;
+		margin-bottom: 30px;
+		background-size:cover;
+	}
+	
+	.website .sections-header{background-color: #000;}
+	
+	.soporte .header-caption {background: url(img/banner-datawarehouse.jpg);}
+	.blog    .header-caption {background: url(img/banner-datawarehouse-rojo.jpg);}
+	.soporte .header-right-part a{color: #006db0;}	
+	.blog    .header-right-part a{color: #a30431;}
+	.website .header-right-part a{color: #FFF;text-transform: uppercase;font-weight: bold;}
+	.soporte a.btn{background-color: #2880ba !important;border: 2px solid #2880ba !important;}
+	.blog    a.btn{background-color: #a30431 !important;border: 2px solid #a30431 !important;}
+	.website a.btn{background-color: transparent !important;border: 2px solid #FFF !important;}
+	
+	.header-caption h1{
+		color: #fff;
+		font-size: 50px;
+		font-weight: 100;
+		letter-spacing: 2px;
+		margin-top: 50px;
+		text-align: center;
+	}
+	
+	.blog .header-caption p{text-align:center !important;margin-bottom:0; margin-top:20px;}
+	
+	.container{
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	
+	.header-caption .container{
+		max-width:100%;
+	}
+	
 	.span4{
 		
 		margin-top:50px;
@@ -89,7 +157,7 @@
 	  margin: 20px 0 0px 0 !important;
 	}
 	a.btn {
-	  color: #FFF;
+	  color: #FFF !important;
 	  background-color: #2880ba;
 	  border: 2px solid #2880ba;
 	  width: auto;

@@ -23,14 +23,9 @@ Layout: layouts/blog.cshtml
       </div>
       @if(Page.Image!=null){
 	  <div class="imgpost"> <img class="w100p" src="@Root/blog/images/@Page.Image"> </div>
-      <p class="blog-post-meta"> 
-		<span><i class="fa fa-archive"></i>@Page.ShortDate</span>
-		<span><i class="fa fa-tags"></i>bussines, intelligence, quote</span> 
-	  </p>
 	  }
     </div>
     <div class="w100p">
-      <h2 class="blog-post-title">@Page.Title</h2>
       <div class="text">
         @RenderBody()
       </div>
