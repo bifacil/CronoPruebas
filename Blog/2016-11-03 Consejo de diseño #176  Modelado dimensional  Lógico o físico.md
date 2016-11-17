@@ -2,12 +2,13 @@
 UniqueId: CZzUAhZOqN
 Title: "Consejo de diseño #176: Modelado dimensional: ¿Lógico o físico?"
 Url: soporte/modelado-dimensional-logico-o-fisico.html
-Section: "Artículos"
 Date: 2016-11-03T00:00:00.0000000
 SecondaryDate: 2015-07-28T23:42:00.0000000
 Description: "La solicitud del modelado dimensional deriva de la evidente simplicidad de los modelos y de la forma natural en que la gente de negocios y la gente técnica puedan entender lo que significan los modelos."
 Author: Ralph Kimball
 Category: "Fundamentos diseño dimensional"
+Categories:
+- "Fundamentos diseño dimensional"
 RelatedUrl: http://www.kimballgroup.com/2015/07/design-tip-176-dimensional-models-logical-or-physical/
 
 ---
