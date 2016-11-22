@@ -18,7 +18,7 @@ La última vez, indiqué que las restricciones no negociables del diseño de un 
 
 El resto de restricciones implicaban el reconocimiento de que el diseño del DWH es extremadamente complejo. La fuente de datos, las tecnologías de la base de datos y los entornos empresariales con los que tratamos son increíblemente complicados. Así que, como buenos ingenieros, para buscar nuestro camino hacia fuera de la ciénaga, debemos descomponer el problema en partes separadas manejables y poner énfasis en las técnicas que son predecibles, reutilizables y robustas.
 
-## Separa tus sistemas   
+## Separa tus sistemas  
 
 El primer paso crucial en el diseño de un almacén de datos en una empresa es separar los sistemas lógica, física y administrativamente.
 
