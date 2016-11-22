@@ -10,7 +10,7 @@ Category: ETL y calidad de datos
 RelatedUrl: http://www.kimballgroup.com/2009/10/six-key-decisions-for-etl-architectures/
 
 ---
-Este artículo describe seis decisiones clave que deben incluirse durante la elaboración de la arquitectura ETL para un DWH dimensional. Estas decisiones tienen un impacto importante en el coste inicial y coste corriente y en la complejidad de la solución ETL y, finalmente, en el éxito de toda la solución BI/DW en global.
+Este artículo describe seis decisiones clave que deben incluirse durante la elaboración de la arquitectura ETL para un DWH dimensional. Estas decisiones tienen un impacto importante en el coste inicial y coste corriente y en la complejidad de la solución ETL y, finalmente, en el éxito de toda la solución BI/DW en global.  
 
 ## 1. ¿Debemos utilizar una herramienta ETL?
 
