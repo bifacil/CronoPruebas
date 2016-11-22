@@ -12,7 +12,7 @@ RelatedUrl: http://www.kimballgroup.com/2009/05/the-10-essential-rules-of-dimens
 ---
 Un estudiante que asistió recientemente a una de las clases de modelado dimensional de *Kimball Gruop* me pidió una lista de "10 Mandamientos de Kimball" para el modelado dimensional. Nos abstendremos de utilizar la terminología religiosa, pero debemos decir que estas reglas incluyen recomendaciones que se deben seguir necesariamente junto a otras buenas prácticas que conviene tener en cuenta.
 
-### Regla \#1: Cargar los datos atómicos en estructuras dimensionales
+### Regla \#1: Cargar los datos atómicos en estructuras dimensionales  
 
 Los modelos dimensionales deben estar cargados con el máximo detalle para poder dar respuesta a los filtros impredecibles y agrupaciones requeridas en las consultas de los usuarios de negocio. Normalmente los usuarios no necesitan ver un único registro cada vez, pero no puedes predecir de que manera arbitraria querrán visualizar y consultar estos detalles.
 
