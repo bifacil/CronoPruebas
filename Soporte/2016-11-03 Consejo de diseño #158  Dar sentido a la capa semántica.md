@@ -2,7 +2,6 @@
 UniqueId: yCgqODiWRH
 Title: "Consejo de diseño #158: Dar sentido a la capa semántica"
 Url: soporte/dar-sentido-capa-semnatica.html
-Section: "Artículos"
 Date: 2016-11-03T00:00:00.0000000
 SecondaryDate: 2013-08-05T00:32:00.0000000
 Description: "Uno de los componentes clave de la arquitectura de un sistema Business Intelligence es la capa semántica. La capa semántica proporciona la traducción de las estructuras subyacentes de la base de datos en términos y construcciones orientados  al usuario de negocio."
@@ -13,7 +12,7 @@ RelatedUrl: http://www.kimballgroup.com/2013/08/design-tip-158-making-sense-of-t
 ---
 Uno de los componentes clave de la arquitectura de un sistema Business Intelligence es la capa semántica. La capa semántica proporciona la traducción de las estructuras subyacentes de la base de datos en términos y construcciones orientados  al usuario de negocio. Normalmente es una parte integrante de la herramienta de consulta e informe. Los sistemas OLAP o las bases de datos multi-dimensionales (cubos) también incluyen una capa semántica.
 
-Algunas sistemas BI proporcionan capas semánticas microscópicamente pequeñas, otras son ricas y robustas. La funcionalidad mínima para poder calificarse como una capa semántica incluye:
+Algunas sistemas BI proporcionan capas semánticas microscópicamente pequeñas, otras son ricas y robustas. La funcionalidad mínima para poder calificarse como una capa semántica incluye :
 
 - Una organización que presenta los elementos de modo intuitivo para la gente de negocios. En la mayoría de las herramientas organizarás las tablas y columnas en estructuras de carpetas. El método Kimball te aconseja estructurar dimensionalmente tu almacén de datos, lo cuál te sitúa por delante de aquellos que intentan lanzar BI directamente sobre estructuras de bases de datos transaccionales. Pero incluso si rehaces sobre un modelo dimensional limpio, una capa semántica proporcionará oportunidades para mejorar la navegabilidad y la capacidad de encontrar.
 - Una oportunidad para renombrar los elementos de datos para que los usuarios de negocios encuentren sentido. Por supuesto, el método Kimball recomienda encarecidamente que las tablas y columnas del almacén de la base de datos sean nombrados como a los usuarios les gustaría verlos, pero esta funcionalidad se implementa a veces en la capa semántica.
