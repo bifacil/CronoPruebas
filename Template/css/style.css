@@ -383,13 +383,14 @@ mark {
   bottom: 0;
   width: 100%;
   height: auto;
-  background-color: #fff;
   left:0;
   padding-top:30px;
   padding-bottom:50px;
 }
 
 .descargar a {min-height:132px;}
+.descargar .col-centered{display:inline-block; text-align: left; float: none;}
+.descargar h3{text-align:center;}
 
 a.boton-descargar       {border:1px solid #066198;text-align:center;font-size: 18px;background-color:transparent;padding:15px 10px;display:block;}
 a.boton-descargar:hover {background-color:#066198; color: #fff !important;text-decoration:none;}
@@ -401,9 +402,8 @@ a.boton-more-articles:hover {color:#066198 !important;background-color:#a6c9dd;t
 a.boton-more-articles h4       {font-size: 18px;color:#fff}
 a.boton-more-articles:hover h4 {color:#066198}*/
 
-.espacio-articles {
-    margin-bottom: 30px;
-    margin-top: 20px;
+.clientes{
+
 }
 
 /* Sobre Kimball Group */
