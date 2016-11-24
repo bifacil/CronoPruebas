@@ -10,6 +10,11 @@ body {
   margin-bottom: 220px;
   font-family: "Ubuntu", sans-serif;
 }
+@media (min-width: 1600px) {
+ .container {
+   width: 1550px;
+ }
+}
 
 .home{
 		overflow-x:hidden;
@@ -310,12 +315,12 @@ mark {
 
 .home h3{
 	color: #006db0;
-    text-align: center;
+    text-align: left;
     font-size: 34px;
 	font-weight: 300;
 	margin-bottom:25px;
 }
-.home .suscribete h3{
+.home .informarse h3{
 	color: #000;
 	text-align: left;
 	font-weight:600;
@@ -325,9 +330,9 @@ mark {
 .home .col-crono     h3{text-align: right;}
 
 .home          p{font-size: 17px;font-weight: 300;margin-bottom: 5px;}
-.suscribete    p{padding-left:0;}
+.informarse    p{padding-left:0;}
 .col-crono     p{text-align:right;padding-left:10px;}
-.last-articles p{padding-left:0;text-align:center;}
+.descargar p{padding-left:0;text-align:center;}
 .home p.nota    {font-size: 15px;color:#006db0;margin-bottom: -25px;text-align:center;margin-top:50px;}
 
 
@@ -340,33 +345,40 @@ mark {
   bottom: 0;
   width: 100%;
   height: auto;
-  background-color: #fff;
+  background-color: #EBEDEC;
   left:0;
   padding-top:30px;
   padding-bottom:50px;
 }
 
-/* fcríbete */
-.suscribete {
+/* fmarse */
+.informarse {
   position: relative;
   bottom: 0;
   width: 100%;
   height: auto;
-  background-color: #ffcc01;
   left:0;
   padding-top:30px;
   padding-bottom:50px;
 }
 
-.buzon {
-    margin-bottom: -30px;
-    margin-top: -10px;
-}
-.boton-suscribete {border:1px solid #000;color:#000;background-color:transparent;float:right;text-align:center;padding:10px 20px;font-size: 18px;margin-top:20px;}
-.boton-suscribete:hover {border:1px solid #000;color:#ffcc01;background-color:#000;text-decoration:none;}
+.informarse .panel-footer{text-align:right; color:#fff; border-radius:0; text-transform:uppercase; font-size:20px;}
+.informarse .panel img{display:block; margin:0 auto 30px auto;}
+
+.informarse .panel{border-radius:0;}
+.informarse .panel-body{min-height:235px;}
+
+.col-centered{display:inline-block; text-align: left; float: none;}
+.row-centered{text-align:center;}
+
+.panel-analysis{border-color:#D24726;}
+.panel-etl{border-color:#0072C6;}
+.panel-analysis .panel-footer{background-color:#D24726;}
+.panel-etl .panel-footer{background-color:#0072C6;}
+
 
 /* Últimos Artículos Traducidos */
-.last-articles {
+.descargar {
   position: relative;
   bottom: 0;
   width: 100%;
@@ -377,17 +389,17 @@ mark {
   padding-bottom:50px;
 }
 
-.last-articles a {min-height:132px;}
+.descargar a {min-height:132px;}
 
-a.boton-last-articles       {border:1px solid #066198;text-align:center;font-size: 18px;background-color:transparent;padding:15px 10px;display:block;}
-a.boton-last-articles:hover {background-color:#066198; color: #fff !important;text-decoration:none;}
-a.boton-last-articles h4 {font-size: 18px;margin-top:0;}
-a.boton-last-articles p {font-size: 12px;margin-bottom:10px;}
+a.boton-descargar       {border:1px solid #066198;text-align:center;font-size: 18px;background-color:transparent;padding:15px 10px;display:block;}
+a.boton-descargar:hover {background-color:#066198; color: #fff !important;text-decoration:none;}
+a.boton-descargar h4 {font-size: 18px;margin-top:0;}
+a.boton-descargar p {font-size: 12px;margin-bottom:10px;}
 
-a.boton-more-articles       {border:1px solid #066198;text-align:center;font-size: 18px;background-color:#066198;color:#fff;padding:40px 10px;display:block;}
+/*a.boton-more-articles       {border:1px solid #066198;text-align:center;font-size: 18px;background-color:#066198;color:#fff;padding:40px 10px;display:block;}
 a.boton-more-articles:hover {color:#066198 !important;background-color:#a6c9dd;text-decoration:none;}
 a.boton-more-articles h4       {font-size: 18px;color:#fff}
-a.boton-more-articles:hover h4 {color:#066198}
+a.boton-more-articles:hover h4 {color:#066198}*/
 
 .espacio-articles {
     margin-bottom: 30px;
@@ -656,7 +668,7 @@ text-align:center;
 
 @media screen and (max-width: 600px) {
 .sm-text {margin-left:-5px;}
-.boton-last-articles {margin-bottom:30px;}
+.boton-descargar {margin-bottom:30px;}
 }
 
 @media screen and (max-width: 414px) {
