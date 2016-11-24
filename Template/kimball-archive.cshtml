@@ -1,0 +1,69 @@
+---
+Url: kimball-archive.html
+Title: Índice de artículos
+Description: "Artículos de Kimball Group sobre recomendaciones y buenas prácticas datawarehousing."
+---
+<!DOCTYPE html>
+<html lang="en">
+	@Include("layouts/head.cshtml")
+	<body>
+		@Include("layouts/navigation.cshtml")
+		<div class="cabecera">
+			<div class="container">
+				<h1>@Page.Title</h1>
+			</div>
+		</div>
+
+		<div class="container contenido">
+
+		<div class="row">
+			<div class="col-md-3">
+				<img class="img-responsive center-block" src="images/toolkit-classics.jpg" width="182" height="200" alt="" />
+			</div>
+			<div class="col-md-9">
+				<p>En esta web encontrarás los <strong>artículos de Kimball Group</strong> traducidos al español. Se trata de artículos excepcionales sobre el diseño y buenas prácticas en entornos <strong>Datawarehouse</strong>. Todos los artículos son de sus respectivos autores. Los artículos originales, en inglés, puedes consultarlos en la web de <a href="http://www.kimballgroup.com/" style="text-decoration:underline;">Kimball Group.</a></p>
+				<p>Pretendemos ayudar a la divulgación de estas buenas prácticas para mejorar el diseño, construcción y mantenimiento de los datawarehouse en nuestras organizaciones. También te animamos a comprar los libros de Ralph Kimball y de todo su equipo. No te arrepentirás.</a></p>
+				<p>Las traducciones son propias. Para facilitar la lectura, hemos intentado utilizar expresiones y construcciones propias del español, respetando siempre el sentido original. A veces, destacamos con <strong>negritas</strong> o <em>itálicas</em> frases o expresiones con el objetivo de facilitar la lectura o para resaltar algún aspecto que, personalmente, nos parece especialmente relevante. Nos disculpamos de antemano por cualquier inexactitud que hayamos podido cometer. </a></p>
+			</div>
+		</div>
+			
+		<div class="row">
+			<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+					<div>
+						@foreach(var item in Site.Sections.OrderBy(p=>p.Image)){
+							<div class="seccion">
+								<h2 id="@item.Code">@item.Title</h2>
+								<ul>
+									@foreach(var page in item.Pages.OrderBy(p=>p.SecondaryDate)){
+									<li><a href="@Root\@page.Url">@page.Title</a> <span class="year">@page.SecondaryDate.Year</span></li>
+									}
+								</ul>
+							</div>
+						}
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="libro-categories">
+			<div class="container foot">
+				<div class="row">
+					<div class="col-md-3">
+						<a href="http://amzn.to/2ee3QAM"><img class="libro-image" src="@Root/images/libro.png" width="192" height="250" alt="" /></a>
+					</div>
+					<div class="col-md-9 ajuste-banda">
+						<h4 class="about-libro">Adquiere el Libro <span class="libro-name">"The Kimball Group Reader, Remastered Collection"</h4>
+						<div class="col-md-3">
+							<a href="http://amzn.to/2ee3QAM"><img src="@Root/images/boton-amazon.png" width="180" height="42" alt="" /></a>
+						</div>
+						<div class="col-md-9">
+							<p class="libro-p-categories">A lo largo de los últimos 20 años, los miembros de Kimball Group han escrito cerca de 300 artículos, recomendaciones y white papers. The Kimball Group Reader, Remastered Collection constituye la mejor recopilación de todo este contenido, totalmente actualizado para mostrar su pensamiento actualizado, junto a las mejores recomendaciones y prácticas a partir de su amplísima experiencia.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		@Include("layouts/footer.cshtml")
+		@Include("layouts/scripts.cshtml")
+	</body>
+</html>
