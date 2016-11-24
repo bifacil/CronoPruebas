@@ -26,7 +26,7 @@ p {margin-top: 15px;margin-bottom:30px;}
 .h5, h5 {font-size: 15px;}
 .header-pages {min-height:60px;}
 .blog-main {padding-bottom: 60px;}
-h2.header-libros {color:#006db0;}
+h2.header-libros {color:#C5C7C6;}
 
 /** FOOTER **/
 .footer {
@@ -34,7 +34,7 @@ h2.header-libros {color:#006db0;}
   width: 100%;
   /* Set the fixed height of the footer here */
   height: auto;
-  background-color: #006db0;
+  background-color: #C5C7C6;
   left:0;
 }
 
@@ -42,7 +42,7 @@ h2.header-libros {color:#006db0;}
 .enlaces h5 {font-weight: bold;color: #79bae4;text-transform: uppercase;margin-bottom: 5px}
 .enlaces ul{margin-bottom:30px;}
 
-.footer-links {color:#fff;font-weight:100;font-size:15px;}
+.footer-links {color:#2B2A28;font-weight:100;font-size:15px;}
 .footer-links:hover {color:#ccc;text-decoration:none;}
 .list-styled {color:#fff; font-weight:300; list-style:none;padding-left: 0;}
 .list-styled-blog {
@@ -51,18 +51,19 @@ h2.header-libros {color:#006db0;}
     font-size: 16px;
 }
 
-.social-media-footer {text-align:center;font-weight:300;font-family:'FontAwesome';font-size:26px;margin: 5px auto;}
-.social-media-footer a{width:65px;display:inline-block;color:#006db0;margin:10px;background-color:#fefefe;padding:10px 20px;}
-.social-media-footer a:hover{background-color:#e31e25;text-decoration:none;}
-.icon-twitter:before{content:"\f099";margin:0 0px;}
+.social-media-footer {text-align:center;font-weight:300;font-family:'FontAwesome';font-size:35px;margin: 5px auto;}
+.social-media-footer a{width:65px;display:inline-block;color:#C5C7C6;margin:10px;background-color:#2B2A28;padding:10px 10px;}
+.social-media-footer a:hover{color:#fefefe;text-decoration:none;}
 .icon-facebook:before{content:"\f09a";margin:0 0px;}
+.icon-twitter:before{content:"\f099";margin:0 0px;}
 .icon-linkedin:before{content:"\f0e1";margin:0 0px;}
+.icon-youtube:before{content:"\f167";margin:0px 0px; font-size:50px; }
 .sm-text {clear:both;font-size:18px;font-weight:300;color:#fff;text-align:center;}
 .copyright-text {color:#fff;text-align:center;margin-bottom:-20px;bottom:20px;position:relative;font-weight: 100;}
 .foot {margin-top:30px;}
 .boton-newsletter {
-    background: #fff none repeat scroll 0 0;
-    color: #006db0;
+    background: #2B2A28 none repeat scroll 0 0;
+    color: #C5C7C6;
     font-size: 14px;
     padding: 2px 20px;
     text-decoration: none;
@@ -70,8 +71,8 @@ h2.header-libros {color:#006db0;}
     margin-top: -5px;
 }
 .boton-newsletter:hover {
-    background: #e31e25 none repeat scroll 0 0;
-    color: #fff;
+    background: #2B2A28 none repeat scroll 0 0;
+    color: #fefefe;
     text-decoration: none;
 }
 .suscripcion {position:absolute;right:0;bottom:0;}
@@ -513,7 +514,7 @@ a.boton-more-articles:hover h4 {color:#066198}
     bottom: none;
     width: 100%;
     height: auto;
-    background-color: #006db0;
+    background-color: #C5C7C6;
     left: 0;
 }
 .social-media-footer {
