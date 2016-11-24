@@ -1,56 +1,14 @@
-
-<!-- jQuery -->
-<script src="@Root/js/jquery-2.1.1.min.js"></script>
-
-<!--  ViewPort -->
-<script src="@Root/js/viewport/jquery.viewport.js"></script>
-
-<!--  Easing -->
-<script src="@Root/js/easing/jquery.easing.1.3.js"></script>
-
-<!--  SimplePlaceholder -->
-<script src="@Root/js/simpleplaceholder/jquery.simpleplaceholder.js"></script>
-
-<!--  Fitvids -->
-<script src="@Root/js/fitvids/jquery.fitvids.js"></script>
-
-<!--  Animations -->
-<script src="@Root/js/animations/animate.js"></script>
-
-<!--  Superfish Menu -->
-<script src="@Root/js/superfish/hoverIntent.js"></script>
-<script src="@Root/js/superfish/superfish.js"></script>
-
-<!--  Revolution Slider -->
-<script src="@Root/js/revolutionslider/js/jquery.themepunch.tools.min.js"></script>
-<script src="@Root/js/revolutionslider/js/jquery.themepunch.revolution.min.js"></script>
-
-<!--  bxSlider -->
-<script src="@Root/js/bxslider/jquery.bxslider.min.js"></script>
-
-
-<!--  Parallax -->
-<script src="@Root/js/parallax/jquery.parallax.min.js"></script>
-
-
-<!--  Custom JS   -->
-<script src="@Root/js/plugins.js"></script>
-<script src="@Root/js/scripts.js"></script>
-
-<script src="@Root/js/crono.js"></script>
-
-<script id="dsq-count-scr" src="//cronoblog.disqus.com/count.js" async></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+<script src="@Root/js/bootstrap.min.js"></script>
 <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-		var disqus_config = function () {
-			this.page.url = '@Site.BaseUrl/@Page.Url'
-			this.page.identifier = '@Page.UniqueId'
-		};	
-		(function() { 
-			var d = document, s = d.createElement('script');
-			s.src = '//cronoblog.disqus.com/embed.js';
-			s.setAttribute('data-timestamp', +new Date());
-			(d.head || d.body).appendChild(s);
-		})();
-			
+  ga('create', 'UA-86725886-1', 'auto');
+  ga('send', 'pageview');
+
 </script>
+		
