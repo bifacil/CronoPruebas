@@ -8,20 +8,12 @@ Description: "Data warehouse fácil recoje buenas prácticas en entornos DWH/Bus
 @Include("layouts\head.cshtml")
 @{var ultimos = (from article in Site.Pages orderby article.Date descending select article).Take(5);}
 <body class="home">
-    <div class="cabecera-home">
-        <div class="sections-header">
-				<div class="header-left-part">
-					<a class="header-divider" href="index.html"><img src="./images/logo-white.png" /></a>
-				</div>
-				<div class="header-right-part">
-					<a class="active" href="./index.html">Inicio</a>
-					<a class="" href="./crono-analysis.html">Productos</a>
-					<a class="" href="./crono-precios.html">Precios</a>
-					<a class="" href="./soporte/index.html">Soporte</a>
-					<a class="" href="./blog/index.html">Blog</a>
-					<a class="btn " href="./crono-contacto.html">Contacto</a>
-				</div>
-			</div>
+    <div class="home-header">
+        @Include("layouts\header.cshtml")
+		<div class="container">
+			<h2>Haga que las personas de su empresa puedan acceder a los datos con facilidad</h2>
+			<a class="btn">Descubrir</a>
+		</div>
     </div>
 
     <div class="presentacion">

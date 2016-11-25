@@ -89,10 +89,62 @@ footer address{margin-top:20px;}
 
 
 /** HEADER **/
+.sections-header{
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 10px;
+	min-height: 50px;
+	text-transform: uppercase;
+}
+.sections-header img{
+	max-height: 43px;
+	margin-left: 10px;
+}
+.sections-header a:hover{
+	text-decoration: none;
+}
 
+.header-left-part{
+	width:50%;
+	float:left;
+}
+
+.header-right-part{
+	width:50%;
+	float:right;
+	text-align: right;
+	margin-top: 5px;
+}	
+
+.header-right-part a{
+	margin-right: 5px;
+	margin-bottom: 0;
+}
 
 /** HOME **/
+.home-header{
+	background: url(img/header_home.jpg);
+	background-size:cover;
+	min-height:665px;
+	color: #fff;
+}
 
+.home-header a{color: #fff;}
+.home-header .btn{
+	border:1px solid #fff;
+	border-radius:3px;
+}
+.home-header .btn:hover{color: #fff;}
+
+.home-header .container{ padding-top: 200px;}
+.home-header .container h2{font-size: 36px;max-width:670px;text-align:center; margin:0 auto}
+.home-header .container .btn {
+	display: block;
+    font-size: 20px;
+    margin: 30px auto;
+    max-width: 190px;
+    text-transform: uppercase;
+}
 
 
 
