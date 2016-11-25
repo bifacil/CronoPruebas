@@ -207,6 +207,14 @@ footer address{margin-top:20px;}
 .boton-descargar {border:1px solid #000;color:#000;background-color:transparent;text-align:center;padding:10px 20px;font-size: 18px;margin:20px auto 0 auto; display:block; width:200px;}
 .boton-descargar:hover {border:1px solid #000;color:#ffcc01;background-color:#000;text-decoration:none;}
 
+.boton-preguntar {border:1px solid #0072C6;color:#0072C6;background-color:transparent;text-align:center;padding:5px 20px;font-size: 18px;margin:20px 0 0 auto; display:block; width:200px;}
+.boton-preguntar:hover {border:1px solid #0072C6;color:#fff;background-color:#0072C6;text-decoration:none;}
+
+.boton-descargar-producto {border:1px solid #000;color:#000;background-color:transparent;text-align:center;padding:10px 20px;font-size: 18px;margin:20px auto 0 auto; display:block; width:300px;}
+.boton-descargar:hover {border:1px solid #000;color:#D24726;background-color:#000;text-decoration:none;}
+
+.boton-descargar-crono-excel {border:1px solid #000;color:#000;background-color:transparent;text-align:center;padding:10px 20px;font-size: 18px;margin:20px auto 0 auto; display:block; width:300px;}
+.boton-descargar-crono-excel:hover {border:1px solid #000;color:#fff;background-color:#000;text-decoration:none;}
 
 
 .clientes {
@@ -219,6 +227,135 @@ footer address{margin-top:20px;}
   padding-bottom:50px;
 }
 .clientes h3{ text-align:left;}
+/*Jordi*/
+.formacion {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  left:0;
+  padding-top:30px;
+  padding-bottom:50px;
+}
+.formacion p{padding-right:50px;}
+.formacion h3{font-weight:bold;}
+
+.consultoria-data {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  left:0;
+  padding-top:30px;
+  padding-bottom:50px;
+  background: #ffcc01;
+}
+.consultoria-data p{ padding-right:30px; text-align:left;}
+.consultoria-data h3{font-weight:bold;}
+
+.consultoria-business {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  left:0;
+  padding-top:30px;
+  padding-bottom:50px;
+}
+.consultoria-business p{padding-right:50px; text-align:left;}
+.consultoria-business h3{font-weight:bold;}
+
+.que-es {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  left:0;
+  padding-top:30px;
+  padding-bottom:50px;
+  background: #D24726;
+}
+.que-es p{padding-right:50px; text-align:left; color:#fff;}
+.que-es h3{text-align:left; color:#fff;}
+.que-es img{background: #fff; padding:10px; margin:0 0 50px auto;}
+.que-es iframe{ vertical-align:central;}
+
+.crono-excel {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  left:0;
+  padding-top:30px;
+  padding-bottom:50px;
+}
+.crono-excel h3{text-align:right; color:#0072C6;}
+
+.crono-etl-icon {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  left:0;
+  padding-top:30px;
+  padding-bottom:50px;
+  border-top: 1px solid gray;
+}
+.crono-etl-icon img{margin:30px auto;}
+
+.crono-etl {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  left:0;
+  padding-top:30px;
+  padding-bottom:50px;
+  background:#0072C6;
+}
+.crono-etl p{padding-right:50px; text-align:left; color:#fff;}
+.crono-etl h3{text-align:left; color:#fff;}
+.crono-etl img{background: #fff; margin:30px auto;}
+
+.facilidad-metodo {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  left:0;
+  padding-top:30px;
+  padding-bottom:50px;
+}
+
+.soluciones {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  left:0;
+  padding-top:30px;
+  padding-bottom:50px;
+  background:#EAECEB;
+}
+.soluciones p{padding-right:20px; text-align:left; color:#000;}
+.soluciones h2{text-align:left; color:#000;}
+
+.caracteristicas {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  left:0;
+  padding-top:30px;
+  padding-bottom:50px;
+}
+.caracteristicas p{padding-right:20px; text-align:left; color:#000;}
+.caracteristicas h2{text-align:center; color:#000;}
+.orange{background-color:#D24726;color:white;}
+
+tr:nth-child(odd){background:#EAECEB}
+td{padding-left:5px;}
+/*Jordi*/
 
 /*** RESPONSIVE ***/
 
