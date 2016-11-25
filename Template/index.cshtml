@@ -9,39 +9,19 @@ Description: "Data warehouse fácil recoje buenas prácticas en entornos DWH/Bus
 @{var ultimos = (from article in Site.Pages orderby article.Date descending select article).Take(5);}
 <body class="home">
     <div class="cabecera-home">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 logo-desktop">
-                    <a class="header-divider" href="index.html"><img src="@Root/images/logo-datawarehouse-white.png" width="250" height="25" alt="" /></a>
-                    <a class="indice" href="kimball-archive.html">Índice Artículos</a>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-4 col-xs-12 boton-desktop">
-                    <a class="btn btn-lg btn-header" href="ralph-kimball-books.html" role="button">Comprar Libro</a>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row row-menu-home">
-                <ul class="nav nav-pills">
-                    <li><a class="scroll" href="#presentacion">Presentación</a></li>
-                    <li><a class="scroll" href="#suscribirse">Suscribirse</a></li>
-                    <li><a class="scroll" href="#articulos">Artículos</a></li>
-                    <li><a class="scroll" href="#about-kimball">Kimball Group</a></li>
-                    <li><a class="scroll" href="#ralph-kimball">Ralph Kimball</a></li>
-                    <li><a class="scroll" href="#crono">Crono</a></li>
-                </ul>
-                <div class="recientes">
-                    <div>
-                        <h4>ÚLTIMOS ARTÍCULOS</h4>
-                        @foreach (var article in ultimos.Take(3))
-                        {
-                            <p><a href="@Root/@article.Url">@article.Title</a></p>
-                        }
-                    </div>
-                </div>
-            </div>
-
-        </div>
+        <div class="sections-header">
+				<div class="header-left-part">
+					<a class="header-divider" href="index.html"><img src="./images/logo-white.png" /></a>
+				</div>
+				<div class="header-right-part">
+					<a class="active" href="./index.html">Inicio</a>
+					<a class="" href="./crono-analysis.html">Productos</a>
+					<a class="" href="./crono-precios.html">Precios</a>
+					<a class="" href="./soporte/index.html">Soporte</a>
+					<a class="" href="./blog/index.html">Blog</a>
+					<a class="btn " href="./crono-contacto.html">Contacto</a>
+				</div>
+			</div>
     </div>
 
     <div class="presentacion">
