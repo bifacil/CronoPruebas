@@ -100,8 +100,18 @@ footer address{margin-top:20px;}
 	max-height: 43px;
 	margin-left: 10px;
 }
+.sections-header a{
+	color: #757776;
+}
 .sections-header a:hover{
 	text-decoration: none;
+}
+
+.sections-header .btn{
+	border:1px solid #e31e25;
+	border-radius:3px;
+	background-color: #e31e25;
+	color: #fff;
 }
 
 .header-left-part{
@@ -119,31 +129,38 @@ footer address{margin-top:20px;}
 .header-right-part a{
 	margin-right: 5px;
 	margin-bottom: 0;
+	vertical-align: middle;
 }
 
-/** HOME **/
-.home-header{
+.page-caption{
 	background: url(img/header_home.jpg);
 	background-size:cover;
-	min-height:665px;
 	color: #fff;
 }
 
-.home-header a{color: #fff;}
-.home-header .btn{
+.page-caption a{color: #fff;}
+.page-caption .btn{
 	border:1px solid #fff;
 	border-radius:3px;
+	background-color: transparent;
 }
-.home-header .btn:hover{color: #fff;}
+.page-caption .btn:hover{color: #fff;}
 
-.home-header .container{ padding-top: 200px;}
-.home-header .container h2{font-size: 36px;max-width:670px;text-align:center; margin:0 auto}
-.home-header .container .btn {
+.page-caption .container{ padding-top: 200px;}
+.page-caption .container h2{font-size: 36px;max-width:670px;text-align:center; margin:0 auto}
+.page-caption .container .btn {
 	display: block;
     font-size: 20px;
     margin: 30px auto;
     max-width: 190px;
     text-transform: uppercase;
+}
+
+
+
+/** HOME **/
+.home .page-caption{
+	min-height:665px;
 }
 
 

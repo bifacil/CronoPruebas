@@ -8,7 +8,7 @@ Description: "Data warehouse fácil recoje buenas prácticas en entornos DWH/Bus
 @Include("layouts\head.cshtml")
 @{var ultimos = (from article in Site.Pages orderby article.Date descending select article).Take(5);}
 <body class="home">
-    <div class="home-header">
+    <div class="page-caption">
         @Include("layouts\header.cshtml")
 		<div class="container">
 			<h2>Haga que las personas de su empresa puedan acceder a los datos con facilidad</h2>
