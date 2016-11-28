@@ -181,6 +181,8 @@ footer address{margin-top:20px;}
 
 .informarse .panel{border-radius:0;}
 .informarse .panel-body{min-height:235px;}
+.informarse .glyphicon-triangle-bottom{ color:white;background-color: transparent; border:none;}
+.informarse .glyphicon-triangle-bottom:hover{text-decoration:none}
 
 .panel-analysis{border-color:#D24726;}
 .panel-etl{border-color:#0072C6;}
@@ -290,6 +292,7 @@ footer address{margin-top:20px;}
   padding-bottom:50px;
 }
 .crono-excel h3{text-align:right; color:#0072C6;}
+.crono-excel img{width:50%;height:50%;}
 
 .crono-etl-icon {
   position: relative;
@@ -301,7 +304,7 @@ footer address{margin-top:20px;}
   padding-bottom:50px;
   border-top: 1px solid gray;
 }
-.crono-etl-icon img{margin:30px auto;}
+.crono-etl-icon img{margin:30px auto; margin:0 auto;}
 
 .crono-etl {
   position: relative;
@@ -352,9 +355,10 @@ footer address{margin-top:20px;}
 .caracteristicas p{padding-right:20px; text-align:left; color:#000;}
 .caracteristicas h2{text-align:center; color:#000;}
 .orange{background-color:#D24726;color:white;}
+.cf{padding-left:5px;}
 
-tr:nth-child(odd){background:#EAECEB}
-td{padding-left:5px;}
+/*tr:nth-child(even){background:#EAECEB;} BootStrap tiene #f9f9f9 en filas pares*/
+.body-table p{padding-left:5px;}
 /*Jordi*/
 
 /*** RESPONSIVE ***/
