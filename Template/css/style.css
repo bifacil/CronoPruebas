@@ -93,7 +93,7 @@ footer address{margin-top:20px;}
 	padding-left: 15px;
 	padding-right: 15px;
 	padding-top: 10px;
-	min-height: 50px;
+	min-height: 65px;
 	text-transform: uppercase;
 }
 .sections-header img{
@@ -117,6 +117,7 @@ footer address{margin-top:20px;}
 .header-left-part{
 	width:50%;
 	float:left;
+	text-align: left;
 }
 
 .header-right-part{
@@ -134,10 +135,13 @@ footer address{margin-top:20px;}
 
 .page-caption{
 	background: url(img/header_home.jpg);
+	background-position: center;
 	background-size:cover;
 	color: #fff;
+	text-align:center;
 }
-
+.page-caption h1 {margin-bottom: 0px}
+.page-caption p {margin-top:5px;text-transform: uppercase; font-size:15px;}
 .page-caption a{color: #fff;}
 .page-caption .btn{
 	border:1px solid #fff;
@@ -146,7 +150,7 @@ footer address{margin-top:20px;}
 }
 .page-caption .btn:hover{color: #fff;}
 
-.page-caption .container{ padding-top: 200px;}
+.page-caption .container {padding-top: 20px; padding-bottom: 20px;}
 .page-caption .container h2{font-size: 36px;max-width:670px;text-align:center; margin:0 auto}
 .page-caption .container .btn {
 	display: block;
@@ -162,6 +166,7 @@ footer address{margin-top:20px;}
 .home .page-caption{
 	min-height:665px;
 }
+.home .page-caption .container{padding-top: 200px;}
 
 
 
