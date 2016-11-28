@@ -100,8 +100,18 @@ footer address{margin-top:20px;}
 	max-height: 43px;
 	margin-left: 10px;
 }
+.sections-header a{
+	color: #757776;
+}
 .sections-header a:hover{
 	text-decoration: none;
+}
+
+.sections-header .btn{
+	border:1px solid #e31e25;
+	border-radius:3px;
+	background-color: #e31e25;
+	color: #fff;
 }
 
 .header-left-part{
@@ -119,31 +129,38 @@ footer address{margin-top:20px;}
 .header-right-part a{
 	margin-right: 5px;
 	margin-bottom: 0;
+	vertical-align: middle;
 }
 
-/** HOME **/
-.home-header{
+.page-caption{
 	background: url(img/header_home.jpg);
 	background-size:cover;
-	min-height:665px;
 	color: #fff;
 }
 
-.home-header a{color: #fff;}
-.home-header .btn{
+.page-caption a{color: #fff;}
+.page-caption .btn{
 	border:1px solid #fff;
 	border-radius:3px;
+	background-color: transparent;
 }
-.home-header .btn:hover{color: #fff;}
+.page-caption .btn:hover{color: #fff;}
 
-.home-header .container{ padding-top: 200px;}
-.home-header .container h2{font-size: 36px;max-width:670px;text-align:center; margin:0 auto}
-.home-header .container .btn {
+.page-caption .container{ padding-top: 200px;}
+.page-caption .container h2{font-size: 36px;max-width:670px;text-align:center; margin:0 auto}
+.page-caption .container .btn {
 	display: block;
     font-size: 20px;
     margin: 30px auto;
     max-width: 190px;
     text-transform: uppercase;
+}
+
+
+
+/** HOME **/
+.home .page-caption{
+	min-height:665px;
 }
 
 
@@ -181,6 +198,8 @@ footer address{margin-top:20px;}
 
 .informarse .panel{border-radius:0;}
 .informarse .panel-body{min-height:235px;}
+.informarse .glyphicon-triangle-bottom{ color:white;background-color: transparent; border:none;}
+.informarse .glyphicon-triangle-bottom:hover{text-decoration:none}
 
 .panel-analysis{border-color:#D24726;}
 .panel-etl{border-color:#0072C6;}
@@ -207,6 +226,14 @@ footer address{margin-top:20px;}
 .boton-descargar {border:1px solid #000;color:#000;background-color:transparent;text-align:center;padding:10px 20px;font-size: 18px;margin:20px auto 0 auto; display:block; width:200px;}
 .boton-descargar:hover {border:1px solid #000;color:#ffcc01;background-color:#000;text-decoration:none;}
 
+.boton-preguntar {border:1px solid #0072C6;color:#0072C6;background-color:transparent;text-align:center;padding:5px 20px;font-size: 18px;margin:20px 0 0 auto; display:block; width:200px;}
+.boton-preguntar:hover {border:1px solid #0072C6;color:#fff;background-color:#0072C6;text-decoration:none;}
+
+.boton-descargar-producto {border:1px solid #000;color:#000;background-color:transparent;text-align:center;padding:10px 20px;font-size: 18px;margin:20px auto 0 auto; display:block; width:300px;}
+.boton-descargar:hover {border:1px solid #000;color:#D24726;background-color:#000;text-decoration:none;}
+
+.boton-descargar-crono-excel {border:1px solid #000;color:#000;background-color:transparent;text-align:center;padding:10px 20px;font-size: 18px;margin:20px auto 0 auto; display:block; width:300px;}
+.boton-descargar-crono-excel:hover {border:1px solid #000;color:#fff;background-color:#000;text-decoration:none;}
 
 
 .clientes {
@@ -219,6 +246,137 @@ footer address{margin-top:20px;}
   padding-bottom:50px;
 }
 .clientes h3{ text-align:left;}
+/*Jordi*/
+.formacion {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  left:0;
+  padding-top:30px;
+  padding-bottom:50px;
+}
+.formacion p{padding-right:50px;}
+.formacion h3{font-weight:bold;}
+
+.consultoria-data {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  left:0;
+  padding-top:30px;
+  padding-bottom:50px;
+  background: #ffcc01;
+}
+.consultoria-data p{ padding-right:30px; text-align:left;}
+.consultoria-data h3{font-weight:bold;}
+
+.consultoria-business {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  left:0;
+  padding-top:30px;
+  padding-bottom:50px;
+}
+.consultoria-business p{padding-right:50px; text-align:left;}
+.consultoria-business h3{font-weight:bold;}
+
+.que-es {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  left:0;
+  padding-top:30px;
+  padding-bottom:50px;
+  background: #D24726;
+}
+.que-es p{padding-right:50px; text-align:left; color:#fff;}
+.que-es h3{text-align:left; color:#fff;}
+.que-es img{background: #fff; padding:10px; margin:0 0 50px auto;}
+.que-es iframe{ vertical-align:central;}
+
+.crono-excel {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  left:0;
+  padding-top:30px;
+  padding-bottom:50px;
+}
+.crono-excel h3{text-align:right; color:#0072C6;}
+.crono-excel img{width:50%;height:50%;}
+
+.crono-etl-icon {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  left:0;
+  padding-top:30px;
+  padding-bottom:50px;
+  border-top: 1px solid gray;
+}
+.crono-etl-icon img{margin:30px auto; margin:0 auto;}
+
+.crono-etl {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  left:0;
+  padding-top:30px;
+  padding-bottom:50px;
+  background:#0072C6;
+}
+.crono-etl p{padding-right:50px; text-align:left; color:#fff;}
+.crono-etl h3{text-align:left; color:#fff;}
+.crono-etl img{background: #fff; margin:30px auto;}
+
+.facilidad-metodo {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  left:0;
+  padding-top:30px;
+  padding-bottom:50px;
+}
+
+.soluciones {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  left:0;
+  padding-top:30px;
+  padding-bottom:50px;
+  background:#EAECEB;
+}
+.soluciones p{padding-right:20px; text-align:left; color:#000;}
+.soluciones h2{text-align:left; color:#000;}
+
+.caracteristicas {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  left:0;
+  padding-top:30px;
+  padding-bottom:50px;
+}
+.caracteristicas p{padding-right:20px; text-align:left; color:#000;}
+.caracteristicas h2{text-align:center; color:#000;}
+.orange{background-color:#D24726;color:white;}
+.cf{padding-left:5px;}
+
+/*tr:nth-child(even){background:#EAECEB;} BootStrap tiene #f9f9f9 en filas pares*/
+.body-table p{padding-left:5px;}
+/*Jordi*/
 
 /*** RESPONSIVE ***/
 
