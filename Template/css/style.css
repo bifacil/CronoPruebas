@@ -66,8 +66,8 @@ p {margin-top: 15px;margin-bottom:30px;}
 .section .glyphicon-triangle-bottom:hover{text-decoration:none}
 
 
-/** HEADER **/
-.sections-header{
+/**  ======== HEADER  ======== **/
+.header{
 	padding-left: 15px;
 	padding-right: 15px;
 	padding-top: 10px;
@@ -75,11 +75,11 @@ p {margin-top: 15px;margin-bottom:30px;}
 	text-transform: uppercase;
 }
 
-.sections-header img{max-height: 43px;margin-left: 10px;}
-.sections-header a{	color: #757776;}
-.sections-header a:hover{text-decoration: none;}
+.header img{max-height: 43px;margin-left: 10px;}
+.header a{	color: #757776;}
+.header a:hover{text-decoration: none;}
 
-.sections-header .btn{
+.header .btn{
 	border-color:#e31e25;
 	background-color: #e31e25;
 	color: #fff;
@@ -210,7 +210,32 @@ footer address{margin-top:20px;}
 .download .btn {text-transform:uppercase;display:block;width: 50%;margin: 0 auto;}
 
 /* ======== END HOME SECTIONS ======== */
+/* ======== END HOME ======== */
 
+
+
+
+/* ======== PRODUCTS ======== */
+.btn-download {display:block;margin:0 auto;text-align:center}
+
+/* Crono Analysis */
+.crono-analysis .btn-download .btn{border-color: #fff;color:#fff}
+.crono-analysis .btn-download .btn:hover{background-color: #fff;color:#000}
+.crono-analysis { background-color: #D24726;}
+.crono-analysis p{padding-right:50px; text-align:left; color:#fff;}
+.crono-analysis h3{text-align:left; color:#fff;}
+.crono-analysis img{background: #fff; padding:10px; margin:0 0 50px auto;}
+
+/* Crono Excel */
+.crono-excel h3{text-align:right;}
+.crono-excel .btn{margin-top:15px;}
+
+/* Crono ETL */
+.crono-etl-icon {text-align:center; border-top: 1px solid gray;}
+.crono-etl {background:#0072C6;}
+.crono-etl p{text-align:left; color:#fff;}
+.crono-etl h3{color:#fff;}
+.crono-etl img{background: #fff; margin:30px auto;}
 
 /*Jordi*/
 .formacion {
@@ -250,58 +275,15 @@ footer address{margin-top:20px;}
 .consultoria-business p{padding-right:50px; text-align:left;}
 .consultoria-business h3{font-weight:bold;}
 
-.que-es {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  height: auto;
-  left:0;
-  padding-top:30px;
-  padding-bottom:50px;
-  background: #D24726;
-}
-.que-es p{padding-right:50px; text-align:left; color:#fff;}
-.que-es h3{text-align:left; color:#fff;}
-.que-es img{background: #fff; padding:10px; margin:0 0 50px auto;}
-.que-es iframe{ vertical-align:central;}
 
-.crono-excel {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  height: auto;
-  left:0;
-  padding-top:30px;
-  padding-bottom:50px;
-}
-.crono-excel h3{text-align:right; color:#0072C6;}
-.crono-excel img{width:50%;height:50%;}
 
-.crono-etl-icon {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  height: auto;
-  left:0;
-  padding-top:30px;
-  padding-bottom:50px;
-  border-top: 1px solid gray;
-}
-.crono-etl-icon img{margin:30px auto; margin:0 auto;}
 
-.crono-etl {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  height: auto;
-  left:0;
-  padding-top:30px;
-  padding-bottom:50px;
-  background:#0072C6;
-}
-.crono-etl p{padding-right:50px; text-align:left; color:#fff;}
-.crono-etl h3{text-align:left; color:#fff;}
-.crono-etl img{background: #fff; margin:30px auto;}
+
+
+
+
+
+
 
 .facilidad-metodo {
   position: relative;
