@@ -25,6 +25,14 @@ h3{
 p, ul, li {font-size: 17px;font-weight: 300;margin-bottom: 5px;}
 p {margin-top: 15px;margin-bottom:30px;}
 
+.btn {color: #000; border:1px solid #000;border-radius:3px;background-color: transparent;}
+.btn:hover{color:#D24726; background-color:#000;}
+
+.panel-analysis{border-color:#D24726;}
+.panel-etl{border-color:#0072C6;}
+.panel-analysis .panel-footer{background-color:#D24726;}
+.panel-etl .panel-footer{background-color:#0072C6;}
+
 .col-centered{display:inline-block; text-align: left; float: none;}
 .row-centered{text-align:center;}
 
@@ -35,8 +43,93 @@ p {margin-top: 15px;margin-bottom:30px;}
 .icon-twitter:before{content:"\f099";}
 .icon-linkedin:before{content:"\f0e1";}
 .icon-youtube:before{content:"\f167";}
+
+.section{
+	position: relative;
+	bottom: 0;
+	width: 100%;
+	height: auto;
+	left:0;
+	padding-top:30px;
+	padding-bottom:50px;
+}
+
+.section h3 {margin-top:0px;}
+
+.section .panel{border-radius:0;}
+.section .panel img{display:block; margin:0 auto 30px auto;}
+
+.section .panel-body{min-height:235px;}
+.section .panel-footer{text-align:right; color:#fff; border-radius:0; text-transform:uppercase; font-size:20px;}
+
+.section .glyphicon-triangle-bottom{ color:white;background-color: transparent; border:none;}
+.section .glyphicon-triangle-bottom:hover{text-decoration:none}
+
+
+/** HEADER **/
+.sections-header{
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 10px;
+	min-height: 65px;
+	text-transform: uppercase;
+}
+
+.sections-header img{max-height: 43px;margin-left: 10px;}
+.sections-header a{	color: #757776;}
+.sections-header a:hover{text-decoration: none;}
+
+.sections-header .btn{
+	border-color:#e31e25;
+	background-color: #e31e25;
+	color: #fff;
+}
+
+.header-left-part{
+	width:50%;
+	float:left;
+	text-align: left;
+}
+
+.header-right-part{
+	width:50%;
+	float:right;
+	text-align: right;
+	margin-top: 5px;
+}	
+
+.header-right-part a{
+	margin-right: 5px;
+	margin-bottom: 0;
+	vertical-align: middle;
+}
+
+.page-caption{
+	background: url(img/header_home.jpg);
+	background-position: center;
+	background-size:cover;
+	color: #fff;
+	text-align:center;
+}
+.page-caption h1 {margin-bottom: 0px}
+.page-caption p {margin-top:5px;text-transform: uppercase; font-size:15px;}
+.page-caption a{color: #fff;}
+
+.page-caption .container {padding-top: 20px; padding-bottom: 20px;}
+.page-caption .container h2{font-size: 36px;max-width:670px;text-align:center; margin:0 auto}
+.page-caption .btn{color:#fff;border:1px solid #fff;background-color:transparent;}
+.page-caption .btn:hover{color: #fff;}
+.page-caption .container .btn {
+	display: block;
+    font-size: 20px;
+    margin: 30px auto;
+    max-width: 190px;
+    text-transform: uppercase;
+}
+
+
 	
-/** FOOTER **/
+/**  ======== FOOTER  ======== **/
 footer {
   position: absolute;
   width: 100%;
@@ -88,169 +181,37 @@ footer address{margin-top:20px;}
 
 
 
-/** HEADER **/
-.sections-header{
-	padding-left: 15px;
-	padding-right: 15px;
-	padding-top: 10px;
-	min-height: 65px;
-	text-transform: uppercase;
-}
-.sections-header img{
-	max-height: 43px;
-	margin-left: 10px;
-}
-.sections-header a{
-	color: #757776;
-}
-.sections-header a:hover{
-	text-decoration: none;
-}
-
-.sections-header .btn{
-	border:1px solid #e31e25;
-	border-radius:3px;
-	background-color: #e31e25;
-	color: #fff;
-}
-
-.header-left-part{
-	width:50%;
-	float:left;
-	text-align: left;
-}
-
-.header-right-part{
-	width:50%;
-	float:right;
-	text-align: right;
-	margin-top: 5px;
-}	
-
-.header-right-part a{
-	margin-right: 5px;
-	margin-bottom: 0;
-	vertical-align: middle;
-}
-
-.page-caption{
-	background: url(img/header_home.jpg);
-	background-position: center;
-	background-size:cover;
-	color: #fff;
-	text-align:center;
-}
-.page-caption h1 {margin-bottom: 0px}
-.page-caption p {margin-top:5px;text-transform: uppercase; font-size:15px;}
-.page-caption a{color: #fff;}
-.page-caption .btn{
-	border:1px solid #fff;
-	border-radius:3px;
-	background-color: transparent;
-}
-.page-caption .btn:hover{color: #fff;}
-
-.page-caption .container {padding-top: 20px; padding-bottom: 20px;}
-.page-caption .container h2{font-size: 36px;max-width:670px;text-align:center; margin:0 auto}
-.page-caption .container .btn {
-	display: block;
-    font-size: 20px;
-    margin: 30px auto;
-    max-width: 190px;
-    text-transform: uppercase;
-}
 
 
 
-/** HOME **/
+
+/**  ======== HOME  ======== **/
 .home .page-caption{
 	min-height:665px;
 }
+
 .home .page-caption .container{padding-top: 200px;}
 
 
 
-/* Presentacion */
-.presentacion {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  height: auto;
-  background-color: #EBEDEC;
-  left:0;
-  padding-top:30px;
-  padding-bottom:50px;
-}
+/* ======== HOME SECTIONS ========*/
+/* Business Intelligence */
+.business-intelligence{ background-color: #EBEDEC;}
 
-/* Informarse */
-.informarse {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  height: auto;
-  left:0;
-  padding-top:30px;
-  padding-bottom:50px;
-}
-.informarse h3{
-	color: #000;
-	text-align: left;
-	font-weight:600;
-}
-
-.informarse .panel-footer{text-align:right; color:#fff; border-radius:0; text-transform:uppercase; font-size:20px;}
-.informarse .panel img{display:block; margin:0 auto 30px auto;}
-
-.informarse .panel{border-radius:0;}
-.informarse .panel-body{min-height:235px;}
-.informarse .glyphicon-triangle-bottom{ color:white;background-color: transparent; border:none;}
-.informarse .glyphicon-triangle-bottom:hover{text-decoration:none}
-
-.panel-analysis{border-color:#D24726;}
-.panel-etl{border-color:#0072C6;}
-.panel-analysis .panel-footer{background-color:#D24726;}
-.panel-etl .panel-footer{background-color:#0072C6;}
-
-
-/* Últimos Artículos Traducidos */
-.descargar {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  height: auto;
-  left:0;
-  padding-top:30px;
-  padding-bottom:50px;
+/* Download */
+.download {
   background: url(img/portatil.jpg) no-repeat #ffcc01 right;
   background-size:contain;
 }
+.download .container {width:40%;}
 
-.descargar h3{text-align:center; color: black;}
-.descargar p {text-align:left;}
+.download h3{text-align:center; color: black;}
+.download p {text-align:left;}
+.download .btn {text-transform:uppercase;display:block;width: 50%;margin: 0 auto;}
 
-.boton-descargar {border:1px solid #000;color:#000;background-color:transparent;text-align:center;padding:10px 20px;font-size: 18px;margin:20px auto 0 auto; display:block; width:200px;}
-.boton-descargar:hover {border:1px solid #000;color:#ffcc01;background-color:#000;text-decoration:none;}
-
-.boton-preguntar {border:1px solid #0072C6;color:#0072C6;background-color:transparent;text-align:center;padding:5px 20px;font-size: 18px;margin:20px 0 0 auto; display:block; width:200px;}
-.boton-preguntar:hover {border:1px solid #0072C6;color:#fff;background-color:#0072C6;text-decoration:none;}
-
-.boton-descargar-producto {border:1px solid #000;color:#000;background-color:transparent;text-align:center;padding:10px 20px;font-size: 18px;margin:20px auto 0 auto; display:block; width:300px;}
-.boton-descargar:hover {border:1px solid #000;color:#D24726;background-color:#000;text-decoration:none;}
-
-.boton-descargar-crono-excel {border:1px solid #000;color:#000;background-color:transparent;text-align:center;padding:10px 20px;font-size: 18px;margin:20px auto 0 auto; display:block; width:300px;}
-.boton-descargar-crono-excel:hover {border:1px solid #000;color:#fff;background-color:#000;text-decoration:none;}
+/* ======== END HOME SECTIONS ======== */
 
 
-.clientes {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  height: auto;
-  left:0;
-  padding-top:30px;
-  padding-bottom:50px;
-}
-.clientes h3{ text-align:left;}
 /*Jordi*/
 .formacion {
   position: relative;

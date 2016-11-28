@@ -39,7 +39,7 @@
 		</div>
     </div>
 
-    <div class="presentacion">
+    <div class="section business-intelligence">
         <div class="container">
             <div class="row">
                 <div class="col-md-5">
@@ -56,7 +56,7 @@
         </div>
     </div>
 
-    <div class="informarse">
+    <div class="section">
         <div class="container">
             <div class="row row-centered">
                 <div class="col-md-4 col-centered">
@@ -82,55 +82,52 @@
         </div>
     </div>
 
-    <div class="descargar">
+    <div class="section download">
         <div class="container">
-            <div class="row row-centered">
-                <div class="col-md-4 col-centered">
-                    <h3>Ten tu empresa al día</h3>
-                    <p>Descarga la versión de evaluación para comprobar lo sencillo que resulta controlar tus indicadores de negocio. Crono es una aplicación moderna y potente y puede ayudarte tanto si quieres analizar las ventas, los stocks, la rentabilidad o cualquier otro KPI de tu negocio.</p>
-                        <a class="boton-descargar" role="button" href="https://crono-md5.s3.amazonaws.com/CronoAnalytics/CronoAnalysis/Last/CronoAnalysis.msi">DESCARGAR</a>
-                </div>
-            </div>
+            <h3>Ten tu empresa al día</h3>
+            <p>Descarga la versión de evaluación para comprobar lo sencillo que resulta controlar tus indicadores de negocio. Crono es una aplicación moderna y potente y puede ayudarte tanto si quieres analizar las ventas, los stocks, la rentabilidad o cualquier otro KPI de tu negocio.</p>
+            <a class="btn" role="button" href="https://crono-md5.s3.amazonaws.com/CronoAnalytics/CronoAnalysis/Last/CronoAnalysis.msi">Descargar</a>
         </div>
     </div>
 
-    <div class="clientes">
+    <div class="section clients">
         <div class="container">
             <div class="row row-centered">
                 <div class="col-md-8 col-centered">
                     <h3>Clientes</h3>
-                </div>
-               
+                </div>               
             </div>
+			
             <div class="row row-centered">
                 <div class="col-md-2 col-centered">
-                            <img class="img-responsive" src="./images/clientes/cliente-cronoanalytics_C1.jpg" />
-                    </div>
+                    <img class="img-responsive" src="./images/clientes/cliente-cronoanalytics_C1.jpg" />
+                </div>
                 <div class="col-md-2 col-centered">
-                        <img class="img-responsive" src="./images/clientes/cliente-cronoanalytics_C2.jpg" />
-                    </div>
+					<img class="img-responsive" src="./images/clientes/cliente-cronoanalytics_C2.jpg" />
+                </div>
                 <div class="col-md-2 col-centered">
-                        <img class="img-responsive" src="./images/clientes/cliente-cronoanalytics_C3.jpg" />
-                    </div>
+                    <img class="img-responsive" src="./images/clientes/cliente-cronoanalytics_C3.jpg" />
+				</div>
                 <div class="col-md-2 col-centered">
-                        <img class="img-responsive" src="./images/clientes/cliente-cronoanalytics_C4.jpg" />
-                    </div>
-                        </div>
+					<img class="img-responsive" src="./images/clientes/cliente-cronoanalytics_C4.jpg" />
+				</div>
+			</div>
             
             <div class="row row-centered">
                 <div class="col-md-2 col-centered">
-                        <img class="img-responsive" src="./images/clientes/cliente-cronoanalytics_C5.jpg" />
-                    </div>
+					<img class="img-responsive" src="./images/clientes/cliente-cronoanalytics_C5.jpg" />
+				</div>
                 <div class="col-md-2 col-centered">
-                        <img class="img-responsive" src="./images/clientes/cliente-cronoanalytics_C6.jpg" />
-                    </div>
+					<img class="img-responsive" src="./images/clientes/cliente-cronoanalytics_C6.jpg" />
+				</div>
                 <div class="col-md-2 col-centered">
-                        <img class="img-responsive" src="./images/clientes/cliente-cronoanalytics_C7.jpg" />
-                    </div>
+					<img class="img-responsive" src="./images/clientes/cliente-cronoanalytics_C7.jpg" />
+				</div>
                 <div class="col-md-2 col-centered">
-                        <img class="img-responsive" src="./images/clientes/cliente-cronoanalytics_C8.jpg" />
-                    </div>
+					<img class="img-responsive" src="./images/clientes/cliente-cronoanalytics_C8.jpg" />
+				</div>
             </div>
+			
             <div class="row row-centered">
                 <div class="col-md-2 col-centered">
                     <img class="img-responsive" src="./images/clientes/cliente-cronoanalytics_C9.jpg" />
@@ -145,7 +142,8 @@
                     <img class="img-responsive" src="./images/clientes/cliente-cronoanalytics_C12.jpg" />
                 </div>
             </div>
-            <div class="row row-centered">
+            
+			<div class="row row-centered">
                 <div class="col-md-2 col-centered">
                     <img class="img-responsive" src="./images/clientes/cliente-cronoanalytics_C13.jpg" />
                 </div>
@@ -159,16 +157,15 @@
                     <img class="img-responsive" src="./images/clientes/cliente-cronoanalytics_C16.jpg" />
                 </div>
             </div>
-            <div class="row row-centered">
+            
+			<div class="row row-centered">
                 <div class="col-md-2 col-centered">
                     <img class="img-responsive" src="./images/clientes/cliente-cronoanalytics_C17.jpg" />
                 </div>
                 <div class="col-md-2 col-centered">
                     <img class="img-responsive" src="./images/clientes/cliente-cronoanalytics_C18.jpg" />
                 </div>
-
             </div>
-            
         </div>
     </div>
 
@@ -233,19 +230,5 @@
     
     </script>
     		
-    <script>
-        $(document).ready(function () {
-            $(".scroll").click(function (event) {
-                //bloqueamos la función del anchor original
-                event.preventDefault();
-                //dirigimos de manera animada al id del anchor
-                $('html,body').animate({
-                    //le indicamos al scroll vertical que se dirija al objeto con el id
-                    //guardado en el anchor a su posición top.
-                    scrollTop: $(this.hash).offset().top
-                }, 1000);
-            });
-        });
-    </script>
 </body>
 </html>
