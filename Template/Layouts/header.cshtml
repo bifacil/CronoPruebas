@@ -7,11 +7,15 @@
 		<a href="index.html"><img src="@Root/images/@logo" /></a>
 	</div>
 	<div class="header-right-part">
-		<a href="@Root/index.html">Inicio</a>
+	
+	@if(Page.Section == null){
 		<a href="@Root/productos.html">Productos</a>
 		<a href="@Root/servicios.html">Servicios</a>
 		<a href="@Root/soporte/index.html">Soporte</a>
 		<a href="@Root/blog/index.html">Blog</a>
+	}else{
+		<a href="@Root/index.html">Volver a crono</a>
+	}		
 		<a class="btn" href="@Root/crono-contacto.html">Contacto</a>
 	</div>
 </div>
