@@ -7,6 +7,32 @@
    <description></description>
 
  <item>
+      <guid isPermaLink="true">https://datawarehouse.es/2011/esto es una prueba3</guid>
+      <link>https://datawarehouse.es/2011/esto es una prueba3</link>
+      <title>esto es una prueba3</title>
+      <pubDate>Tue, 29 Nov 2016 11:16:53 GMT</pubDate>
+      <atom:updated>2016-11-29T11:16:53Z</atom:updated>
+      <description>
+	  &lt;div style=&quot;width:700px&quot;&gt;&lt;img class=&quot;w100p&quot; src=&quot;https://datawarehouse.es/blog/images/&quot; /&gt;
+	  &lt;p&gt;asfasfasf&lt;/p&gt;
+	   
+	  
+	  &lt;/div&gt;</description>
+</item>
+ <item>
+      <guid isPermaLink="true">https://datawarehouse.es/2011/recomendaciones-testing-datawarehouse.html</guid>
+      <link>https://datawarehouse.es/2011/recomendaciones-testing-datawarehouse.html</link>
+      <title>Esto es una prueba</title>
+      <pubDate>Tue, 29 Nov 2016 10:39:28 GMT</pubDate>
+      <atom:updated>2016-11-29T10:39:28Z</atom:updated>
+      <description>
+	  &lt;div style=&quot;width:700px&quot;&gt;&lt;img class=&quot;w100p&quot; src=&quot;https://datawarehouse.es/blog/images/&quot; /&gt;
+	  &lt;p&gt;Esto es una prueba&lt;/p&gt;
+	   
+	  
+	  &lt;/div&gt;</description>
+</item>
+ <item>
       <guid isPermaLink="true">https://datawarehouse.es/2009/seis-claves-para-elegir-arquitectura-etl.html</guid>
       <link>https://datawarehouse.es/2009/seis-claves-para-elegir-arquitectura-etl.html</link>
       <title>Seis claves para elegir la arquitectura ETL</title>

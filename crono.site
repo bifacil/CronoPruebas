@@ -4,13 +4,7 @@
   DestinationPath='docs\',
   ImagesDirectory='Template\images\',
   SiteTemplate='Template',
-  VisibleDocumentProperties=('Title', 'Url', 'Section', 'Date', 'SecondaryDate', 'Description', 'Author', 'Category', 'RelatedUrl'),
-  Categories=(
-    Category (Name='Fundamentos Business Intelligence', Title='Fundamentos Business Intelligence', Code='bi'),
-    Category (Name='Fundamentos diseño dimensional', Title='Fundamentos diseño dimensional', Code='dmensional'),
-    Category (Name='Planificación y gestión de proyectos', Title='Planificación y gestión de proyectos', Code='management'),
-    Category (Name='ETL y calidad de datos', Title='ETL y calidad de datos', Code='etl')
-  ),
+  VisibleDocumentProperties=('Title', 'Url', 'Section', 'Date', 'SecondaryDate', 'Description', 'Author', 'Category', 'RelatedUrl', 'SocialMessages'),
   Authors=(
     Author (Name='Ralph Kimball', Description='Ralph Kimball es el fundador de Kimball Group y de Kimball University donde ha impartido clases sobre diseño de data warehouses a más de 10.000 estudiantes. Es el autor del best seller Data warehouse Toolkit. Ha dedicado 4 décadas diseñando sistemas DWH simples y rápidos.', Image='ralph-kimball.jpg'),
     Author (Name='Margy Ross', Description='Margy es Presidenta de Kimball Group y ha desarrollado su carrera profesional durante más de 30 años en entornos DSS y Data Warehousing. Es especialista en gestión de proyectos, toma de requerimienots de negocio, y modelado dimensional.', Image='margy-ross.jpg'),
@@ -18,5 +12,6 @@
     Author (Name='Bob Becker', Description='Bob es miembro de Kimball Group. Ha trabajado junto a responsables de negocio y profesionales IT para priorizar, justificar e implementar sistemas data warehouse para el soporte a la toma de decisiones desde 1990. Es experto en identificar requerimientos de negocio, gestionar proyectos, y diseñar modelos dimensionales para todo tipo de industrias.', Image='bob-becker.jpg')
   ),
   Links=(),
-  SocialLinks=()
+  SocialLinks=(),
+  AutoPublish=YES
 )
