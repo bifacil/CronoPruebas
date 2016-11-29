@@ -27,6 +27,10 @@ p {margin-top: 15px;margin-bottom:30px;}
 
 .btn {color: #000; border:1px solid #000;border-radius:3px;background-color: transparent;}
 .btn:hover{color:#fff; background-color:#000;}
+.btn.btn-blue {border-color: #0072C6;color:#0072C6;}
+.btn.btn-blue:hover{color:#fff;background-color:#0072C6;}
+.btn.btn-right {float:right;}
+
 
 .panel-analysis{border-color:#D24726;}
 .panel-etl{border-color:#0072C6;}
@@ -66,7 +70,9 @@ p {margin-top: 15px;margin-bottom:30px;}
 .section .panel-footer{text-align:right; color:#fff; border-radius:0; text-transform:uppercase; font-size:20px;}
 .section .panel-footer a {color:#fff;text-decoration: none;}
 
-
+.section.yellow-background {background-color:#ffcc01}
+.section.yellow-background h3 {color: black;}
+.section.yellow-background .btn:hover {color: #ffcc01;}
 
 /**  ======== HEADER  ======== **/
 .header{
@@ -203,15 +209,16 @@ footer address{margin-top:20px;}
 
 /* Download */
 .download {
-  background: url(img/portatil.jpg) no-repeat #ffcc01 right;
+  background-image: url(img/portatil.jpg);
+  background-repeat: no-repeat;
+  background-position: right;
   background-size:contain;
 }
 .download .container {width:40%;}
 
-.download h3{text-align:center; color: black;}
-.download p {text-align:left;}
+.download h3{text-align:center;}
 .download .btn {text-transform:uppercase;display:block;width: 50%;margin: 0 auto;}
-.download .btn:hover {color: #ffcc01;}
+
 
 /* ======== END HOME SECTIONS ======== */
 /* ======== END HOME ======== */
@@ -222,6 +229,7 @@ footer address{margin-top:20px;}
 /* ======== PRODUCTS ======== */
 .btn-download {display:block;margin:0 auto;text-align:center;margin-top:15px;}
 
+/* ======== PRODUCTS SECTIONS ========*/
 /* Crono Analysis */
 #crono-analysis .btn-download .btn{border-color: #fff;color:#fff}
 #crono-analysis .btn-download .btn:hover{background-color: #fff;color:#D24726;}
@@ -243,54 +251,24 @@ footer address{margin-top:20px;}
 /* Features */
 .features thead{background-color:#D24726; color:#fff;}
 
-/*Jordi*/
-.formacion {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  height: auto;
-  left:0;
-  padding-top:30px;
-  padding-bottom:50px;
-}
-.formacion p{padding-right:50px;}
-.formacion h3{font-weight:bold;}
 
-.consultoria-data {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  height: auto;
-  left:0;
-  padding-top:30px;
-  padding-bottom:50px;
-  background: #ffcc01;
-}
-.consultoria-data p{ padding-right:30px; text-align:left;}
-.consultoria-data h3{font-weight:bold;}
-
-.consultoria-business {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  height: auto;
-  left:0;
-  padding-top:30px;
-  padding-bottom:50px;
-}
-.consultoria-business p{padding-right:50px; text-align:left;}
-.consultoria-business h3{font-weight:bold;}
+/* ======== END PRODUCTS SECTIONS ======== */
+/* ======== END PRODUCTS ======== */
 
 
 
 
+/* ======== SERVICES ======== */
+/* ======== SERVICES SECTIONS ========*/
 
-/*Jordi*/
+/* ======== END PRODUCTS SECTIONS ======== */
+/* ======== END PRODUCTS ======== */
+
 
 /*** RESPONSIVE ***/
 
 @media screen and (max-width: 1920px) {
-.cabecera-home {min-height:1080;}
+.home .page-caption {min-height:1080;}
 }
 
 @media screen and (max-width: 1024px) {
@@ -332,7 +310,6 @@ footer {
 
 @media screen and (max-width: 600px) {
 .sm-text {margin-left:-5px;}
-.boton-descargar {margin-bottom:30px;}
 }
 
 @media screen and (max-width: 414px) {
