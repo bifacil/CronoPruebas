@@ -16,8 +16,7 @@ Layout: layouts/default-page.cshtml
                     </div>
 					
                     <div class="panel-footer">
-						<span>Saber más</span>
-                        <a href="@Root/crono-analysis.html" class="glyphicon glyphicon-triangle-bottom" aria-hidden="true" role="button"></a>
+                        <a href="#crono-analysis" role="button">Saber más<span class="glyphicon glyphicon-triangle-bottom"></span></a>
                     </div>
                 </div>
             </div>
@@ -30,8 +29,7 @@ Layout: layouts/default-page.cshtml
                     </div>
 					
                     <div class="panel-footer">
-						<span>Saber más</span>
-                        <a href="@Root/crono-etl.html"  class="glyphicon glyphicon-triangle-bottom" aria-hidden="true" role="button"></a>
+                        <a href="#crono-etl" role="button">Saber más<span class="glyphicon glyphicon-triangle-bottom"></span></a>
                     </div>
                 </div>
             </div>
@@ -39,7 +37,7 @@ Layout: layouts/default-page.cshtml
     </div>
 </div>
 
-<div class="section crono-analysis">
+<div class="section" id="crono-analysis">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -49,7 +47,7 @@ Layout: layouts/default-page.cshtml
                 <p>El siguiente vídeo de presentación de Crono Analysis muestra lo sencillo que resulta crear un cuadro de mando con CRONO.</p>
             </div>
             <div class="col-md-6">
-                <img class="img-responsive" src="@Root/images/logo_crono_analysis.png" />
+                <img class="logo" src="@Root/images/logo_crono_analysis_white.png" />
                 <div class="embed-responsive embed-responsive-16by9">
                     <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/F6fTBQUyIh8" allowfullscreen></iframe>
                 </div>
@@ -80,13 +78,9 @@ Layout: layouts/default-page.cshtml
         </div>
     </div>
 </div>
-<div class="section crono-etl-icon">
+<div class="section" id="crono-etl">
     <div class="container">
-        <img src="@Root/images/logo_crono_etl.png" />
-    </div>
-</div>
-<div class="section crono-etl">
-    <div class="container">
+		<img class="logo" src="@Root/images/logo_crono_etl_white.png" />
         <div class="row">
             <div class="col-md-6">
                 <img class="img-responsive" src="@Root/images/productos/etl-grafic.png">
@@ -101,7 +95,7 @@ Layout: layouts/default-page.cshtml
         </div>
     </div>
 </div>
-<div class="section facilidad-metodo">
+<div class="section">
     <div class="container">
         <div class="row">
             <div class="col-md-6 ">
@@ -119,7 +113,7 @@ Layout: layouts/default-page.cshtml
         </div>
     </div>
 </div>
-<div class="section soluciones">
+<div class="section solutions">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -129,7 +123,7 @@ Layout: layouts/default-page.cshtml
         </div>
     </div>
 </div>
-<div class="section caracteristicas">
+<div class="section features">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -137,89 +131,87 @@ Layout: layouts/default-page.cshtml
                 <p>Crono Analysis y Crono Excel tienen una apariencia extremadamente amigable y sencilla. Crono Analysis tiene una sola pestaña en la cinta de opciones y tiene apenas una decena de botones. Sin embargo, el usuario encontrará todas las opciones que necesita para generar sus informes.</p>
             </div>
             <div class="row">
-						<div id="no-more-tables">
-							<div class="analysis_table">
-								<table class="col-md-12 table-bordered table-striped table-condensed cf">
-									<thead class="cf">
-										<tr>
-											<th class="orange">Nombre de la característica</th>
-											<th class="orange">Crono Analysis</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td data-title="Nombre de la característica"><p>Generación de informes con tablas y gráficos</p></td>
-											<td data-title="Crono ETL"><p>Sí</p></td>
-										</tr>
-										<tr>
-											<td data-title="Nombre de la característica"><p>Variedad de gráficos (líneas, barras, puntos, burbuja, área, curvas, dispersión)</p></td>
-											<td data-title="Crono ETL"><p>Sí</p></td>
-										</tr>
-										<tr>
-											<td data-title="Nombre de la característica"><p>Variedad de tablas (tablas dinámicas, tablas invertidas, subtotales) </p> </td>
-											<td data-title="Crono ETL"><p>Sí</p></td>
-										</tr>
-										<tr>
-											<td data-title="Nombre de la característica"><p>Velocímetros</p> </td>
-											<td data-title="Crono ETL"><p>Sí</p></td>
-										</tr>
-										<tr>
-											<td data-title="Nombre de la característica"><p>Uso de capa semántica</p> </td>
-											<td data-title="Crono ETL"><p>Sí</p></td>
-										</tr>
-										<tr>
-											<td data-title="Nombre de la característica"><p>Campos Calculados</p> </td>
-											<td data-title="Crono ETL"><p>Sí</p></td>
-										</tr>
-										<tr>
-											<td data-title="Nombre de la característica"><p>Acceso rápido a cálculos habituales (variaciones, incrementos, porcentajes respecto el total ,  etc.)</p> </td>
-											<td data-title="Crono ETL"><p>Sí</p></td>
-										</tr>
-										<tr>
-											<td data-title="Nombre de la característica"><p>Filtros de informe y filtros de consulta</p> </td>
-											<td data-title="Crono ETL"><p>Sí</p></td>
-										</tr>
-										<tr>
-											<td data-title="Nombre de la característica"><p>Filtros de columna</p> </td>
-											<td data-title="Crono ETL"><p>Sí</p></td>
-										</tr>
-										<tr>
-											<td data-title="Nombre de la característica"><p>Alertas semafóricas</p> </td>
-											<td data-title="Crono ETL"><p>Sí</p></td>
-										</tr>
-										<tr>
-											<td data-title="Nombre de la característica"><p>Informes dinámicos</p> </td>
-											<td data-title="Crono ETL"><p>Sí</p></td>
-										</tr>
-										<tr>
-											<td data-title="Nombre de la característica"><p>Exportación a Excel</p> </td>
-											<td data-title="Crono ETL"><p>Sí</p></td>
-										</tr>
-										<tr>
-											<td data-title="Nombre de la característica"><p>Exportación a otros formatos (HTML, CSV, TXT, JPG, …)</p> </td>
-											<td data-title="Crono ETL"><p>Sí</p></td>
-										</tr>
-										<tr>
-											<td data-title="Nombre de la característica"><p>Informes locales</p> </td>
-											<td data-title="Crono ETL"><p>Sí</p></td>
-										</tr>
-										<tr>
-											<td data-title="Nombre de la característica"><p>Informes en servidor</p> </td>
-											<td data-title="Crono ETL"><p>Sí</p></td>
-										</tr>
-										<tr>
-											<td data-title="Nombre de la característica"><p>Opciones OLAP</p> </td>
-											<td data-title="Crono ETL"><p>Sí</p></td>
-										</tr>
-										<tr>
-											<td data-title="Nombre de la característica"><p>Vista presentación</p> </td>
-											<td data-title="Crono ETL"><p>Sí</p></td>
-										</tr>
-									</tbody>
-								</table>
-							</div> 
-						</div>
-					</div>
+                <div class="col-md-12">
+                    <table class="col-md-12 table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Nombre de la característica</th>
+                                <th>Crono Analysis</th>
+                            </tr>
+                        </thead>
+                        <tbody class="body-table">
+                            <tr>
+                                <td data-title="Nombre de la característica"><p>Generación de informes con tablas y gráficos</p></td>
+                                <td data-title="Crono ETL"><p>Sí</p></td>
+                            </tr>
+                            <tr>
+                                <td data-title="Nombre de la característica"><p>Variedad de gráficos (líneas, barras, puntos, burbuja, área, curvas, dispersión)</p></td>
+                                <td data-title="Crono ETL"><p>Sí</p></td>
+                            </tr>
+                            <tr>
+                                <td data-title="Nombre de la característica"><p>Variedad de tablas (tablas dinámicas, tablas invertidas, subtotales) </p> </td>
+                                <td data-title="Crono ETL"><p>Sí</p></td>
+                            </tr>
+                            <tr>
+                                <td data-title="Nombre de la característica"><p>Velocímetros</p> </td>
+                                <td data-title="Crono ETL"><p>Sí</p></td>
+                            </tr>
+                            <tr>
+                                <td data-title="Nombre de la característica"><p>Uso de capa semántica</p> </td>
+                                <td data-title="Crono ETL"><p>Sí</p></td>
+                            </tr>
+                            <tr>
+                                <td data-title="Nombre de la característica"><p>Campos Calculados</p> </td>
+                                <td data-title="Crono ETL"><p>Sí</p></td>
+                            </tr>
+                            <tr>
+                                <td data-title="Nombre de la característica"><p>Acceso rápido a cálculos habituales (variaciones, incrementos, porcentajes respecto el total ,  etc.)</p> </td>
+                                <td data-title="Crono ETL"><p>Sí</p></td>
+                            </tr>
+                            <tr>
+                                <td data-title="Nombre de la característica"><p>Filtros de informe y filtros de consulta</p> </td>
+                                <td data-title="Crono ETL"><p>Sí</p></td>
+                            </tr>
+                            <tr>
+                                <td data-title="Nombre de la característica"><p>Filtros de columna</p> </td>
+                                <td data-title="Crono ETL"><p>Sí</p></td>
+                            </tr>
+                            <tr>
+                                <td data-title="Nombre de la característica"><p>Alertas semafóricas</p> </td>
+                                <td data-title="Crono ETL"><p>Sí</p></td>
+                            </tr>
+                            <tr>
+                                <td data-title="Nombre de la característica"><p>Informes dinámicos</p> </td>
+                                <td data-title="Crono ETL"><p>Sí</p></td>
+                            </tr>
+                            <tr>
+                                <td data-title="Nombre de la característica"><p>Exportación a Excel</p> </td>
+                                <td data-title="Crono ETL"><p>Sí</p></td>
+                            </tr>
+                            <tr>
+                                <td data-title="Nombre de la característica"><p>Exportación a otros formatos (HTML, CSV, TXT, JPG, …)</p> </td>
+                                <td data-title="Crono ETL"><p>Sí</p></td>
+                            </tr>
+                            <tr>
+                                <td data-title="Nombre de la característica"><p>Informes locales</p> </td>
+                                <td data-title="Crono ETL"><p>Sí</p></td>
+                            </tr>
+                            <tr>
+                                <td data-title="Nombre de la característica"><p>Informes en servidor</p> </td>
+                                <td data-title="Crono ETL"><p>Sí</p></td>
+                            </tr>
+                            <tr>
+                                <td data-title="Nombre de la característica"><p>Opciones OLAP</p> </td>
+                                <td data-title="Crono ETL"><p>Sí</p></td>
+                            </tr>
+                            <tr>
+                                <td data-title="Nombre de la característica"><p>Vista presentación</p> </td>
+                                <td data-title="Crono ETL"><p>Sí</p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
 </div>

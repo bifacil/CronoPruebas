@@ -44,6 +44,8 @@ p {margin-top: 15px;margin-bottom:30px;}
 .icon-linkedin:before{content:"\f0e1";}
 .icon-youtube:before{content:"\f167";}
 
+.glyphicon {vertical-align: text-top;margin:0 5px;}
+
 .section{
 	position: relative;
 	bottom: 0;
@@ -55,15 +57,15 @@ p {margin-top: 15px;margin-bottom:30px;}
 }
 
 .section h3 {margin-top:0px;}
+.section img.logo {display:block;margin: 0 0 50px auto;}
 
 .section .panel{border-radius:0;}
 .section .panel img{display:block; margin:0 auto 30px auto;}
 
 .section .panel-body{min-height:276px;}
 .section .panel-footer{text-align:right; color:#fff; border-radius:0; text-transform:uppercase; font-size:20px;}
+.section .panel-footer a {color:#fff;text-decoration: none;}
 
-.section .glyphicon-triangle-bottom{ color:white;background-color: transparent; border:none;}
-.section .glyphicon-triangle-bottom:hover{text-decoration:none}
 
 
 /**  ======== HEADER  ======== **/
@@ -221,22 +223,25 @@ footer address{margin-top:20px;}
 .btn-download {display:block;margin:0 auto;text-align:center;margin-top:15px;}
 
 /* Crono Analysis */
-.crono-analysis .btn-download .btn{border-color: #fff;color:#fff}
-.crono-analysis .btn-download .btn:hover{background-color: #fff;}
-.crono-analysis {background-color: #D24726;}
-.crono-analysis p{padding-right:50px; text-align:left; color:#fff;}
-.crono-analysis h3{text-align:left; color:#fff;}
-.crono-analysis img{background: #fff; padding:10px; margin:0 0 50px auto;}
+#crono-analysis .btn-download .btn{border-color: #fff;color:#fff}
+#crono-analysis .btn-download .btn:hover{background-color: #fff;color:#D24726;}
+#crono-analysis {background-color: #D24726;}
+#crono-analysis p{padding-right:50px; text-align:left; color:#fff;}
+#crono-analysis h3{text-align:left; color:#fff;}
 
 /* Crono Excel */
 .crono-excel h3{text-align:right;}
 
 /* Crono ETL */
-.crono-etl-icon {text-align:center; border-top: 1px solid gray;}
-.crono-etl {background:#0072C6;}
-.crono-etl p{text-align:left; color:#fff;}
-.crono-etl h3{color:#fff;}
-.crono-etl img{background: #fff; margin:30px auto;}
+#crono-etl {background:#0072C6;}
+#crono-etl p{text-align:left; color:#fff;}
+#crono-etl h3{color:#fff;}
+
+/* Solutions */
+.solutions {background:#EAECEB;}
+
+/* Features */
+.features thead{background-color:#D24726; color:#fff;}
 
 /*Jordi*/
 .formacion {
@@ -279,53 +284,6 @@ footer address{margin-top:20px;}
 
 
 
-
-
-
-
-
-
-
-.facilidad-metodo {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  height: auto;
-  left:0;
-  padding-top:30px;
-  padding-bottom:50px;
-}
-
-.soluciones {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  height: auto;
-  left:0;
-  padding-top:30px;
-  padding-bottom:50px;
-  background:#EAECEB;
-}
-.soluciones p{padding-right:20px; text-align:left; color:#000;}
-.soluciones h2{text-align:left; color:#000;}
-
-.caracteristicas {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  height: auto;
-  left:0;
-  padding-top:30px;
-  padding-bottom:50px;
-}
-.caracteristicas p{padding-right:20px; text-align:left; color:#000;}
-.caracteristicas h2{text-align:center; color:#000;}
-.orange{background-color:#D24726;color:white;}
-.cf{padding-left:5px;}
-.row {margin-left:5px;margin-right:5px;}
-
-/*tr:nth-child(even){background:#EAECEB;} BootStrap tiene #f9f9f9 en filas pares*/
-.body-table p{padding-left:5px;}
 
 /*Jordi*/
 
