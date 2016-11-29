@@ -164,7 +164,7 @@ footer address{margin-top:20px;}
     background: #2B2A28 none repeat scroll 0 0;
     color: #C5C7C6;
     font-size: 14px;
-    padding: 2px 20px;
+    padding: 5px 20px;
     text-decoration: none;
     float: right;
     margin-top: -5px;
@@ -176,7 +176,7 @@ footer address{margin-top:20px;}
 }
 .suscripcion {position:absolute;right:0;bottom:0;}
 .subscribe-text{margin-right: 180px;float:right;position:relative;z-index:100}
-.suscripcion h4{color: #fff;font-size: 16px;text-align: right;text-transform: uppercase;}
+.suscripcion h4{font-size: 16px;text-align: right;text-transform: uppercase;}
 .subscribe-girl {display:inline-block;float:right;margin-top:-65px;clear:both;position:relative;z-index:0}
 
 
