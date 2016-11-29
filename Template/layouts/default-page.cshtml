@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 @Include("layouts\head.cshtml")
-@{var ultimos = (from article in Site.Pages orderby article.Date descending select article).Take(5);}
 <body>
     @Include("layouts\header.cshtml")
     

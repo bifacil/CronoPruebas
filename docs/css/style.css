@@ -15,7 +15,7 @@ body {
   margin-bottom: 220px;
   font-family: "Ubuntu", sans-serif;
 }
-h3{
+h2{
 	color: #006db0;
     text-align: left;
     font-size: 34px;
@@ -60,7 +60,7 @@ p {margin-top: 15px;margin-bottom:30px;}
 	padding-bottom:50px;
 }
 
-.section h3 {margin-top:0px;}
+.section h2 {margin-top:0px;}
 .section img.logo {display:block;margin: 0 0 50px auto;}
 
 .section .panel{border-radius:0;}
@@ -71,7 +71,7 @@ p {margin-top: 15px;margin-bottom:30px;}
 .section .panel-footer a {color:#fff;text-decoration: none;}
 
 .section.yellow-background {background-color:#ffcc01}
-.section.yellow-background h3 {color: black;}
+.section.yellow-background h2 {color: black;}
 .section.yellow-background .btn:hover {color: #ffcc01;}
 
 /**  ======== HEADER  ======== **/
@@ -124,7 +124,7 @@ p {margin-top: 15px;margin-bottom:30px;}
 .page-caption a{color: #fff;}
 
 .page-caption .container {padding-top: 20px; padding-bottom: 20px;}
-.page-caption .container h2{font-size: 36px;max-width:670px;text-align:center; margin:0 auto}
+.page-caption .container h1{font-size: 36px;max-width:670px;text-align:center; margin:0 auto}
 .page-caption .btn{color:#fff;border:1px solid #fff;background-color:transparent;}
 .page-caption .btn:hover{color: #365691;background-color:#fff;}
 .page-caption .container .btn {
@@ -216,7 +216,7 @@ footer address{margin-top:20px;}
 }
 .download .container {width:40%;}
 
-.download h3{text-align:center;}
+.download h2{text-align:center;}
 .download .btn {text-transform:uppercase;display:block;width: 50%;margin: 0 auto;}
 
 
@@ -235,15 +235,15 @@ footer address{margin-top:20px;}
 #crono-analysis .btn-download .btn:hover{background-color: #fff;color:#D24726;}
 #crono-analysis {background-color: #D24726;}
 #crono-analysis p{padding-right:50px; text-align:left; color:#fff;}
-#crono-analysis h3{text-align:left; color:#fff;}
+#crono-analysis h2{text-align:left; color:#fff;}
 
 /* Crono Excel */
-.crono-excel h3{text-align:right;}
+.crono-excel h2{text-align:right;}
 
 /* Crono ETL */
 #crono-etl {background:#0072C6;}
 #crono-etl p{text-align:left; color:#fff;}
-#crono-etl h3{color:#fff;}
+#crono-etl h2{color:#fff;}
 
 /* Solutions */
 .solutions {background:#EAECEB;}
