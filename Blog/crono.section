@@ -1,1 +1,1 @@
-﻿Section (Name='Blog', DefaultLayout='Layouts\blog.cshtml')
+﻿Section (Name='Blog', DefaultLayout='Layouts\blog-article.cshtml')

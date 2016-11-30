@@ -1,0 +1,57 @@
+---
+Layout: layouts/blog.cshtml
+---
+
+@{
+    var allArticles = (from p in Site.Pages where p.Section == Page.Section && p.Layout == null orderby p.Date select p.Url).ToList();
+    var index = allArticles.IndexOf(Page.Url) + 1;
+}
+
+<div class="blog-post-full ">
+    <div class="row">
+        <div class="span8">
+            <div class="arrows">
+                <span>Artículo @index/@allArticles.Count()</span>
+                @if (PreviousPage != null)
+                {<a href="@Root/@PreviousPage.Url"><i class="arrow fa fa-arrow-circle-o-left"></i></a>}
+                @if (PreviousPage == null)
+                {<a><i class="fa fa-circle-o"></i></a>}
+                @if (NextPage != null)
+                {<a href="@Root/@NextPage.Url"><i class="arrow fa fa-arrow-circle-o-right"></i></a>}
+                @if (NextPage == null)
+                {<a><i class="fa fa-circle-o"></i></a>}
+
+            </div>
+
+            @if (Page.Image != null)
+            {
+                <div class="imgpost"> <img class="w100p" src="@Root/blog/images/@Page.Image"> </div>
+                <p class="blog-post-meta">
+                    <span><i class="fa fa-archive"></i>@Page.ShortDate</span>
+                    <span><i class="fa fa-tags"></i>bussines, intelligence, quote</span>
+                </p>}
+            </div>
+            <div class="w100p">
+                <h2 class="blog-post-title">@Page.Title</h2>
+                <div class="text">
+                    @RenderBody()
+                </div>
+            </div>
+            <div class="w100p socialshare">
+                <span>
+                    Comparte<br>
+                    este articulo
+                </span>
+                <ol>
+                    <li class="tw"><a href="javascript:void(0)" onclick="javascript:OpenPopup('http://twitter.com/share?text=@Page.Description&url=@Site.BaseUrl/@Page.Url')"><i class="fa fa-twitter"></i></a></li>
+                    <li class="in"><a href="javascript:void(0)" onclick="javascript:OpenPopup('http://www.linkedin.com/shareArticle?mini=true&url=@Site.BaseUrl/@Page.Url')"><i class="fa fa-linkedin"></i></a></li>
+                    <li class="fb"><a href="javascript:void(0)" onclick="javascript:OpenPopup('https://www.facebook.com/sharer/sharer.php?u=@Site.BaseUrl/@Page.Url')"><i class="fa fa-facebook"></i></a></li>
+                    <li class="go"><a href="javascript:void(0)" onclick="javascript:OpenPopup('https://plus.google.com/share?url=@Site.BaseUrl/@Page.Url')"><i class="fa fa-google-plus"></i></a></li>
+                    <li class="pi"><a href="javascript:void(0)" onclick="javascript:OpenPopup('http://pinterest.com/pin/create/button/?url=@Site.BaseUrl/@Page.Url')"><i class="fa fa-pinterest"></i></a></li>
+                    <!-- <li class="ma"><a href="#"><i class="fa fa-envelope-o"></i></a></li> -->
+                </ol>
+            </div>
+
+            <div id="disqus_thread"></div>
+        </div>
+    </div>

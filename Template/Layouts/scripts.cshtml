@@ -8,4 +8,19 @@
   ga('send', 'pageview');
 
 </script>
+<script id="dsq-count-scr" src="//cronoblog.disqus.com/count.js" async></script>
+<script>
+
+		var disqus_config = function () {
+			this.page.url = '@Site.BaseUrl/@Page.Url'
+			this.page.identifier = '@Page.UniqueId'
+		};
+		(function() {
+			var d = document, s = d.createElement('script');
+			s.src = '//cronoblog.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+		})();
+
+</script>
 		

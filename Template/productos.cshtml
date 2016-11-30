@@ -5,37 +5,7 @@ Description: "Nuestros productos"
 Layout: layouts/default-page.cshtml
 ---
 
-<div class="section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="panel panel-analysis">
-                    <div class="panel-body">
-                        <img src="@Root/images/logo_crono_analysis.png" />
-                        <p>Crono Analysis revoluciona la manera de acceder a la información. Con Crono Analysis los usuarios pueden realizar estudios de mercado, analizar tendencias o detectar situaciones anómalas de una manera rápida, visual y fiable.</p>
-                    </div>
-					
-                    <div class="panel-footer">
-                        <a href="#crono-analysis" role="button">Saber más<span class="glyphicon glyphicon-triangle-bottom"></span></a>
-                    </div>
-                </div>
-            </div>
-			
-            <div class="col-md-6">
-                <div class="panel panel-etl">
-                    <div class="panel-body">
-                        <img class="img-responsive" src="@Root/images/logo_crono_etl.png" />
-                        <p>Crono ETL reimagina la manera de crear los procesos de aprovisionamiento del Data Warehouse Corporativo.</p>
-                    </div>
-					
-                    <div class="panel-footer">
-                        <a href="#crono-etl" role="button">Saber más<span class="glyphicon glyphicon-triangle-bottom"></span></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+@Include("layouts/products-boxes.cshtml")
 
 <div class="section" id="crono-analysis">
     <div class="container">
