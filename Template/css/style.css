@@ -129,7 +129,7 @@ p {margin-top: 15px;margin-bottom:30px;}
 	text-align:center;
 	
 }
-.page-caption p {margin-top:20px;font-size:15px;}
+.page-caption p {margin-top:35px;font-size:20px;}
 .page-caption a{color: #fff;}
 
 .page-caption .container {padding: 30px 0;}
@@ -249,8 +249,7 @@ footer address{margin-top:20px;}
 #crono-etl p{text-align:left; color:#fff;}
 #crono-etl h2{color:#fff;}
 
-/* Solutions */
-.solutions {background:#EAECEB;}
+
 
 /* Features */
 .features thead{background-color:#D24726; color:#fff;}
@@ -268,6 +267,9 @@ footer address{margin-top:20px;}
 
 /*Data-consultor*/
 .data-consultor .img-responsive{margin:-45px auto;}
+
+/*bi-consultor*/
+.bi-consultor .img-responsive{padding:5px 20px 0px 20px;}
 
 /* ======== END PRODUCTS SECTIONS ======== */
 /* ======== END PRODUCTS ======== */
