@@ -288,6 +288,7 @@ footer .subscribe-girl {display:inline-block;float:right;margin-top:-65px;clear:
 .blog .btn:hover{color:#236a4c;}
 
 .blog .page-caption {background-image: url(img/header_home_green.jpg);}
+.blog .page-caption a {color: #c7c7c7;}
 .blog .sidebar h2, .blog .sidebar h3 {color: #fff;}
 .blog .btn.btn-colored {color: #236a4c;border-color:#236a4c;}
 .blog .btn.btn-colored:hover {color: #fff;background-color:#236a4c;}
