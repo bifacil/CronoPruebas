@@ -29,8 +29,8 @@ p {margin-top: 15px;margin-bottom:30px;}
 
 .btn {color: #000; border:1px solid #000;border-radius:3px;background-color: transparent;}
 .btn:hover{color:#fff; background-color:#000;}
-.btn.btn-blue {border-color: #0072C6;color:#0072C6;}
-.btn.btn-blue:hover{color:#fff;background-color:#0072C6;}
+.btn.btn-colored {border-color: #0072C6;color:#0072C6;}
+.btn.btn-colored:hover{color:#fff;background-color:#0072C6;}
 .btn.btn-right {float:right;}
 
 
@@ -277,9 +277,25 @@ footer address{margin-top:20px;}
 
 
 /*  ======== BLOG  ======== */
-.blog h2, .blog h3 , .blog h2 a, .blog h3 a {color: #236a4c}
+.blog h2, .blog h3 , .blog h2 a, .blog h3 a {color: #236a4c;text-decoration:none;}
+.blog h2 {border-bottom: 1px solid #236a4c;}
+
 .blog .page-caption {background-image: url(img/header_home_green.jpg);}
 .blog .sidebar h2, .blog .sidebar h3 {color: #fff;}
+.blog .btn.btn-colored {color: #236a4c;border-color:#236a4c;}
+.blog .btn.btn-colored:hover {color: #fff;background-color:#236a4c;}
+
+.blog-content {padding-bottom: 50px;padding-top: 70px;}
+
+.last-posts {margin-bottom: 30px;}
+.last-posts > div {background-color: transparent;}
+.last-posts > div:nth-of-type(2n+0) {background-color: #eaeceb;}
+
+.blog-post {padding: 20px;}
+.blog-post h3 {margin-top: 0;}
+.blog-post .tags {font-size:12px;}
+.blog-post .tags .icon:before {font-size:20px;margin-right:5px;}
+
 
 /*Social Share*/
 .socialshare {margin-top:40px;margin-bottom:25px;}

@@ -7,33 +7,31 @@ Id: 0
 
 ---
 
-<h2 class="page-title">Últimos articulos</h2>
+<h2>Últimos articulos</h2>
 
-@{
-  var posts=(from post in Site.Pages where !post.Date.IsMinDate() orderby post.Date descending select post).Take(8);
-  foreach(var post in posts){
-<div class="blog-post">
-	<div class="row">
-		<div class="col-md-6">
-		@if(post.Image!=null){
-			<img class="img-responsive" src="@Root/blog/images/@post.Image" />
-			<p>
-				<span class="icon fa-archive">@post.ShortDate</span>
-				<span class="icon fa-tags">business, intelligence, quote</span>
-			</p>
-		}
-		</div>
-		<div class="col-md-6">
-			<h3><a href="@Root/@post.Url">@post.Title</a></h3>
-			<p>@post.Description</p>
-			<a href="@Root/@post.Url" class="btn">Leer más</a>
+<div class="last-posts">
+	@{
+	  var posts=(from post in Site.Pages where !post.Date.IsMinDate() orderby post.Date descending select post).Take(8);
+	  foreach(var post in posts){
+	<div class="blog-post">
+		<div class="row">
+			<div class="col-md-6">
+			@if(post.Image!=null){
+				<img class="img-responsive" src="@Root/blog/images/@post.Image" />
+				<div class="tags">
+					<span class="icon fa-archive">@post.ShortDate</span>
+					<span class="icon fa-tags">business, intelligence, quote</span>
+				</div>
+			}
+			</div>
+			<div class="col-md-6">
+				<h3><a href="@Root/@post.Url">@post.Title</a></h3>
+				<p>@post.Description</p>
+				<a href="@Root/@post.Url" class="btn btn-right">Leer más</a>
+			</div>
 		</div>
 	</div>
+	}}
 </div>
-}}
 
-<div class="row">
-	<div class="col-md-8">
-		<a href="@Root/blog/archive.html" class="btn readmore">Ver artículos anteriores</a> 
-	</div>
-</div>
+<a href="@Root/blog/archive.html" class="btn btn-right btn-colored">Ver artículos anteriores</a> 
