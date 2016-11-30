@@ -75,6 +75,7 @@ p {margin-top: 15px;margin-bottom:30px;}
 .section.yellow-background {background-color:#ffcc01}
 .section.yellow-background h2 {color: black;}
 .section.yellow-background .btn:hover {color: #ffcc01;}
+.section.yellow-background .img-responsive{margin:-15px;}
 
 .sidebar > div {color: #fff;padding: 5px;background-color: #06619a;}
 .sidebar > div:nth-of-type(2n+1) {background-color: #1d2f57;}
