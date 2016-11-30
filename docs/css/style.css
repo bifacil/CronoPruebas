@@ -75,10 +75,13 @@ p {margin-top: 15px;margin-bottom:30px;}
 .section.yellow-background {background-color:#ffcc01}
 .section.yellow-background h2 {color: black;}
 .section.yellow-background .btn:hover {color: #ffcc01;}
-.section.yellow-background .img-responsive{margin:-15px;}
 
-.sidebar > div {color: #fff;padding: 5px;background-color: #06619a;}
-.sidebar > div:nth-of-type(2n+1) {background-color: #1d2f57;}
+.sidebar {color:#fff;}
+.sidebar a {color:#fff;text-decoration:none;}
+.sidebar .btn {border-color: white;}
+.sidebar .btn:hover {background-color: #fff;color: #236a4c;}
+.sidebar > div {padding: 10px 20px;background-color: #236a4c;}
+.sidebar > div:nth-of-type(2n+1) {background-color: #16442f;}
 
 /**  ======== HEADER  ======== **/
 .header{
@@ -263,14 +266,18 @@ footer address{margin-top:20px;}
 /* ======== SERVICES ======== */
 /* ======== SERVICES SECTIONS ========*/
 
+/*Data-consultor*/
+.data-consultor .img-responsive{margin:-45px auto;}
+
 /* ======== END PRODUCTS SECTIONS ======== */
 /* ======== END PRODUCTS ======== */
 
 
 
 /*  ======== BLOG  ======== */
-.blog h2, .blog h3 {color: #236a4c}
+.blog h2, .blog h3 , .blog h2 a, .blog h3 a {color: #236a4c}
 .blog .page-caption {background-image: url(img/header_home_green.jpg);}
+.blog .sidebar h2, .blog .sidebar h3 {color: #fff;}
 
 /* ======== END BLOG ======== */
 
