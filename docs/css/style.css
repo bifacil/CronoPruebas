@@ -25,6 +25,8 @@ h2{
 p, ul, li {font-size: 17px;font-weight: 300;margin-bottom: 5px;}
 p {margin-top: 15px;margin-bottom:30px;}
 
+.table p{ margin:10px;}
+
 .btn {color: #000; border:1px solid #000;border-radius:3px;background-color: transparent;}
 .btn:hover{color:#fff; background-color:#000;}
 .btn.btn-blue {border-color: #0072C6;color:#0072C6;}
@@ -248,7 +250,7 @@ footer address{margin-top:20px;}
 
 /* Features */
 .features thead{background-color:#D24726; color:#fff;}
-.body-table p{ margin:10px;}
+
 
 
 /* ======== END PRODUCTS SECTIONS ======== */
