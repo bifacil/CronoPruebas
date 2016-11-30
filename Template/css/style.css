@@ -52,6 +52,14 @@ p {margin-top: 15px;margin-bottom:30px;}
 
 .glyphicon {vertical-align: text-top;margin:0 5px;}
 
+.social-media {text-align:center;margin: 5px auto;}
+.social-media a {width:65px;display:inline-block;margin:5px;padding:10px 10px;vertical-align: middle;}
+.social-media a:hover{text-decoration:none;}
+
+.social-media .icon:before {font-size:26px;font-weight:300;}
+.social-media .icon-youtube:before {font-size:40px;}
+.social-media a.icon-youtube { padding: 0;}
+
 .section{
 	position: relative;
 	bottom: 0;
@@ -76,13 +84,16 @@ p {margin-top: 15px;margin-bottom:30px;}
 .section.yellow-background h2 {color: black;}
 .section.yellow-background .btn:hover {color: #ffcc01;}
 
-.sidebar {color:#fff;}
-.sidebar a {color:#fff;text-decoration:none;}
-.sidebar .btn {border-color: white;}
-.sidebar .btn:hover {background-color: #fff;color: #236a4c;}
-.sidebar div .subscribe-girl {max-height:170px;margin-left:auto;margin-bottom:-10px;}
-.sidebar > div {padding: 10px 20px;background-color: #236a4c;}
-.sidebar > div:nth-of-type(2n+1) {background-color: #16442f;}
+.sidebar {
+	background-color: #c5c7c6;
+	border-radius: 25px;
+	color: #000;
+	margin-left: 30px;
+	padding: 10px 20px;
+}
+.sidebar a {color:#000;text-decoration:none;}
+.sidebar .btn:hover {color: #cccccc;}
+.sidebar .subscribe-girl {max-height:170px;margin-left:auto;margin-bottom:-10px;}
 
 /**  ======== HEADER  ======== **/
 .header{
@@ -169,13 +180,9 @@ footer address{margin-top:20px;}
 .footer-links:hover {color:#ccc;text-decoration:none;}
 
 
-.social-media-footer {text-align:center;margin: 5px auto;}
-.social-media-footer a{width:65px;display:inline-block;color:#C5C7C6;margin:5px;background-color:#2B2A28;padding:10px 10px;vertical-align: middle;}
-.social-media-footer a:hover{color:#fefefe;text-decoration:none;}
 
-.social-media-footer .icon:before {font-size:26px;font-weight:300;}
-.social-media-footer .icon-youtube:before {font-size:40px;}
-.social-media-footer a.icon-youtube { padding: 0;}
+footer .social-media a{color:#C5C7C6;background-color:#2B2A28;}
+footer .social-media a:hover{color:#fefefe;}
 
 .sm-text {clear:both;font-size:18px;font-weight:bold;color:#C5C7C6;text-align:center;}
 
@@ -283,9 +290,8 @@ footer .subscribe-girl {display:inline-block;float:right;margin-top:-65px;clear:
 .blog h2 {border-bottom: 1px solid #236a4c;}
 
 .blog .page-caption {background-image: url(img/header_home_green.jpg);}
-.blog .sidebar h2, .blog .sidebar h3 {color: #fff;}
-.blog .btn.btn-colored {color: #236a4c;border-color:#236a4c;}
-.blog .btn.btn-colored:hover {color: #fff;background-color:#236a4c;}
+.blog .sidebar h2, .blog .sidebar h3 {color: #000;}
+
 
 .blog-content {padding-bottom: 50px;padding-top: 70px;}
 
@@ -394,7 +400,7 @@ footer {
     background-color: #C5C7C6;
     left: 0;
 }
-.social-media-footer {
+footer .social-media {
     margin-left: auto;
     margin-right: auto;
 	margin-bottom: 10px;
@@ -425,13 +431,13 @@ footer {
 
 @media screen and (max-width: 414px) {
 
-.social-media-footer {
+footer .social-media {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10px;
 	margin-top: 20px;
 }
-.social-media-footer a {
+footer .social-media a {
     margin: 5px;
 }
 .sm-text {margin-left:-5px !important;}
