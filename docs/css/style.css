@@ -279,6 +279,82 @@ footer address{margin-top:20px;}
 .blog .page-caption {background-image: url(img/header_home_green.jpg);}
 .blog .sidebar h2, .blog .sidebar h3 {color: #fff;}
 
+/*Social Share*/
+.socialshare 
+{
+	margin-top:40px;
+	margin-bottom:25px;
+}
+
+.socialshare ol
+{
+	list-style:none;
+	padding:0px;
+	margin-left:5px;
+	float:left;
+}
+.socialshare span
+{
+	float:left;
+	font-size:80%;
+	color:#5b5b5b;
+	font-weight:bold;
+	line-height:110%;
+	text-align:right;
+}
+.socialshare ol li
+{
+	width:30px;
+	text-align:center;
+	height:30px;
+	padding-top:3px;
+	padding-bottom:3px;
+	float:left;
+	margin-right:5px;
+	color:#FFF;
+}
+.socialshare ol li a
+{
+	color:#FFF;
+}
+.socialshare .fb
+{
+	background:#3a589b;
+}
+.socialshare .tw
+{
+	background:#598dca;
+}
+.socialshare .in
+{
+	background:#007ab9;
+}
+.socialshare .go
+{
+	background:#d95333;
+}
+.socialshare .pi
+{
+	background:#bd2125;
+}
+.socialshare .ma
+{
+	background:#c8a723;
+}
+/*End Social-share*/
+
+/*post Arrow*/
+.arrows i {
+	font-size:200%;
+	color: #aaa;
+	margin:2px;
+}
+
+.arrows i.arrow:hover {
+	font-size:200%;
+	color: #d27e36;
+}
+
 /* ======== END BLOG ======== */
 
 /*** RESPONSIVE ***/
