@@ -1,7 +1,7 @@
 ---
 Url: index.html
-Title: "Data warehouse fácil"
-Description: "Data warehouse fácil recoje buenas prácticas en entornos DWH/Business Intelligence. Contiene los mejores artículos de Ralph Kimball en español."
+Title: "Crono Business Intelligence"
+Description: "Crono es la mejor y más fácil herramienta de Business Intelligence. Crono incluye las mejores soluciones de ETL, reporting, cuadros de mando y reporting Excel."
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -9,7 +9,7 @@ Description: "Data warehouse fácil recoje buenas prácticas en entornos DWH/Bus
 @{var ultimos = (from article in Site.Pages orderby article.Date descending select article).Take(5);}
 <body class="home">
     <div class="page-caption">
-        @Include("layouts\header.cshtml")
+        @Include("layouts\page-header.cshtml")
 		<div class="container">
 			<h1>Haga que las personas de su empresa puedan acceder a los datos con facilidad</h2>
 			<a class="btn">Descubrir</a>

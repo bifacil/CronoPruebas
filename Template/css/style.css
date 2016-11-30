@@ -85,14 +85,15 @@ p {margin-top: 15px;margin-bottom:30px;}
 .section.yellow-background .btn:hover {color: #ffcc01;}
 
 .sidebar {
-	background-color: #c5c7c6;
+	background-color: #236a4c;
 	border-radius: 25px;
-	color: #000;
+	color: #fff;
 	margin-left: 30px;
 	padding: 10px 20px;
 }
-.sidebar a {color:#000;text-decoration:none;}
-.sidebar .btn:hover {color: #cccccc;}
+.sidebar a {color:#fff;text-decoration:none;}
+.sidebar .btn {border-color: white;}
+.sidebar .btn:hover {background-color: #fff;color: #236a4c;}
 .sidebar .subscribe-girl {max-height:170px;margin-left:auto;margin-bottom:-10px;}
 
 /**  ======== HEADER  ======== **/
@@ -107,12 +108,6 @@ p {margin-top: 15px;margin-bottom:30px;}
 .header img{max-height: 43px;margin-left: 10px;}
 .header a{	color: #757776;}
 .header a:hover{text-decoration: none;}
-
-.header .btn{
-	border-color:#e31e25;
-	background-color: #e31e25;
-	color: #fff;
-}
 
 .header-left-part{
 	width:50%;
@@ -141,7 +136,7 @@ p {margin-top: 15px;margin-bottom:30px;}
 	text-align:center;
 	
 }
-.page-caption p {margin-top:35px;font-size:20px;}
+.page-caption p {font-size: 20px;margin: 25px auto 0;text-align: left;width: 70%;}
 .page-caption a{color: #fff;}
 
 .page-caption .container {padding: 30px 0;}
@@ -286,14 +281,18 @@ footer .subscribe-girl {display:inline-block;float:right;margin-top:-65px;clear:
 
 
 /*  ======== BLOG  ======== */
+.blog-content {padding-bottom: 50px;padding-top: 70px;}
+
 .blog h2, .blog h3 , .blog h2 a, .blog h3 a {color: #236a4c;text-decoration:none;}
 .blog h2 {border-bottom: 1px solid #236a4c;}
+.blog .btn:hover{color:#236a4c;}
 
 .blog .page-caption {background-image: url(img/header_home_green.jpg);}
-.blog .sidebar h2, .blog .sidebar h3 {color: #000;}
+.blog .sidebar h2, .blog .sidebar h3 {color: #fff;}
+.blog .btn.btn-colored {color: #236a4c;border-color:#236a4c;}
+.blog .btn.btn-colored:hover {color: #fff;background-color:#236a4c;}
 
 
-.blog-content {padding-bottom: 50px;padding-top: 70px;}
 
 .last-posts {margin-bottom: 30px;}
 .last-posts > div {background-color: transparent;}
