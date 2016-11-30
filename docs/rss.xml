@@ -121,19 +121,22 @@
   var posts=(from post in Site.Pages where !post.Date.IsMinDate() orderby post.Date descending select post).Take(8);
   foreach(var post in posts){
 &lt;div class=&quot;blog-post&quot;&gt;
-  &lt;div class=&quot;row&quot;&gt;
-	&lt;div class=&quot;col-md-6&quot;&gt;
-		@if(post.Image!=null){&lt;div class=&quot;imgpost&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;@Root/blog/images/@post.Image&quot;&gt;&lt;/div&gt;
-		&lt;p class=&quot;blog-post-meta&quot;&gt;
-			&lt;span&gt;&lt;i class=&quot;fa fa-archive&quot;&gt;&lt;/i&gt;@post.ShortDate&lt;/span&gt;
-			&lt;span&gt;&lt;i class=&quot;fa fa-tags&quot;&gt;&lt;/i&gt;business, intelligence, quote&lt;/span&gt;
-		&lt;/p&gt;}
+	&lt;div class=&quot;row&quot;&gt;
+		&lt;div class=&quot;col-md-6&quot;&gt;
+		@if(post.Image!=null){
+			&lt;img class=&quot;img-responsive&quot; src=&quot;@Root/blog/images/@post.Image&quot; /&gt;
+			&lt;p&gt;
+				&lt;span class=&quot;icon fa-archive&quot;&gt;@post.ShortDate&lt;/span&gt;
+				&lt;span class=&quot;icon fa-tags&quot;&gt;business, intelligence, quote&lt;/span&gt;
+			&lt;/p&gt;
+		}
+		&lt;/div&gt;
+		&lt;div class=&quot;col-md-6&quot;&gt;
+			&lt;h3&gt;&lt;a href=&quot;@Root/@post.Url&quot;&gt;@post.Title&lt;/a&gt;&lt;/h3&gt;
+			&lt;p&gt;@post.Description&lt;/p&gt;
+			&lt;a href=&quot;@Root/@post.Url&quot; class=&quot;btn&quot;&gt;Leer m&#225;s&lt;/a&gt;
+		&lt;/div&gt;
 	&lt;/div&gt;
-	&lt;div class=&quot;col-md-6&quot;&gt;
-		&lt;h3&gt;&lt;a href=&quot;@Root/@post.Url&quot;&gt;@post.Title&lt;/a&gt;&lt;/h3&gt;
-		&lt;p&gt;@post.Description&lt;/p&gt;
-		&lt;a href=&quot;@Root/@post.Url&quot; class=&quot;btn&quot;&gt;Leer m&#225;s&lt;/a&gt; &lt;/div&gt;
-  &lt;/div&gt;
 &lt;/div&gt;
 }}
 

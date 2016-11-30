@@ -121,13 +121,13 @@ p {margin-top: 15px;margin-bottom:30px;}
 	background-size:cover;
 	color: #fff;
 	text-align:center;
+	
 }
-.page-caption h1 {margin-bottom: 0px}
-.page-caption p {margin-top:5px;text-transform: uppercase; font-size:15px;}
+.page-caption p {margin-top:20px;font-size:15px;}
 .page-caption a{color: #fff;}
 
-.page-caption .container {padding-top: 20px; padding-bottom: 20px;}
-.page-caption .container h1{font-size: 36px;max-width:670px;text-align:center; margin:0 auto}
+.page-caption .container {padding: 30px 0;}
+.page-caption .container h1{font-size: 50px;max-width:670px;text-align:center; margin:0 auto}
 .page-caption .btn{color:#fff;border:1px solid #fff;background-color:transparent;}
 .page-caption .btn:hover{color: #365691;background-color:#fff;}
 .page-caption .container .btn {
@@ -198,11 +198,10 @@ footer address{margin-top:20px;}
 
 
 /**  ======== HOME  ======== **/
-.home .page-caption{
-	min-height:665px;
-}
+.home .page-caption{min-height:665px;}
 
-.home .page-caption .container{padding-top: 200px;}
+.home .page-caption .container {padding-top: 200px;}
+.home .page-caption .container h1 {font-size:36px;}
 
 
 
@@ -271,7 +270,10 @@ footer address{margin-top:20px;}
 
 
 /*  ======== BLOG  ======== */
+.blog h2, .blog h3 {color: #236a4c}
 .blog .page-caption {background-image: url(img/header_home_green.jpg);}
+
+/* ======== END BLOG ======== */
 
 /*** RESPONSIVE ***/
 
