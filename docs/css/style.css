@@ -319,6 +319,26 @@ footer address{margin-top:20px;}
 .socialshare .ma{background:#c8a723;}
 
 /*post Arrow*/
+
+.blog-post-full .navegador
+{
+	/*background:#7a7885;*/
+	width:100%;
+	float:left;
+}
+.blog-post-full .navegador .arrows
+{
+	float:right;
+	margin-right:10px;
+	
+}
+.blog-post-full .navegador .arrows a
+{
+	color:#000;
+	font-size: 150%;
+	vertical-align: middle;
+	display:inline-block;
+}
 .arrows i {
 	font-size:200%;
 	color: #aaa;
@@ -326,6 +346,15 @@ footer address{margin-top:20px;}
 }
 
 .arrows i.arrow:hover {font-size:200%;color: #d27e36;}
+
+.w100p
+{
+	width:100%;
+}
+.imgpost img
+{
+	max-width:100%;
+}
 
 /* ======== END BLOG ======== */
 

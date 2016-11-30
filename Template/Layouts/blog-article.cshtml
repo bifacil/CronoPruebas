@@ -10,26 +10,29 @@ Layout: layouts/blog.cshtml
 <div class="blog-post-full ">
     <div class="row">
         <div class="span8">
-            <div class="arrows">
-                <span>Artículo @index/@allArticles.Count()</span>
-                @if (PreviousPage != null)
-                {<a href="@Root/@PreviousPage.Url"><i class="arrow fa fa-arrow-circle-o-left"></i></a>}
-                @if (PreviousPage == null)
-                {<a><i class="fa fa-circle-o"></i></a>}
-                @if (NextPage != null)
-                {<a href="@Root/@NextPage.Url"><i class="arrow fa fa-arrow-circle-o-right"></i></a>}
-                @if (NextPage == null)
-                {<a><i class="fa fa-circle-o"></i></a>}
+            <div class="navegador">
+                <div class="arrows">
+                    <span>Artículo @index/@allArticles.Count()</span>
+                    @if (PreviousPage != null)
+                    {<a href="@Root/@PreviousPage.Url"><i class="arrow fa fa-arrow-circle-o-left"></i></a>}
+                    @if (PreviousPage == null)
+                    {<a><i class="fa fa-circle-o"></i></a>}
+                    @if (NextPage != null)
+                    {<a href="@Root/@NextPage.Url"><i class="arrow fa fa-arrow-circle-o-right"></i></a>}
+                    @if (NextPage == null)
+                    {<a><i class="fa fa-circle-o"></i></a>}
 
+                </div>
             </div>
 
-            @if (Page.Image != null)
+                @if (Page.Image != null)
             {
-                <div class="imgpost"> <img class="w100p" src="@Root/blog/images/@Page.Image"> </div>
-                <p class="blog-post-meta">
-                    <span><i class="fa fa-archive"></i>@Page.ShortDate</span>
-                    <span><i class="fa fa-tags"></i>bussines, intelligence, quote</span>
-                </p>}
+                    <div class="imgpost"> <img class="w100p" src="@Root/blog/images/@Page.Image"> </div>
+                    <p class="blog-post-meta">
+                        <span><i class="fa fa-archive"></i>@Page.ShortDate</span>
+                        <span><i class="fa fa-tags"></i>bussines, intelligence, quote</span>
+                    </p>
+                }
             </div>
             <div class="w100p">
                 <h2 class="blog-post-title">@Page.Title</h2>
