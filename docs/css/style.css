@@ -80,6 +80,7 @@ p {margin-top: 15px;margin-bottom:30px;}
 .sidebar a {color:#fff;text-decoration:none;}
 .sidebar .btn {border-color: white;}
 .sidebar .btn:hover {background-color: #fff;color: #236a4c;}
+.sidebar div .subscribe-girl {max-height:170px;margin-left:auto;margin-bottom:-10px;}
 .sidebar > div {padding: 10px 20px;background-color: #236a4c;}
 .sidebar > div:nth-of-type(2n+1) {background-color: #16442f;}
 
@@ -195,7 +196,7 @@ footer address{margin-top:20px;}
 .suscripcion {position:absolute;right:0;bottom:0;}
 .subscribe-text{margin-right: 180px;float:right;position:relative;z-index:100}
 .suscripcion h4{font-size: 16px;text-align: right;text-transform: uppercase;}
-.subscribe-girl {display:inline-block;float:right;margin-top:-65px;clear:both;position:relative;z-index:0}
+footer .subscribe-girl {display:inline-block;float:right;margin-top:-65px;clear:both;position:relative;z-index:0}
 
 
 
@@ -273,6 +274,7 @@ footer address{margin-top:20px;}
 
 /* ======== END PRODUCTS SECTIONS ======== */
 /* ======== END PRODUCTS ======== */
+
 
 
 
