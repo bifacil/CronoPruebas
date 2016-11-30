@@ -366,7 +366,7 @@ footer .subscribe-girl {display:inline-block;float:right;margin-top:-65px;clear:
 /*Blog-post-meta*/
 .blog-post-meta{color:#7a7885;}
 .blog-post-meta span{margin-right:15px;}
-.blog-post-meta .fa{margin-right:15px;}
+.blog-post-meta .fa{margin-right:10px;}
 
 /*Disqus*/
 div#disqus_thread {padding-top:150px;}
