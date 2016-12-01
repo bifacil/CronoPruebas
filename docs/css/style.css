@@ -384,9 +384,6 @@ textarea.form-control {margin: 20px 0;}
 
 /*** RESPONSIVE ***/
 
-@media screen and (max-width: 1920px) {
-.home .page-caption {min-height:1080px;}
-}
 
 @media screen and (max-width: 1024px) {
 }
