@@ -1,0 +1,63 @@
+﻿---
+UniqueId: DPIKJACMkD
+Title: Crono Contacto
+Url: crono-contacto.html
+Description: "Crono es la mejor y más fácil herramienta de Business Intelligence. Crono incluye las mejores soluciones de ETL, reporting, cuadros de mando y reporting Excel."
+Layout: layouts/default-page.cshtml
+
+---
+
+<div class="section contact-info">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<p>Estamos a tu disposición:</p>
+				<p>Lunes a viernes / 9:00 - 18:00</p>
+			</div>
+			<div class="col-md-4">
+				<p><strong>Nuestras oficinas</strong></p> 
+				<p>Numancia 74, </p>
+				<p>08029, Barcelona</p>
+			</div>
+			<div class="col-md-4">
+				<p><strong>Información de contacto</strong></p>
+				<p>Teléfono: 034 652 50 46 71</p>
+				<p>Email: <a href="mailto:info@crono.net">info@crono.net</a></p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Contacta con Crono</h2>
+			</div>
+		</div>
+		 
+		<div class="row">
+			<div class="col-md-12">
+				<form id="contact-form" name="contact-form" method="post" action="https://fwdform.herokuapp.com/user/f60a3459-f28a-499a-890f-26507ac2d2ce">  
+					<fieldset>
+						<div id="formstatus"></div>
+						<div class="row">
+							<div class="col-md-6">
+								<input class="form-control" type="text" id="name" name="name" value="" placeholder="Nombre" />
+							</div>
+							<div class="col-md-6">
+								<input class="form-control" type="text" id="email" name="email" value="" placeholder="Email"/>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<textarea class="form-control" id="message" name="message" rows="5" cols="25" placeholder="Mensaje"></textarea>	
+							</div>
+						</div>
+						<input class="btn btn-colored" type="submit" name="submit" value="Enviar correo" />
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
