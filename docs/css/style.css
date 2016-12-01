@@ -25,6 +25,7 @@ h2{
 p, ul, li {font-size: 17px;font-weight: 300;margin-bottom: 5px;}
 p {margin-top: 15px;margin-bottom:30px;}
 
+.site-section-content {padding-bottom: 50px;padding-top: 70px;}
 .table p{ margin:10px;}
 
 .btn {color: #000; border:1px solid #000;border-radius:3px;background-color: transparent;}
@@ -302,7 +303,6 @@ textarea.form-control {margin: 20px 0;}
 
 
 /*  ======== BLOG  ======== */
-.blog-content {padding-bottom: 50px;padding-top: 70px;}
 
 .blog h2, .blog h3 , .blog h2 a, .blog h3 a {color: #236a4c;text-decoration:none;}
 .blog h2 {border-bottom: 1px solid #236a4c;}

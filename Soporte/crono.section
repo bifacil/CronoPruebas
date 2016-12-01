@@ -1,1 +1,1 @@
-﻿Section (Name='Soporte', DefaultLayout='layouts\soporte.cshtml', Categories=(Category (Name='Crono Analysis', Title='Crono Analysis', Description='Crono Analysis'), Category (Name='Crono ETL', Title='Crono ETL', Description='Crono ETL')))
+﻿Section (Name='Soporte', DefaultLayout='layouts\support-article.cshtml', Categories=(Category (Name='Crono Analysis', Title='Crono Analysis', Description='Crono Analysis'), Category (Name='Crono ETL', Title='Crono ETL', Description='Crono ETL')))
