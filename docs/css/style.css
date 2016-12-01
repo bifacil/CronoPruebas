@@ -383,14 +383,16 @@ textarea.form-control {margin: 20px 0;}
 
 
 
-/*  ======== SuPORT  ======== */
-.suport-content {padding-bottom: 50px;padding-top: 70px;}
+/*  ======== SUPPORT  ======== */
+.support-content {padding-bottom: 50px;padding-top: 70px;}
 
-.suport h2 {border-bottom: 1px solid #9A3441;}
-.suport .btn:hover{color:#9A3441;}
-.suport .page-caption {background-image: url(img/header_home_red.jpg);}
+.support .btn:hover{color:#9A3441;}
+.support .page-caption {background-image: url(img/header_home_red.jpg);}
+.support h2,.support h3{color:#9A3441; margin-bottom:10px;}
+.support li a{color:#9A3441;}
 
-.suport-section h2{color:#006db0;font-weight:700; border:none;}
+.support .support-section{margin-bottom:60px;}
+
 
 
 

@@ -9,11 +9,10 @@ Id: 0
 <div class="section">
 
     <div class="container">
-        <h3>Ten tu empresa al día</h3>
         <div class="row">
 
             <div class="col-md-5">
-
+                <img class="img-responsive" src="images/image.jpg" />
             </div>
 
             <div class="col-md-7">
@@ -38,7 +37,7 @@ Id: 0
                 <div>
                     @foreach (var item in Page.Section.Categories)
             {
-                        <div class="suport-section">
+                        <div class="support-section">
                             <h2 id="@item.Code">@item.Title</h2>
                             <ul>
                                 @foreach (var page in item.MainPages.OrderBy(p => p.SecondaryDate))
