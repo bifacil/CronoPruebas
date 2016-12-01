@@ -33,6 +33,7 @@ p {margin-top: 15px;margin-bottom:30px;}
 .btn.btn-colored {border-color: #0072C6;color:#0072C6;}
 .btn.btn-colored:hover{color:#fff;background-color:#0072C6;}
 .btn.btn-right {float:right;}
+div.btn-centered {display: block;margin-left: auto;margin-right:auto;margin-top:15px;text-align: center;}
 
 
 .panel-analysis{border-color:#D24726;}
@@ -239,8 +240,6 @@ footer .subscribe-girl {display:inline-block;float:right;margin-top:-65px;clear:
 
 
 /* ======== PRODUCTS ======== */
-.btn-download {display:block;margin:0 auto;text-align:center;margin-top:15px;}
-
 /* ======== PRODUCTS SECTIONS ========*/
 /* Crono Analysis */
 #crono-analysis .btn-download .btn{border-color: #fff;color:#fff}
@@ -279,8 +278,27 @@ footer .subscribe-girl {display:inline-block;float:right;margin-top:-65px;clear:
 /*bi-consultor*/
 .bi-consultor .img-responsive{padding:5px 20px 0px 20px;}
 
-/* ======== END PRODUCTS SECTIONS ======== */
-/* ======== END PRODUCTS ======== */
+/* ======== END SERVICES SECTIONS ======== */
+/* ======== END SERVICES ======== */
+
+
+
+
+/* ======== PRICE ======== */
+/* ======== PRICE SECTIONS ========*/
+
+/* Price listing */
+.price-listing .panel {min-height: 500px;}
+.price-listing .panel h4 {text-align:center;margin-bottom:30px;}
+.price-listing .panel p {text-align: justify;}
+.price-listing .panel .price {color:#7a7885;position:absolute; text-align:center; bottom: 15px;font-size: 230%;font-weight: bolder;left: 0;right: 0;}
+
+/* Considerations */
+.considerations {padding-top:20px;}
+.considerations .btn {margin-top:20px;text-transform:uppercase;}
+
+/* ======== END PRICE SECTIONS ======== */
+/* ======== END PRICE ======== */
 
 
 
@@ -306,9 +324,10 @@ textarea.form-control {margin: 20px 0;}
 
 .blog h2, .blog h3 , .blog h2 a, .blog h3 a {color: #236a4c;text-decoration:none;}
 .blog h2 {border-bottom: 1px solid #236a4c;}
-.blog .btn:hover{color:#236a4c;}
 
 .blog .page-caption {background-image: url(img/header_home_green.jpg);}
+.blog .page-caption .btn:hover{color:#236a4c;}
+
 .blog .sidebar h2, .blog .sidebar h3 {color: #fff;}
 .blog .btn.btn-colored {color: #236a4c;border-color:#236a4c;}
 .blog .btn.btn-colored:hover {color: #fff;background-color:#236a4c;}
