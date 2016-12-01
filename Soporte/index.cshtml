@@ -1,0 +1,55 @@
+---
+UniqueId:
+Title: "Soporte Business Intelligence"
+Url: soporte/index.html
+Layout: layouts/soporte.cshtml
+Id: 0
+
+---
+<div class="section">
+
+    <div class="container">
+        <h3>Ten tu empresa al día</h3>
+        <div class="row">
+
+            <div class="col-md-5">
+
+            </div>
+
+            <div class="col-md-7">
+
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi turpis sapien, volutpat vitae odio non, hendrerit tempus elit. Curabitur dapibus aliquet metus a facilisis. Aenean consequat nisl posuere ante maximus rhoncus. In euismod arcu sit amet tortor dapibus, vitae suscipit lorem porta.</p>
+
+                <p>Nam ligula tellus, rutrum nec quam vel, ultrices laoreet risus. Vivamus quis placerat nulla, eget molestie mauris. Aliquam et turpis quis est molestie ornare sit amet vitae purus. Proin vitae metus velit. Vivamus magna elit, luctus sed diam non, imperdiet consequat tellus.</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                <div>
+                    @foreach (var item in Page.Section.Categories)
+            {
+                        <div class="suport-section">
+                            <h2 id="@item.Code">@item.Title</h2>
+                            <ul>
+                                @foreach (var page in item.MainPages.OrderBy(p => p.SecondaryDate))
+                                {
+                                    <li><a href="@Root\@page.Url">@page.Title</a> <span class="year">@page.SecondaryDate.Year</span></li>
+                                }
+                            </ul>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

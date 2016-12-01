@@ -382,6 +382,21 @@ textarea.form-control {margin: 20px 0;}
 
 
 
+
+/*  ======== SuPORT  ======== */
+.suport-content {padding-bottom: 50px;padding-top: 70px;}
+
+.suport h2 {border-bottom: 1px solid #9A3441;}
+.suport .btn:hover{color:#9A3441;}
+.suport .page-caption {background-image: url(img/header_home_red.jpg);}
+
+.suport-section h2{color:#006db0;font-weight:700; border:none;}
+
+
+
+
+/* ======== END SOPORTE ======== */
+
 /*** RESPONSIVE ***/
 
 
