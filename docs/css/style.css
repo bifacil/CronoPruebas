@@ -280,6 +280,23 @@ footer .subscribe-girl {display:inline-block;float:right;margin-top:-65px;clear:
 
 
 
+/* ======== CONTACT ======== */
+/* ======== CONTACT SECTIONS ======== */
+
+/* Contact info */
+.contact-info {padding-top: 90px;}
+.contact-info p {margin-top:0;margin-bottom:0;}
+
+/* Contact form */
+textarea.form-control {margin: 20px 0;}
+
+/* ======== END CONTACT SECTIONS ======== */
+/* ======== END CONTACT ======== */
+
+
+
+
+
 /*  ======== BLOG  ======== */
 .blog-content {padding-bottom: 50px;padding-top: 70px;}
 
