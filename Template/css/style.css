@@ -316,14 +316,14 @@ textarea.form-control {margin: 20px 0;}
 
 
 /* Home */
-.last-posts {margin-bottom: 30px;}
-.last-posts > div {background-color: transparent;}
-.last-posts > div:nth-of-type(2n+0) {background-color: #eaeceb;}
+.post-listing {margin-bottom: 30px;}
+.post-listing > div {background-color: transparent;}
+.post-listing > div:nth-of-type(2n+0) {background-color: #eaeceb;}
 
-.last-posts .blog-post {padding: 20px;}
-.last-posts .blog-post h3 {margin-top: 0;}
-.last-posts .blog-post .meta {font-size:12px;}
-.last-posts .blog-post .meta .icon:before {font-size:20px;margin-right:5px;}
+.post-listing .blog-post {padding: 20px;}
+.post-listing .blog-post h3 {margin-top: 0;}
+.post-listing .blog-post .meta {font-size:12px;}
+.post-listing .blog-post .meta .icon:before {font-size:20px;margin-right:5px;}
 
 
 /* Post */

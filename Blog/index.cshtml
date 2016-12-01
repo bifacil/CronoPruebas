@@ -9,7 +9,7 @@ Id: 0
 
 <h2>Últimos articulos</h2>
 
-<div class="last-posts">
+<div class="post-listing">
 	@{
 	  var posts=(from post in Site.Pages where !post.Date.IsMinDate() orderby post.Date descending select post).Take(8);
 	  foreach(var post in posts){

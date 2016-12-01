@@ -68,39 +68,38 @@
  <item>
       <guid isPermaLink="true">https://businessintelligence.es/blog/archive.html</guid>
       <link>https://businessintelligence.es/blog/archive.html</link>
-      <title>Todos los art&#237;culos de Crono Business Intelligence</title>
+      <title>Archivo del blog</title>
       <pubDate>Mon, 01 Jan 0001 00:00:00 GMT</pubDate>
       <atom:updated>0001-01-01T00:00:00Z</atom:updated>
       <description>
 	  &lt;div style=&quot;width:700px&quot;&gt;&lt;img class=&quot;w100p&quot; src=&quot;https://businessintelligence.es/blog/images/&quot; /&gt;
 	  
-&lt;div class=&quot;row&quot;&gt;
-	&lt;div class=&quot;span9&quot;&gt;
-		&lt;h1 class=&quot;page-title&quot;&gt;Arcihvo&lt;/h1&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
+&lt;h2&gt;Archivo&lt;/h2&gt;
 
-@{
-  var posts=(from post in Site.Pages where !post.Date.IsMinDate() orderby post.Date descending select post);
-  foreach(var post in posts){
-&lt;div class=&quot;blog-post&quot;&gt;
-	&lt;div class=&quot;row&quot;&gt;
-		&lt;div class=&quot;span4&quot;&gt;
-			@if(post.Image!=null){&lt;div class=&quot;imgpost&quot;&gt;&lt;img src=&quot;@Root/blog/images/@post.Image&quot; /&gt;&lt;/div&gt;
-			&lt;p class=&quot;blog-post-meta&quot;&gt;
-				&lt;span&gt;&lt;i class=&quot;fa fa-archive&quot;&gt;&lt;/i&gt;@post.ShortDate&lt;/span&gt;
-				&lt;span&gt;&lt;i class=&quot;fa fa-tags&quot;&gt;&lt;/i&gt;business, intelligence, quote&lt;/span&gt;
-			&lt;/p&gt;}
-		&lt;/div&gt;
-		&lt;div class=&quot;span4&quot;&gt;
-			&lt;h2 class=&quot;blog-post-title&quot;&gt;&lt;a href=&quot;@Root/@post.Url&quot;&gt;@post.Title&lt;/a&gt;&lt;/h2&gt;
-			&lt;div class=&quot;intro&quot;&gt;
-				&lt;p&gt;@post.Description&lt;/p&gt;
+&lt;div class=&quot;post-listing&quot;&gt;
+	@{
+	  var posts=(from post in Site.Pages where !post.Date.IsMinDate() orderby post.Date descending select post);
+	  foreach(var post in posts){
+	&lt;div class=&quot;blog-post&quot;&gt;
+		&lt;div class=&quot;row&quot;&gt;
+			&lt;div class=&quot;col-md-6&quot;&gt;
+			@if(post.Image!=null){
+				&lt;img class=&quot;img-responsive&quot; src=&quot;@Root/blog/images/@post.Image&quot; /&gt;
+				&lt;div class=&quot;meta&quot;&gt;
+					&lt;span class=&quot;icon fa-archive&quot;&gt;&lt;/span&gt;&lt;span&gt;@post.ShortDate&lt;/span&gt;
+					&lt;span class=&quot;icon fa-tags&quot;&gt;&lt;/span&gt;&lt;span&gt;business, intelligence, quote&lt;/span&gt;
+				&lt;/div&gt;
+			}
 			&lt;/div&gt;
-		&lt;a href=&quot;@Root/@post.Url&quot; class=&quot;readmore&quot;&gt;Leer m&#225;s&lt;/a&gt; &lt;/div&gt;
+			&lt;div class=&quot;col-md-6&quot;&gt;
+				&lt;h3&gt;&lt;a href=&quot;@Root/@post.Url&quot;&gt;@post.Title&lt;/a&gt;&lt;/h3&gt;
+				&lt;p&gt;@post.Description&lt;/p&gt;
+				&lt;a href=&quot;@Root/@post.Url&quot; class=&quot;btn btn-right&quot;&gt;Leer m&#225;s&lt;/a&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
 	&lt;/div&gt;
+	}}
 &lt;/div&gt;
-}}
 
 	   
 	  
@@ -117,7 +116,7 @@
 	  
 &lt;h2&gt;&#218;ltimos articulos&lt;/h2&gt;
 
-&lt;div class=&quot;last-posts&quot;&gt;
+&lt;div class=&quot;post-listing&quot;&gt;
 	@{
 	  var posts=(from post in Site.Pages where !post.Date.IsMinDate() orderby post.Date descending select post).Take(8);
 	  foreach(var post in posts){
