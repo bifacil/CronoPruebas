@@ -25,6 +25,8 @@ h2{
 p, ul, li {font-size: 17px;font-weight: 300;margin-bottom: 5px;}
 p {margin-top: 15px;margin-bottom:30px;}
 
+
+
 .table p{ margin:10px;}
 
 .btn {color: #000; border:1px solid #000;border-radius:3px;background-color: transparent;}
@@ -141,6 +143,7 @@ div#disqus_thread {padding-top:150px;}
 }
 .page-caption p {font-size: 20px;margin: 25px auto 0;text-align: left;width: 70%;}
 .page-caption a{color: #fff;}
+.page-caption a.return-crono {color:#c7c7c7;}
 
 .page-caption .container {padding: 30px 0;}
 .page-caption .container h1{font-size: 50px;max-width:670px;text-align:center; margin:0 auto}
@@ -308,7 +311,6 @@ textarea.form-control {margin: 20px 0;}
 .blog .btn:hover{color:#236a4c;}
 
 .blog .page-caption {background-image: url(img/header_home_green.jpg);}
-.blog .page-caption a:not(.btn) {color: #c7c7c7;}
 .blog .sidebar h2, .blog .sidebar h3 {color: #fff;}
 .blog .btn.btn-colored {color: #236a4c;border-color:#236a4c;}
 .blog .btn.btn-colored:hover {color: #fff;background-color:#236a4c;}
