@@ -324,9 +324,10 @@ textarea.form-control {margin: 20px 0;}
 
 .blog h2, .blog h3 , .blog h2 a, .blog h3 a {color: #236a4c;text-decoration:none;}
 .blog h2 {border-bottom: 1px solid #236a4c;}
-.blog .btn:hover{color:#236a4c;}
 
 .blog .page-caption {background-image: url(img/header_home_green.jpg);}
+.blog .page-caption .btn:hover{color:#236a4c;}
+
 .blog .sidebar h2, .blog .sidebar h3 {color: #fff;}
 .blog .btn.btn-colored {color: #236a4c;border-color:#236a4c;}
 .blog .btn.btn-colored:hover {color: #fff;background-color:#236a4c;}
