@@ -113,6 +113,13 @@ div#disqus_thread {padding-top:150px;}
 .header a{	color: #757776;}
 .header a:hover{text-decoration: none;}
 
+.header .header-divider {
+    border-left: 1px solid #fff;
+    margin-left: 5px;
+    padding: 10px;
+    vertical-align: middle;
+}
+
 .header-left-part{
 	width:50%;
 	float:left;
