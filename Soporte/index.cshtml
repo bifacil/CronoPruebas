@@ -34,20 +34,18 @@ Id: 0
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                <div>
-                    @foreach (var item in Page.Section.Categories)
-            {
-                        <div class="support-section">
-                            <h2 id="@item.Code">@item.Title</h2>
-                            <ul>
-                                @foreach (var page in item.MainPages.OrderBy(p => p.SecondaryDate))
-                                {
-                                    <li><a href="@Root\@page.Url">@page.Title</a> <span class="year">@page.SecondaryDate.Year</span></li>
-                                }
-                            </ul>
-                        </div>
-                    }
+            @foreach (var item in Page.Section.Categories)
+			{
+                <div class="support-section">
+                    <h2 id="@item.Code">@item.Title</h2>
+                    <ul>
+                        @foreach (var page in item.MainPages.OrderBy(p => p.SecondaryDate))
+                        {
+                            <li><a href="@Root\@page.Url">@page.Title</a> <span class="year">@page.SecondaryDate.Year</span></li>
+                        }
+                    </ul>
                 </div>
+            }
             </div>
         </div>
     </div>

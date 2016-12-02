@@ -403,12 +403,11 @@ textarea.form-control {margin: 20px 0;}
 
 
 /*  ======== SUPPORT  ======== */
-.support-content {padding-bottom: 50px;padding-top: 70px;}
-
-.support .btn:hover{color:#9A3441;}
-.support .page-caption {background-image: url(img/header_home_red.jpg);}
-.support h2,.support h3{color:#9A3441; margin-bottom:10px;}
+.support h2, .support h3{color:#9A3441; margin-bottom:10px;}
 .support li a{color:#9A3441;}
+
+.support .page-caption {background-image: url(img/header_home_red.jpg);}
+.support .page-caption .btn:hover{color:#9A3441;}
 
 .support .support-section{margin-bottom:60px;}
 
@@ -416,9 +415,11 @@ textarea.form-control {margin: 20px 0;}
 
 
 
-
-
 /* ======== END SOPORTE ======== */
+
+
+
+
 
 /*** RESPONSIVE ***/
 

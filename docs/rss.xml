@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
  <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
  <channel>
-   <title>Crono Business Intelligence</title>
-   <atom:link href="https://businessintelligence.es/rss.xml" rel="self" type="application/rss+xml" />
-   <link>https://businessintelligence.es</link>
+   <title>Datawarehouse f&#225;cil</title>
+   <atom:link href="https://datawarehouse.es/rss.xml" rel="self" type="application/rss+xml" />
+   <link>https://datawarehouse.es</link>
    <description></description>
 
  <item>
-      <guid isPermaLink="true">https://businessintelligence.es/blog/velcro-facil.html</guid>
-      <link>https://businessintelligence.es/blog/velcro-facil.html</link>
+      <guid isPermaLink="true">https://datawarehouse.es/blog/velcro-facil.html</guid>
+      <link>https://datawarehouse.es/blog/velcro-facil.html</link>
       <title>Zapatillas de velcro</title>
       <pubDate>Tue, 08 Nov 2016 17:18:35 GMT</pubDate>
       <atom:updated>2016-11-08T17:18:35Z</atom:updated>
       <description>
-	  &lt;div style=&quot;width:700px&quot;&gt;&lt;img class=&quot;w100p&quot; src=&quot;https://businessintelligence.es/blog/images/velcro.jpg&quot; /&gt;
+	  &lt;div style=&quot;width:700px&quot;&gt;&lt;img class=&quot;w100p&quot; src=&quot;https://datawarehouse.es/blog/images/velcro.jpg&quot; /&gt;
 	  &lt;p&gt;Si tienes ni&#241;os peque&#241;os habr&#225;s asistido recientemente a la reuni&#243;n de inicio de curso, y los profesores te habr&#225;n insistido sobre la conveniencia de facilitar la vida a los ni&#241;os (botones grandes, zapatillas de velcro, gomas de las batas...). Se trata de que los ni&#241;os sean autosuficientes. Que aprendan estas cosas cotidianas sin que sus &lt;s&gt;departamentos de IT&lt;/s&gt; &lt;em&gt;padres y profesores&lt;/em&gt; tengan que atarles los zapatos.&lt;/p&gt;
 &lt;p&gt;Como responsables de IT hemos de favorecer la capacidad de autoservicio de nuestros usuarios y la manera m&#225;s evidente de hacerlo es proporcionando herramientas f&#225;ciles de usar y especialmente dise&#241;adas para ellos:&lt;/p&gt;
 &lt;ul&gt;
@@ -25,13 +25,13 @@
 	  &lt;/div&gt;</description>
 </item>
  <item>
-      <guid isPermaLink="true">https://businessintelligence.es/blog/datos-valiosos.html</guid>
-      <link>https://businessintelligence.es/blog/datos-valiosos.html</link>
+      <guid isPermaLink="true">https://datawarehouse.es/blog/datos-valiosos.html</guid>
+      <link>https://datawarehouse.es/blog/datos-valiosos.html</link>
       <title>Los datos que almacenamos son muy valiosos</title>
       <pubDate>Mon, 06 Jun 2016 00:00:00 GMT</pubDate>
       <atom:updated>2016-06-06T00:00:00Z</atom:updated>
       <description>
-	  &lt;div style=&quot;width:700px&quot;&gt;&lt;img class=&quot;w100p&quot; src=&quot;https://businessintelligence.es/blog/images/datos-valiosos.png&quot; /&gt;
+	  &lt;div style=&quot;width:700px&quot;&gt;&lt;img class=&quot;w100p&quot; src=&quot;https://datawarehouse.es/blog/images/datos-valiosos.png&quot; /&gt;
 	  &lt;p&gt;Los datos que almacenamos son muy valiosos. &#191;Estamos seguros de que estamos aprovechando toda la informaci&#243;n de la que disponemos?&lt;/p&gt;
 &lt;p&gt;Si crees que la respuesta es que no, no dudes en contactar con nosotros.&lt;/p&gt;
 	   
@@ -39,13 +39,13 @@
 	  &lt;/div&gt;</description>
 </item>
  <item>
-      <guid isPermaLink="true">https://businessintelligence.es/soporte/datos-valiosos.html</guid>
-      <link>https://businessintelligence.es/soporte/datos-valiosos.html</link>
+      <guid isPermaLink="true">https://datawarehouse.es/soporte/datos-valiosos.html</guid>
+      <link>https://datawarehouse.es/soporte/datos-valiosos.html</link>
       <title>Los datos que almacenamos son muy valiosos</title>
       <pubDate>Mon, 06 Jun 2016 00:00:00 GMT</pubDate>
       <atom:updated>2016-06-06T00:00:00Z</atom:updated>
       <description>
-	  &lt;div style=&quot;width:700px&quot;&gt;&lt;img class=&quot;w100p&quot; src=&quot;https://businessintelligence.es/blog/images/datos-valiosos.png&quot; /&gt;
+	  &lt;div style=&quot;width:700px&quot;&gt;&lt;img class=&quot;w100p&quot; src=&quot;https://datawarehouse.es/blog/images/datos-valiosos.png&quot; /&gt;
 	  &lt;p&gt;Los datos que almacenamos son muy valiosos. &#191;Estamos seguros de que estamos aprovechando toda la informaci&#243;n de la que disponemos?&lt;/p&gt;
 &lt;p&gt;Si crees que la respuesta es que no, no dudes en contactar con nosotros.&lt;/p&gt;
 	   
@@ -53,13 +53,13 @@
 	  &lt;/div&gt;</description>
 </item>
  <item>
-      <guid isPermaLink="true">https://businessintelligence.es/blog/datos-irrenunciables.html</guid>
-      <link>https://businessintelligence.es/blog/datos-irrenunciables.html</link>
+      <guid isPermaLink="true">https://datawarehouse.es/blog/datos-irrenunciables.html</guid>
+      <link>https://datawarehouse.es/blog/datos-irrenunciables.html</link>
       <title>Las empresas que desaprovechen los datos que poseen quedar&#225;n atr&#225;s</title>
       <pubDate>Mon, 30 May 2016 00:00:00 GMT</pubDate>
       <atom:updated>2016-05-30T00:00:00Z</atom:updated>
       <description>
-	  &lt;div style=&quot;width:700px&quot;&gt;&lt;img class=&quot;w100p&quot; src=&quot;https://businessintelligence.es/blog/images/datos-irrenunciables.png&quot; /&gt;
+	  &lt;div style=&quot;width:700px&quot;&gt;&lt;img class=&quot;w100p&quot; src=&quot;https://datawarehouse.es/blog/images/datos-irrenunciables.png&quot; /&gt;
 	  &lt;p&gt;Los &amp;quot;datos&amp;quot; siempre han existido y han tratado de aprovecharse dentro de las empresas. Sin embargo, ha evolucionado tanto la tipolog&#237;a, la captaci&#243;n, la cantidad y las posibilidades de an&#225;lisis que se han convertido ya en una materia prima imprescindible en cualquier negocio. Las empresas que desaprovechen los datos que poseen quedar&#225;n atr&#225;s.&lt;/p&gt;
 &lt;p&gt;Bienvenidos a las sociedad del conocimiento.&lt;/p&gt;
 	   
@@ -67,13 +67,13 @@
 	  &lt;/div&gt;</description>
 </item>
  <item>
-      <guid isPermaLink="true">https://businessintelligence.es/soporte/datos-irrenunciables.html</guid>
-      <link>https://businessintelligence.es/soporte/datos-irrenunciables.html</link>
+      <guid isPermaLink="true">https://datawarehouse.es/soporte/datos-irrenunciables.html</guid>
+      <link>https://datawarehouse.es/soporte/datos-irrenunciables.html</link>
       <title>Las empresas que desaprovechen los datos que poseen quedar&#225;n atr&#225;s</title>
       <pubDate>Mon, 30 May 2016 00:00:00 GMT</pubDate>
       <atom:updated>2016-05-30T00:00:00Z</atom:updated>
       <description>
-	  &lt;div style=&quot;width:700px&quot;&gt;&lt;img class=&quot;w100p&quot; src=&quot;https://businessintelligence.es/blog/images/datos-irrenunciables.png&quot; /&gt;
+	  &lt;div style=&quot;width:700px&quot;&gt;&lt;img class=&quot;w100p&quot; src=&quot;https://datawarehouse.es/blog/images/datos-irrenunciables.png&quot; /&gt;
 	  &lt;p&gt;Los &amp;quot;datos&amp;quot; siempre han existido y han tratado de aprovecharse dentro de las empresas. Sin embargo, ha evolucionado tanto la tipolog&#237;a, la captaci&#243;n, la cantidad y las posibilidades de an&#225;lisis que se han convertido ya en una materia prima imprescindible en cualquier negocio. Las empresas que desaprovechen los datos que poseen quedar&#225;n atr&#225;s.&lt;/p&gt;
 &lt;p&gt;Bienvenidos a las sociedad del conocimiento.&lt;/p&gt;
 	   
@@ -81,26 +81,26 @@
 	  &lt;/div&gt;</description>
 </item>
  <item>
-      <guid isPermaLink="true">https://businessintelligence.es/blog/dark-data.html</guid>
-      <link>https://businessintelligence.es/blog/dark-data.html</link>
+      <guid isPermaLink="true">https://datawarehouse.es/blog/dark-data.html</guid>
+      <link>https://datawarehouse.es/blog/dark-data.html</link>
       <title>&#161;Ya lo tienes!</title>
       <pubDate>Mon, 23 May 2016 00:00:00 GMT</pubDate>
       <atom:updated>2016-05-23T00:00:00Z</atom:updated>
       <description>
-	  &lt;div style=&quot;width:700px&quot;&gt;&lt;img class=&quot;w100p&quot; src=&quot;https://businessintelligence.es/blog/images/dark-data.png&quot; /&gt;
+	  &lt;div style=&quot;width:700px&quot;&gt;&lt;img class=&quot;w100p&quot; src=&quot;https://datawarehouse.es/blog/images/dark-data.png&quot; /&gt;
 	  &lt;p&gt;A veces nos encontramos con empresas que quieren encontrar petr&#243;leo en redes sociales o en otras fuentes externas pero que son incapaces de responder con seguridad cuales fueron sus ventas de la semana pasada segmentadas por familia... Nuestro consejo es claro: Comienza por lo b&#225;sico, analiza los datos que YA tienes, y ya tendr&#225;s tiempo de llegar a la luna.&lt;/p&gt;
 	   
 	  
 	  &lt;/div&gt;</description>
 </item>
  <item>
-      <guid isPermaLink="true">https://businessintelligence.es/blog/archive.html</guid>
-      <link>https://businessintelligence.es/blog/archive.html</link>
+      <guid isPermaLink="true">https://datawarehouse.es/blog/archive.html</guid>
+      <link>https://datawarehouse.es/blog/archive.html</link>
       <title>Archivo del blog</title>
       <pubDate>Mon, 01 Jan 0001 00:00:00 GMT</pubDate>
       <atom:updated>0001-01-01T00:00:00Z</atom:updated>
       <description>
-	  &lt;div style=&quot;width:700px&quot;&gt;&lt;img class=&quot;w100p&quot; src=&quot;https://businessintelligence.es/blog/images/&quot; /&gt;
+	  &lt;div style=&quot;width:700px&quot;&gt;&lt;img class=&quot;w100p&quot; src=&quot;https://datawarehouse.es/blog/images/&quot; /&gt;
 	  
 &lt;h2&gt;Archivo&lt;/h2&gt;
 
@@ -134,13 +134,13 @@
 	  &lt;/div&gt;</description>
 </item>
  <item>
-      <guid isPermaLink="true">https://businessintelligence.es/blog/index.html</guid>
-      <link>https://businessintelligence.es/blog/index.html</link>
+      <guid isPermaLink="true">https://datawarehouse.es/blog/index.html</guid>
+      <link>https://datawarehouse.es/blog/index.html</link>
       <title>Todos los articulos</title>
       <pubDate>Mon, 01 Jan 0001 00:00:00 GMT</pubDate>
       <atom:updated>0001-01-01T00:00:00Z</atom:updated>
       <description>
-	  &lt;div style=&quot;width:700px&quot;&gt;&lt;img class=&quot;w100p&quot; src=&quot;https://businessintelligence.es/blog/images/&quot; /&gt;
+	  &lt;div style=&quot;width:700px&quot;&gt;&lt;img class=&quot;w100p&quot; src=&quot;https://datawarehouse.es/blog/images/&quot; /&gt;
 	  
 &lt;h2&gt;&#218;ltimos articulos&lt;/h2&gt;
 
@@ -176,13 +176,13 @@
 	  &lt;/div&gt;</description>
 </item>
  <item>
-      <guid isPermaLink="true">https://businessintelligence.es/soporte/index.html</guid>
-      <link>https://businessintelligence.es/soporte/index.html</link>
+      <guid isPermaLink="true">https://datawarehouse.es/soporte/index.html</guid>
+      <link>https://datawarehouse.es/soporte/index.html</link>
       <title>Soporte Business Intelligence</title>
       <pubDate>Mon, 01 Jan 0001 00:00:00 GMT</pubDate>
       <atom:updated>0001-01-01T00:00:00Z</atom:updated>
       <description>
-	  &lt;div style=&quot;width:700px&quot;&gt;&lt;img class=&quot;w100p&quot; src=&quot;https://businessintelligence.es/blog/images/&quot; /&gt;
+	  &lt;div style=&quot;width:700px&quot;&gt;&lt;img class=&quot;w100p&quot; src=&quot;https://datawarehouse.es/blog/images/&quot; /&gt;
 	  &lt;div class=&quot;section&quot;&gt;
 
     &lt;div class=&quot;container&quot;&gt;
@@ -211,20 +211,18 @@
     &lt;div class=&quot;container&quot;&gt;
         &lt;div class=&quot;row&quot;&gt;
             &lt;div class=&quot;col-lg-8 col-md-8 col-sm-8 col-xs-12&quot;&gt;
-                &lt;div&gt;
-                    @foreach (var item in Page.Section.Categories)
-            {
-                        &lt;div class=&quot;support-section&quot;&gt;
-                            &lt;h2 id=&quot;@item.Code&quot;&gt;@item.Title&lt;/h2&gt;
-                            &lt;ul&gt;
-                                @foreach (var page in item.MainPages.OrderBy(p =&gt; p.SecondaryDate))
-                                {
-                                    &lt;li&gt;&lt;a href=&quot;@Root\@page.Url&quot;&gt;@page.Title&lt;/a&gt; &lt;span class=&quot;year&quot;&gt;@page.SecondaryDate.Year&lt;/span&gt;&lt;/li&gt;
-                                }
-                            &lt;/ul&gt;
-                        &lt;/div&gt;
-                    }
+            @foreach (var item in Page.Section.Categories)
+			{
+                &lt;div class=&quot;support-section&quot;&gt;
+                    &lt;h2 id=&quot;@item.Code&quot;&gt;@item.Title&lt;/h2&gt;
+                    &lt;ul&gt;
+                        @foreach (var page in item.MainPages.OrderBy(p =&gt; p.SecondaryDate))
+                        {
+                            &lt;li&gt;&lt;a href=&quot;@Root\@page.Url&quot;&gt;@page.Title&lt;/a&gt; &lt;span class=&quot;year&quot;&gt;@page.SecondaryDate.Year&lt;/span&gt;&lt;/li&gt;
+                        }
+                    &lt;/ul&gt;
                 &lt;/div&gt;
+            }
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
