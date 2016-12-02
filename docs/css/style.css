@@ -361,7 +361,7 @@ textarea.form-control {margin: 20px 0;}
 .arrows .icon.no-hover:hover {color: inherit;}
 .arrows .icon:hover {color: #d27e36;}
 
-.post-caption img {display:block;max-width: 100%;}
+.post-caption img {display:block;width: 100%;}
 .post-caption .meta .icon:before{font-size:inherit;}
 .post-caption .meta span{margin-right:15px;}
 
